@@ -1,0 +1,35 @@
+// ヘッダーとmvとcv-buttonの調整
+
+.l-header{
+	z-index:200;
+}
+
+.l-cv-button{
+	z-index: 100;
+}
+
+.l-main{
+	z-index: 5;
+}
+
+// c-section__title ブロックのタイトルの黄色の円
+.c-section__title{
+	z-index: 10;
+	&::before{
+		z-index: -1;
+	}
+}
+
+
+// mvの重なり
+.p-mv{
+	&__heading__text{
+		z-index: 10;
+	}
+	&__heading::before{
+		z-index: 5;
+	}
+	&__sub-heading{
+		z-index: 10;
+	}
+}

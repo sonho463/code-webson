@@ -1,0 +1,12 @@
+@use "../foundation/variables" as v;
+
+.l-header{
+	position: sticky;
+	top:0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: v.$main-secondary;
+	@include v.mq(sm){
+		padding: 0;
+	}
+}

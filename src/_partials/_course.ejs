@@ -1,0 +1,12 @@
+<%_ if(num===0){_%>
+<div class="p-course__item p-course__item--new">
+  <%_ }else{_%>
+  <div class="p-course__item p-course__item">
+    <%_}_%>
+    <h3 class="p-course__title"><%= courseList[num].title %></h3>
+      <div class="p-course__count"><%= courseList[num].count %></div>
+      <div class="p-course__logo">
+        <img src="<%= path.img + courseList[num].img %>" alt="">
+      </div>
+      <a href="https://<%= courseList[num].link %>" class="p-course__btn">問題に挑戦する</a>
+    </div>

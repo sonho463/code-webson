@@ -1,0 +1,12 @@
+@use "../foundation/variables" as v;
+
+.c-inner{
+	max-width: 1194px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 90px;
+	@include v.mq(sm){
+		width: 100%;
+	}
+}

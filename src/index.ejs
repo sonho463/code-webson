@@ -1,0 +1,32 @@
+<%- include('./_data/_index_data') %>
+<%- include('./_includes/_head') %>
+<%- include('./_includes/_header')%>
+
+
+<div class="keyVisual">
+  <img src="<%= path.img %>kv_ninjacode.svg" alt="" class="keyVisual__ninjacode">
+</div>
+
+<section class="p-product">
+  <%_ for(let i=0; i<itemList.length; i++){ _%>
+  <%- include('./_partials/_item',{num: i}) %>
+  <%_ } _%>
+
+</section>
+
+<section class="l-section l-sectoin--course">
+  <h2 class="c-sectionTitle">
+    <div class="c-sectionTitle__icon c-sectionTitle__icon--course">
+      <img src="<%= path.img %>course-top-icon.svg" alt="">
+    </div>
+    コー
+  </h2>
+  <div class="p-course l-inner">
+    <%_ for(let j=0; j<courseList.length; j++){ _%>
+    <%- include('./_partials/_course',{num: j}) %>
+    <%_ } _%>
+
+  </div>
+</section>
+
+<%- include('./_includes/_footer')%>

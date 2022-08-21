@@ -1,0 +1,31 @@
+// *----------*
+// colors
+// *----------*
+
+$main-primary:  rgb(27, 47, 96);
+$main-secondary:#f0f8ff;
+$accent-primary: #ffde59;
+$shadow-cBlue: #b0c4de;
+$color-white: #fff;
+$color-black: #333;
+$color-border-gray: #707070;
+
+// *----------*
+// font-family
+// *----------*
+$title-font: senobi-gothic, sans-serif;
+
+// *----------*
+// mixin
+// *----------*
+$breakpoints: (
+	"lg":"screen and (max-width:1024px)",
+  "md":"screen and (max-width:768px)",
+  "sm":"screen and (max-width:480px)"
+);
+
+@mixin mq($breakpoint:md){
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}

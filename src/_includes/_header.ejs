@@ -1,0 +1,23 @@
+<header class="l-header">
+  <a href="" class="l-header__logo">
+    <img src="<%= path.img %>logo.png" alt="">
+  </a>
+  <%_
+		const headerType = {
+			"TOP": "https://top",
+			"コース一覧": "https://course",
+			"有料コンテンツ一覧": "https://paidCourse",
+		}
+		_%>
+  <nav class="l-header__nav">
+    <%_ Object.keys(headerType).forEach((key) => { _%>
+			<a href="<%= headerType[key] %>"><%= key %></a>
+    <%_ }); _%>
+  </nav>
+  <div class="c-account">
+    <div class="c-account__icon">
+      <img src="<%= path.img %>user-icon.png" alt="">
+    </div>
+    <div class="c-account__name">忍者CODE</div>
+  </div>
+</header>
