@@ -11,6 +11,7 @@
 // *--------------*
 @use "./layout/header";
 @use "./layout/footer";
+@use "./layout/l-snap-container";
 
 // *--------------*
 // components
@@ -21,8 +22,8 @@
 // *--------------*
 // project
 // *--------------*
+@use "./project/g-nav";
 
 // *--------------*
 // utility
 // *--------------*
-

@@ -1,6 +1,7 @@
 @use "../foundation/variables" as v;
 
 .c-section {
+	background-color: pink;
   padding-top: 90px;
   &:nth-of-type(odd) {
     background-color: v.$main-secondary;

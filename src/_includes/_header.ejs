@@ -1,23 +1,40 @@
 <header class="l-header">
-  <a href="" class="l-header__logo">
-    <img src="<%= path.img %>logo.png" alt="">
-  </a>
-  <%_
-		const headerType = {
-			"TOP": "https://top",
-			"コース一覧": "https://course",
-			"有料コンテンツ一覧": "https://paidCourse",
-		}
-		_%>
-  <nav class="l-header__nav">
-    <%_ Object.keys(headerType).forEach((key) => { _%>
-			<a href="<%= headerType[key] %>"><%= key %></a>
-    <%_ }); _%>
-  </nav>
-  <div class="c-account">
-    <div class="c-account__icon">
-      <img src="<%= path.img %>user-icon.png" alt="">
-    </div>
-    <div class="c-account__name">忍者CODE</div>
-  </div>
+	<nav class="p-g-nav js-g-nav">
+		<ul class="p-g-nav__inner">
+			<li class="p-g-nav__item">
+				<a href="#about" class="p-g-nav__link p-g-nav__link--about">
+					アバウト
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#works" class="p-g-nav__link p-g-nav__link--works">
+					実績
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#skills" class="p-g-nav__link p-g-nav__link--skills">
+					スキル
+				</a>
+			</li>
+			<li class="p-g-nav__item p-g-nav__item--icon">
+				<a href="/" class="p-g-nav__link--icon">
+					<img src="./assets/images/header/ico_webson.png" alt="">
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#services" class="p-g-nav__link p-g-nav__link--services">
+					サービス
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#career" class="p-g-nav__link p-g-nav__link--career">
+					経歴
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="javascript:void(0)" class="p-g-nav__link p-g-nav__link--contact">
+				</a>
+			</li>
+		</ul>
+	</nav>
 </header>

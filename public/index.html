@@ -1,161 +1,71 @@
 
 
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>EJS@ninjaCode</title>
-  <meta name="description" content="忍者コードでEjsの学習をしました。" />
+  <link rel="stylesheet" href="./public/build/style.css">
+  <!-- <link rel="stylesheet" href="./public/build/style.css"> -->
+  <title>code-webson</title>
+  <meta name="description" content="WEBSONのコーディング代行のアピール用ポートフォリオ" />
 </head>
 <body>
 
 <header class="l-header">
-  <a href="" class="l-header__logo">
-    <img src="./assets/img/logo.png" alt="">
-  </a>
-  <nav class="l-header__nav">
-			<a href="https://top">TOP</a>
-			<a href="https://course">コース一覧</a>
-			<a href="https://paidCourse">有料コンテンツ一覧</a>
-  </nav>
-  <div class="c-account">
-    <div class="c-account__icon">
-      <img src="./assets/img/user-icon.png" alt="">
-    </div>
-    <div class="c-account__name">忍者CODE</div>
-  </div>
+	<nav class="p-g-nav js-g-nav">
+		<ul class="p-g-nav__inner">
+			<li class="p-g-nav__item">
+				<a href="#about" class="p-g-nav__link p-g-nav__link--about">
+					アバウト
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#works" class="p-g-nav__link p-g-nav__link--works">
+					実績
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#skills" class="p-g-nav__link p-g-nav__link--skills">
+					スキル
+				</a>
+			</li>
+			<li class="p-g-nav__item p-g-nav__item--icon">
+				<a href="/" class="p-g-nav__link--icon">
+					<img src="./assets/images/header/ico_webson.png" alt="">
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#services" class="p-g-nav__link p-g-nav__link--services">
+					サービス
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="#career" class="p-g-nav__link p-g-nav__link--career">
+					経歴
+				</a>
+			</li>
+			<li class="p-g-nav__item">
+				<a href="javascript:void(0)" class="p-g-nav__link p-g-nav__link--contact">
+				</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 
-
-<div class="keyVisual">
-  <img src="./assets/img/kv_ninjacode.svg" alt="" class="keyVisual__ninjacode">
-</div>
-
-<section class="p-product">
-  <article class="product product--wp product--new">
-    <div class="product__inner">
-      <div class="product__info">
-        <h3 class="product__title">甘えを吹き飛ばす!<br>WordPress開発</h3>
-        <a href="https://wp" class="c-primary-btn u-mt10">詳しくはコチラ</a>
-      </div>
-      <img src="./assets/img/product_cap_wp.png" alt="" class="product__cap">
-    </div>
-  </article>
-
-    <article class="product product--wp">
-    <div class="product__inner">
-      <div class="product__info">
-        <h3 class="product__title">JavaScriptの屋敷</h3>
-        <a href="https://yashiki" class="c-primary-btn u-mt10">詳しくはコチラ</a>
-      </div>
-      <img src="./assets/img/product_cap_yashiki.png" alt="" class="product__cap">
-    </div>
-  </article>
-
-    <article class="product product--wp">
-    <div class="product__inner">
-      <div class="product__info">
-        <h3 class="product__title">YOROIMOSYA<br>鎧模写</h3>
-        <a href="https://yoroi" class="c-primary-btn u-mt10">詳しくはコチラ</a>
-      </div>
-      <img src="./assets/img/product_cap_yoroi.png" alt="" class="product__cap">
-    </div>
-  </article>
-
-
-</section>
-
-<section class="l-section l-sectoin--course">
-  <h2 class="c-sectionTitle">
-    <div class="c-sectionTitle__icon c-sectionTitle__icon--course">
-      <img src="./assets/img/course-top-icon.svg" alt="">
-    </div>
-    コー
-  </h2>
-  <div class="p-course l-inner">
-    <div class="p-course__item p-course__item--new">
-    <h3 class="p-course__title">HTML, CSS</h3>
-      <div class="p-course__count">全91問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/HTML_CSS.svg" alt="">
-      </div>
-      <a href="https://htmlcss" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">JavaScript, jQuery</h3>
-      <div class="p-course__count">全51問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/JavaScript.svg" alt="">
-      </div>
-      <a href="https://javascript" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">Sass</h3>
-      <div class="p-course__count">全14問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/SASS.svg" alt="">
-      </div>
-      <a href="https://sass" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">PHP</h3>
-      <div class="p-course__count">全49問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/PHP.svg" alt="">
-      </div>
-      <a href="https://php" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">CSSAnimation</h3>
-      <div class="p-course__count">全30問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/CSSAnimation.svg" alt="">
-      </div>
-      <a href="https://cssanimation" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">Git</h3>
-      <div class="p-course__count">全20問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/GIT.svg" alt="">
-      </div>
-      <a href="https://git" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">Vue</h3>
-      <div class="p-course__count">全24問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/Vue.svg" alt="">
-      </div>
-      <a href="https://vue" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-      <div class="p-course__item p-course__item">
-    <h3 class="p-course__title">Ruby</h3>
-      <div class="p-course__count">全15問</div>
-      <div class="p-course__logo">
-        <img src="./assets/img/ruby.svg" alt="">
-      </div>
-      <a href="https://ruby" class="p-course__btn">問題に挑戦する</a>
-    </div>
-
-
-  </div>
-</section>
-
-<footer class="l-footer">
+<main class="main">
+  <div class="l-snap-container">
+    <div class="l-fv-1 l-snap-item">fv1</div>
+    <div class="l-fv-2 l-snap-item">fv2</div>
+    <div class="l-works l-snap-item">works</div>
+    <div class="l-services l-snap-item">services</div>
+    <div class="l-about l-snap-item">
+			<h1>about</h1>
+			<div class="l-contact">contact</div>
+		</div>
+    <footer class="l-footer">
   <div class="l-footer__logo">
     <img src="./assets/img/logo.png" alt="">
   </div>
@@ -171,3 +81,7 @@
 
 </html>
 
+
+
+  </div>
+</main>
