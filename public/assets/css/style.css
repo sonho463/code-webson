@@ -455,7 +455,7 @@ html {
 body {
   color: rgb(27, 47, 96);
   font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Mincho ProN", Meiryo, sans-serif;
+  font-family: "Lato", "Noto Sans JP", Meiryo, sans-serif;
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
@@ -524,7 +524,7 @@ a:hover img {
   top: 0;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #f0f8ff;
+  background-color: #f8faf0;
 }
 @media screen and (max-width:480px) {
   .l-header {
@@ -535,7 +535,7 @@ a:hover img {
 .l-footer {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: calc(100vh - 100px);
   background-color: #b0c4de;
   padding: 20px 5%;
 }
@@ -578,14 +578,13 @@ a:hover img {
 }
 
 .l-snap-container {
-  height: 100vh;
-  scroll-snap-type: block mandatory;
-  scroll-snap-type: y proximity;
+  height: calc(100vh - 100px);
   scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
 
 .l-snap-item {
+  position: relative;
   scroll-snap-stop: always;
   scroll-snap-align: start;
   text-align: center;
@@ -594,35 +593,14 @@ a:hover img {
   width: 100%;
   padding-bottom: 10%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .l-snap-item.l-fv-1 {
-  background-color: #11ffff;
+  height: 200vh;
 }
-.l-snap-item.l-fv-2 {
-  background-color: #ffff00;
-}
-.l-snap-item.l-works {
-  background-color: #ff9900;
-}
-.l-snap-item.l-services {
-  background-color: #ff0000;
-}
-.l-snap-item.l-about {
-  background-color: #990000;
-}
-
-.l-about {
+.l-snap-item.l-contact {
   display: flex;
   flex-direction: column;
-}
-
-.l-contact {
-  width: 100%;
-  height: 20%;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
-  background-color: #99ff00;
 }
 
 .c-inner {
@@ -639,15 +617,10 @@ a:hover img {
 }
 
 .c-section {
-  background-color: pink;
-  padding-top: 90px;
-}
-.c-section:nth-of-type(odd) {
-  background-color: #f0f8ff;
+  background-color: #f8faf0;
 }
 .c-section__title {
   position: relative;
-  font-family: senobi-gothic, sans-serif;
   font-weight: 700;
   font-size: 4.8rem;
   text-align: center;
@@ -655,48 +628,6 @@ a:hover img {
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 100px;
-  padding-top: 150px;
-  margin-top: -100px;
-}
-@media screen and (max-width:480px) {
-  .c-section__title {
-    font-size: 2.8rem;
-  }
-}
-@media screen and (max-width:480px) {
-  .c-section__title {
-    margin-bottom: 38px;
-  }
-}
-.c-section__title::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url(../images/mv/yellow-circle.png);
-  background-size: cover;
-  width: 60px;
-  height: 60px;
-  transform: translate(-35%, -35%);
-}
-@media screen and (max-width:480px) {
-  .c-section__title::before {
-    width: 30px;
-    height: 30px;
-  }
-}
-.c-section__title::after {
-  content: "";
-  display: block;
-  height: 10px;
-  width: 60px;
-  margin: 36px auto 0;
-  background-color: #b0c4de;
-}
-@media screen and (max-width:480px) {
-  .c-section__title::after {
-    height: 5px;
-  }
 }
 .c-section__lead {
   width: 80%;
@@ -709,8 +640,16 @@ a:hover img {
   font-size: 2.4rem;
 }
 
+.c-arrow {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .p-g-nav {
-  background-color: #f0f8ff;
+  background-color: #f8faf0;
   margin-left: auto;
   height: 100%;
 }
@@ -796,6 +735,45 @@ a:hover img {
 }
 .p-g-nav__link--contact::before {
   background-image: url(../images/mv/face.png);
+}
+
+.p-fv {
+  display: flex;
+  position: relative;
+}
+.p-fv__left, .p-fv__right {
+  flex: 1;
+  padding: 30px 2%;
+}
+.p-fv__left {
+  font-size: 4rem;
+  height: calc(100vh - 100px);
+  position: sticky;
+  top: 0;
+}
+.p-fv__image {
+  display: block;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+}
+.p-fv__right {
+  font-size: 2.8rem;
+  scroll-snap-type: y mandatory;
+}
+.p-fv__msg {
+  height: calc(100vh - 100px);
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  padding: 30px 5%;
+}
+.p-fv__msg.--first {
+  position: relative;
+}
+
+.p-fv__left__heading {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

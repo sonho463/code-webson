@@ -17,12 +17,16 @@ html {
 body {
 	color: v.$main-primary;
 	font-size: 1.6rem;
-	font-family: "Helvetica Neue", Arial, "Hiragino Mincho ProN", Meiryo, sans-serif;
+	font-family: 'Lato', 'Noto Sans JP', Meiryo, sans-serif;
 	min-width: 350px;
 	width: 100%;
 	overflow-x: hidden;
 	text-align: justify;
 }
+
+// フォント設定
+// Lato: 400 700 900
+// Noto Sans JP: 400 500 700
 
 img,
 video,

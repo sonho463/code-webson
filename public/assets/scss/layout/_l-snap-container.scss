@@ -1,51 +1,49 @@
 @use "../foundation/variables" as v;
 
 .l-snap-container {
-	height: 100vh;
-  scroll-snap-type: block mandatory;
-  scroll-snap-type: y proximity;
+  height: calc(100vh - 100px);
   scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
 
 .l-snap-item {
-	scroll-snap-stop: always;
-	scroll-snap-align: start;
-	text-align: center;
-	font-size: 4rem;
+	position: relative;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  text-align: center;
+  font-size: 4rem;
   height: 100%;
   width: 100%;
-	padding-bottom: 10%;
-	display: flex;
-	align-items: flex-end;
+  padding-bottom: 10%;
+  display: flex;
+  align-items: flex-start;
   // margin-right: calc(50% - 50vw);
   // margin-left: calc(50% - 50vw);
   &.l-fv-1 {
-    background-color: #11ffff;
+    // background-color: #11ffff;
+    height: 200vh;
   }
-  &.l-fv-2 {
-    background-color: #ffff00;
-  }
-  &.l-works {
-    background-color: #ff9900;
-  }
-  &.l-services {
-    background-color: #ff0000;
-  }
-  &.l-about {
-    background-color: #990000;
+  // &.l-fv-2 {
+  //   background-color: #ffff00;
+  // }
+  // &.l-works {
+  //   background-color: #ff9900;
+  // }
+  // &.l-services {
+  //   background-color: #ff0000;
+  // }
+  // &.l-about {
+  //   background-color: #990000;
+  // }
+  &.l-contact {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.l-about{
-	display: flex;
-	flex-direction: column;
-}
-
-.l-contact {
-	width: 100%;
-	height: 20%;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
-  background-color: #99ff00;
-}
+// .l-contact {
+//   width: 100%;
+//   height: 20%;
+//   margin-right: calc(50% - 50vw);
+//   margin-left: calc(50% - 50vw);
+// }

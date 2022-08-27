@@ -1,0 +1,8 @@
+<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name <%= name %></p>
+	<p>この次がinclude 変数</p>
+	<%_ $sectionPath = `./_section/_${name}` _%>
+	<%= $sectionPath %>
+	<%- include($sectionPath)%>
+</div>

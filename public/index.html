@@ -6,34 +6,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./public/build/style.css">
   <!-- <link rel="stylesheet" href="./public/build/style.css"> -->
   <title>code-webson</title>
   <meta name="description" content="WEBSONのコーディング代行のアピール用ポートフォリオ" />
 </head>
+
 <body>
 
 <header class="l-header">
 	<nav class="p-g-nav js-g-nav">
 		<ul class="p-g-nav__inner">
 			<li class="p-g-nav__item">
-				<a href="#about" class="p-g-nav__link p-g-nav__link--about">
-					アバウト
-				</a>
-			</li>
-			<li class="p-g-nav__item">
 				<a href="#works" class="p-g-nav__link p-g-nav__link--works">
 					実績
-				</a>
-			</li>
-			<li class="p-g-nav__item">
-				<a href="#skills" class="p-g-nav__link p-g-nav__link--skills">
-					スキル
-				</a>
-			</li>
-			<li class="p-g-nav__item p-g-nav__item--icon">
-				<a href="/" class="p-g-nav__link--icon">
-					<img src="./assets/images/header/ico_webson.png" alt="">
 				</a>
 			</li>
 			<li class="p-g-nav__item">
@@ -41,13 +30,19 @@
 					サービス
 				</a>
 			</li>
+			<li class="p-g-nav__item p-g-nav__item--icon">
+				<a href="/" class="p-g-nav__link--icon">
+					<img src="./public/assets/img/ico_webson.png" alt="">
+				</a>
+			</li>
 			<li class="p-g-nav__item">
-				<a href="#career" class="p-g-nav__link p-g-nav__link--career">
-					経歴
+				<a href="#about" class="p-g-nav__link p-g-nav__link--about">
+					アバウト
 				</a>
 			</li>
 			<li class="p-g-nav__item">
 				<a href="javascript:void(0)" class="p-g-nav__link p-g-nav__link--contact">
+					contact
 				</a>
 			</li>
 		</ul>
@@ -57,15 +52,54 @@
 
 <main class="main">
   <div class="l-snap-container">
-    <div class="l-fv-1 l-snap-item">fv1</div>
-    <div class="l-fv-2 l-snap-item">fv2</div>
-    <div class="l-works l-snap-item">works</div>
-    <div class="l-services l-snap-item">services</div>
-    <div class="l-about l-snap-item">
-			<h1>about</h1>
-			<div class="l-contact">contact</div>
-		</div>
-    <footer class="l-footer">
+    <section id="fv" class="l-fv-1 l-snap-item c-section">
+      <div class="p-fv">
+        <div class="p-fv__left">
+	<h1 class="p-fv__left__heading">
+		そのコーディング業務<br>
+		WEBSON・そんほんすに<br>
+		おまかせください
+	</h1>
+	<img src="./public/assets/img/fv/code.png" class="p-fv__image" alt="">
+</div>
+
+        <div class="p-fv__right">
+          <div class="p-fv__msg --first">
+            <p class="p-fv__right___text">・サイトへのご訪問ありがとうございます。</p>
+            <p class="p-fv__right__text">・独学で学習をはじめて２年。コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</p>
+            <p class="p-fv__right__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</p>
+            <p class="p-fv__right__text">・まずは、お気軽にご連絡ください。</p>
+						<div class="c-arrow">
+							
+<a href="/#works" class="c-arrow__next">
+	<img src="./public/assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+</a>
+						</div>
+          </div>
+          <div class="p-fv__msg --first">
+            <h2 class="c-section__title">WEBSON・そんほんすのコーディング業務について</h2>
+            <p class="p-fv__right__text">・独学で学習をはじめて２年。コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</p>
+            <p class="p-fv__right__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</p>
+            <p class="p-fv__right__text">・まずは、お気軽にご連絡ください。</p>
+          </div>
+        </div>
+				<div class="c-arrow">
+					
+<a href="/#works" class="c-arrow__next">
+	<img src="./public/assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+</a>
+				</div>
+      </div>
+
+    </section>
+    <section id="works" class="c-section l-works l-snap-item">works</section>
+    <section id="services" class="c-section l-services l-snap-item">services</section>
+    <section id="about" class="c-section l-about l-snap-item">
+      <h1>about</h1>
+    </section>
+    <section id="contact" class="c-section l-contact l-snap-item">contact
+
+      <footer class="l-footer l-snap-item">
   <div class="l-footer__logo">
     <img src="./assets/img/logo.png" alt="">
   </div>
@@ -81,7 +115,69 @@
 
 </html>
 
+    </section>
 
 
   </div>
+
+		<p>fv</p>
+		<p>works</p>
+		<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name fv</p>
+	<p>この次がinclude 変数</p>
+	./_section/_fv
+	<h1>FV</h1>
+
+</div>
+
+		<p>したのコンテンツ</p>
+		<p>services</p>
+		<p>about</p>
+		<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name services</p>
+	<p>この次がinclude 変数</p>
+	./_section/_services
+	<h1>services</h1>
+
+</div>
+
+		<p>したのコンテンツ</p>
+		<p>about</p>
+		<p>contact</p>
+		<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name about</p>
+	<p>この次がinclude 変数</p>
+	./_section/_about
+	<h1>ABOUT パーシャル</h1>
+
+</div>
+
+		<p>したのコンテンツ</p>
+		<p>footer</p>
+		<p>footer</p>
+		<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name footer</p>
+	<p>この次がinclude 変数</p>
+	./_section/_footer
+	<h1>works</h1>
+
+</div>
+
+		<p>したのコンテンツ</p>
+		<p>works</p>
+		<p>services</p>
+		<div class="section_template">
+	<h1>Section-template</h1>
+	<p>これがわたってきたele.name works</p>
+	<p>この次がinclude 変数</p>
+	./_section/_works
+	<h1>works</h1>
+
+</div>
+
+		<p>したのコンテンツ</p>
 </main>

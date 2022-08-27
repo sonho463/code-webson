@@ -1,0 +1,43 @@
+@use "../foundation/variables" as v;
+
+// レイアウト関連
+.p-fv {
+  display: flex;
+  position: relative;
+  &__left,
+  &__right {
+    flex: 1;
+    padding: 30px 2%;
+  }
+  &__left {
+    font-size: 4rem;
+    height: calc(100vh - 100px);
+    position: sticky;
+    top: 0;
+  }
+	&__image{
+		display: block;
+		margin-top: 100px;
+		margin-right: auto;
+		margin-left: auto;
+		width: 30%;
+	}
+  &__right {
+    font-size: 2.8rem;
+    scroll-snap-type: y mandatory;
+  }
+  &__msg {
+    height: calc(100vh - 100px);
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+		padding: 30px 5%;
+		&.--first{
+			position: relative;
+		}
+  }
+}
+
+// フォント関連
+.p-fv__left__heading{
+	font-weight: 700;
+}

@@ -3,7 +3,7 @@
 .l-footer{
 	position: relative;
 	width: 100%;
-	height: 300px;
+	height: calc(100vh - 100px);
 	background-color: v.$shadow-cBlue;
 	padding: 20px 5%;
 }
