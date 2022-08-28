@@ -4,10 +4,20 @@
 .p-fv {
   display: flex;
   position: relative;
+	&__text{
+		font-size: 2.8rem;
+		line-height: 1.4;
+		& + p{
+			margin-top: 20px;
+		}
+	}
   &__left,
   &__right {
     flex: 1;
-    padding: 30px 2%;
+    padding: 30px 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
   }
   &__left {
     font-size: 4rem;
@@ -17,7 +27,7 @@
   }
 	&__image{
 		display: block;
-		margin-top: 100px;
+		margin-top: 50px;
 		margin-right: auto;
 		margin-left: auto;
 		width: 30%;
@@ -25,14 +35,26 @@
   &__right {
     font-size: 2.8rem;
     scroll-snap-type: y mandatory;
+		&__heading{
+			font-size: 3.2rem;
+			font-weight: 700;
+			& + p {
+				margin-top: 20px;
+			}
+		}
   }
   &__msg {
     height: calc(100vh - 100px);
+		text-align: justify;
     scroll-snap-stop: always;
     scroll-snap-align: start;
-		padding: 30px 5%;
+		// padding: 30px 5%;
 		&.--first{
 			position: relative;
+			padding-top: 15%;
+		}
+		&.--second{
+			padding-top: 15%;
 		}
   }
 }

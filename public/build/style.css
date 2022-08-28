@@ -450,7 +450,6 @@ template {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid pink;
 }
 
 html {
@@ -608,7 +607,7 @@ a:hover img {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.l-snap-item.l-fv-1 {
+.l-snap-item.l-fv {
   height: 200vh;
 }
 .l-snap-item.l-contact {
@@ -782,11 +781,28 @@ a:hover img {
   display: flex;
   position: relative;
 }
+.p-fv__text {
+  font-size: 2.8rem;
+  line-height: 1.4;
+}
+.p-fv__text + p {
+  margin-top: 20px;
+}
 .p-fv__left, .p-fv__right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 30px 2%;
+  padding: 30px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .p-fv__left {
   font-size: 4rem;
@@ -796,7 +812,7 @@ a:hover img {
 }
 .p-fv__image {
   display: block;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   width: 30%;
@@ -806,14 +822,25 @@ a:hover img {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
 }
+.p-fv__right__heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.p-fv__right__heading + p {
+  margin-top: 20px;
+}
 .p-fv__msg {
   height: calc(100vh - 100px);
+  text-align: justify;
   scroll-snap-stop: always;
   scroll-snap-align: start;
-  padding: 30px 5%;
 }
 .p-fv__msg.--first {
   position: relative;
+  padding-top: 15%;
+}
+.p-fv__msg.--second {
+  padding-top: 15%;
 }
 
 .p-fv__left__heading {

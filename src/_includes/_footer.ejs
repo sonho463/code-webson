@@ -1,22 +1,6 @@
-<footer class="l-footer l-snap-item">
-  <div class="l-footer__logo">
-    <img src="<%= path.img %>logo.png" alt="">
-  </div>
-	<%_
-	const footerType = {
-		"TOP": "https://top",
-		"鎧模写": "https://yoroimosha",
-		"JavaScriptの屋敷": "https://yashiki",
-		"WordPress開発": "https://wp",
-	}
-	_%>
-  <nav class="l-footer__nav">
-		<%_ Object.keys(footerType).forEach((key) => { _%>
-			<a href="<%= footerType[key] %>"><%= key %></a>
-    <%_ }); _%>
-  </nav>
-  <p class="l-footer__copy">コピーライト</p>
-</footer>
+
+<script src="./assets/scripts/main.js"></script>
+
 </body>
 
 </html>
