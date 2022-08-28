@@ -5,7 +5,7 @@
   display: flex;
   position: relative;
 	&__text{
-		font-size: 2.8rem;
+		font-size: 2.4rem;
 		line-height: 1.4;
 		& + p{
 			margin-top: 20px;
@@ -24,6 +24,9 @@
     height: calc(100vh - 100px);
     position: sticky;
     top: 0;
+		&__heading{
+			font-weight: 700;
+		}
   }
 	&__image{
 		display: block;
@@ -60,6 +63,3 @@
 }
 
 // フォント関連
-.p-fv__left__heading{
-	font-weight: 700;
-}
