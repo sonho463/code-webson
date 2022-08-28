@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "run-p watch:*",
     "watch:browser": "browser-sync start --server --files='./public' --index='./public/index.html'",
-    "watch:build": "watch 'npm run build' ./public/assets/scss/",
+    "watch:build": "watch 'npm run build' ./assets/scss/",
     "build": "npm run build:scss && npm run build:autoprefixer",
     "build:scss": "sass public/assets/scss/style.scss public/assets/css/style.css",
     "build:autoprefixer": "postcss --use autoprefixer --no-map public/assets/css/style.css -d public/build/",

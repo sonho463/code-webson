@@ -1,0 +1,20 @@
+<li class="p-works__item swiper-slide">
+  <article class="p-works__article">
+    <div class="p-works__article__inner">
+      <figure class="p-works__article__img">
+        <img src="./assets/img/works/<%= worksList[num].imgPath %>.png" alt="">
+      </figure>
+      <div class="p-works__article__info">
+        <h3 class="p-works__article__title">
+          <%- worksList[num].title %>
+        </h3>
+        <p class="p-works__article__responsible">
+          担当工程：<b><%- worksList[num].responsibleProcess %></b>
+        </p>
+        <p class="p-works__article__desc">
+          <%- worksList[num].description %>
+        </p>
+      </div>
+    </div>
+  </article>
+</li>
