@@ -51,15 +51,36 @@
 		text-align: justify;
     scroll-snap-stop: always;
     scroll-snap-align: start;
-		// padding: 30px 5%;
+		padding-top: 80px;
 		&.--first{
 			position: relative;
-			// padding-top: 15%;
-		}
-		&.--second{
-			// padding-top: 15%;
 		}
   }
 }
 
-// フォント関連
+a.p-fv__link{
+	display: block;
+	width: fit-content;
+	margin-top: 20px;
+	margin-left: auto;
+	padding: 10px 7%;
+	text-align: center;
+	font-size: 2rem;
+	border: solid 1px v.$main-primary;
+	border-radius: 100vh;
+	text-decoration: none;
+	&::after{
+		content:'→';
+		display: inline-block;
+		margin-left: 10px;
+	}
+	&:hover{
+		text-decoration: underline;
+		background-color: v.$main-primary;
+		color: white;
+		&::after{
+			transition: transform .3s;
+			transform: translateX(10px);
+		}
+	}
+}

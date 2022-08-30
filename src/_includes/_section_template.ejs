@@ -1,14 +1,13 @@
-<section id="<%= name %>" class="l-<%= name %> l-snap-item c-section">
-
-  <div class="p-<%= name %> c-inner">
-
-    <%_ $sectionPath = `./_section/_${name}` _%>
-
-    <%- include($sectionPath)%>
-
-
-    <div class="c-arrow">
-      <%- include('./_c-arrow__next', {$link:next}) -%>
+<%_ if(name==="fv"){ _%>
+<section id="<%= name %>" class="l-<%= name %> c-section">
+  <%_ } else { _%>
+  <section id="<%= name %>" class="l-<%= name %> l-snap-item c-section">
+    <%_ } _%>
+    <div class="p-<%= name %> c-inner">
+      <%_ $sectionPath = `./_section/_${name}` _%>
+      <%- include($sectionPath)%>
+      <div class="c-arrow">
+        <%- include('./_c-arrow__next', {$link:next}) -%>
+      </div>
     </div>
-  </div>
-</section>
+  </section>

@@ -10,18 +10,13 @@
 </div>
 <div class="p-services__contents c-inner">
   <ul class="p-services__list">
-    <li class="p-servies__item">
-      <div class="p-services__item__inner">
-        <h2 class="p-services__item__heading">
-          HTML/CSS/JavaScriptコーディング
-        </h2>
-        <figure class="p-services__item__icon">
-          アイコン
-        </figure>
-        <div class="c-more-info">
-          <a href="さらに詳しく" class="c-more-info__link">さらに詳しく</a>
-        </div>
-      </div>
-    </li>
+
+		<%_ for(let i=0; i<servicesList.length; i++){ _%>
+
+			<%- include('../../_partials/_serviceItem', {num:i})%>
+
+			<%_ } _%>
+
+
   </ul>
 </div>
