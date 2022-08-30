@@ -1,7 +1,7 @@
 @use "../foundation/variables" as v;
 
-.p-works__list{
-	padding-bottom: 15px;
+.p-works__list {
+  padding-bottom: 15px;
 }
 
 .p-works__item {
@@ -25,15 +25,58 @@
   }
   &__title {
     font-size: 3.2rem;
+		height: 52px;
+		overflow-y: hidden;
   }
   &__responsible {
     margin-top: 10px;
     font-size: 2.4rem;
     text-align: justify;
+		max-height: 76px;
+		overflow-y: hidden;
   }
   &__desc {
     margin-top: 10px;
     font-size: 2rem;
     text-align: justify;
+    height: 100px;
+    overflow-y: hidden;
   }
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 80px;
+  width: 160px;
+}
+.swiper-button-prev {
+  left: 80px;
+}
+.swiper-button-next {
+  right: 80px;
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: inherit;
+  margin: auto;
+  width: inherit;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../assets/img/works/slide-arrow.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../assets/img/works/slide-arrow.png);
+  transform: rotate(180deg);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
 }

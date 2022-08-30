@@ -19,6 +19,7 @@
 @use "./component/inner";
 @use "./component/section";
 @use "./component/c-arrow__next";
+@use "./component/c-more-info";
 
 // *--------------*
 // project
@@ -26,6 +27,7 @@
 @use "./project/g-nav";
 @use "./project/fv";
 @use "./project/works";
+@use "./project/services";
 
 // *--------------*
 // utility

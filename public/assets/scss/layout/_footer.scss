@@ -32,7 +32,6 @@
 	gap: 10px;
 	&__item{
 		font-size:3.2rem;
-		font-family: v.$title-font;
 	}
 	&__item + .l-footer__menu__item::before{
 		content:'|';
