@@ -582,7 +582,7 @@ a:hover img {
 }
 
 .c-arrow {
-  width: 100px;
+  width: 78px;
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -1007,6 +1007,13 @@ a.p-fv__link:hover::after {
 }
 .p-contact__form input, .p-contact__form textarea {
   border: 1px solid rgb(27, 47, 96);
+  padding: 0 10px;
+}
+.p-contact__form input {
+  padding: 0 10px;
+}
+.p-contact__form textarea {
+  padding: 10px;
 }
 
 .p-contact__user-info {
@@ -1014,11 +1021,25 @@ a.p-fv__link:hover::after {
   gap: 20px;
 }
 .p-contact__user-info label {
+  display: flex;
+}
+.p-contact__user-info label:first-of-type {
+  flex: 1;
+}
+.p-contact__user-info label:last-of-type {
+  flex: 2;
+}
+.p-contact__user-info input {
   display: block;
+  flex: 1;
+  margin-left: 5px;
 }
 
 .p-contact__inquiry-wrapper {
   margin-top: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .p-contact__inquiry-wrapper label, .p-contact__inquiry-wrapper textarea {
   display: block;

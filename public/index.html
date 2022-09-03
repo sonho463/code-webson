@@ -322,7 +322,7 @@
     大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
     大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
     人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
-  	２０２２年３月 退職予定。
+  	２０２３年３月 退職予定。
 
 		<div class="c-more-info">
       <a href="/" class="c-more-info__link">さらに詳しく</a>
@@ -353,16 +353,19 @@
     <div class="p-contact__user-info">
       <label class="p-contact__name" for="name">
         お名前
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" required
+				aria-required="true" >
       </label>
       <label class="p-contact__email" for="email">
         メールアドレス
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required
+				aria-required="true" >
       </label>
     </div>
     <div class="p-contact__inquiry-wrapper">
       <label class="p-contact__inquiry" for="inquiry">お問い合わせの内容</label>
-      <textarea name="inquiry" id="inquiry" cols="30" rows="6"></textarea>
+      <textarea name="inquiry" id="inquiry" cols="30" rows="5"required
+			aria-required="true"></textarea>
     </div>
 		<input class="p-contact__submit-button" type="button" value="送信する">
   </form>

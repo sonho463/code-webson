@@ -8,6 +8,13 @@
 	text-align: left;
 	input,textarea{
 		border: 1px solid v.$main-primary;
+		padding: 0 10px;
+	}
+	input{
+		padding: 0 10px;
+	}
+	textarea{
+		padding: 10px;
 	}
 }
 
@@ -15,12 +22,26 @@
 display: flex;
 gap: 20px;
 label{
+	display: flex;
+	&:first-of-type{
+		flex:1
+	}
+	&:last-of-type{
+		flex: 2;
+	}
+}
+input{
 	display: block;
+	flex:1;
+	margin-left: 5px;
 }
 }
 
 .p-contact__inquiry-wrapper{
 	margin-top: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 	label,textarea{
 		display: block;
 		width: 100%;
