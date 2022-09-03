@@ -6,6 +6,10 @@
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
+	transition: transform .5s;
+	&:hover{
+		transform: translateX(-50%) rotate(360deg);
+	}
 }
 
 .p-fv .c-arrow{

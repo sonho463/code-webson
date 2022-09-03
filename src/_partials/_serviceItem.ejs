@@ -1,7 +1,7 @@
-<li class="p-services__item">
+<li class="p-services__item js-services__item">
 	<div class="p-services__item__inner">
 		<h2 class="p-services__item__heading">
-			<%= servicesList[num].title %>
+			<%- servicesList[num].title %>
 		</h2>
 		<figure class="p-services__item__icon">
 			<img src="../assets/img/services/<%= servicesList[num].imgPath %>
@@ -12,7 +12,6 @@
 		</div>
 	</div>
 	<div class="p-services__item__desc">
-		<%= servicesList[num].desc %>
-
+		<%- servicesList[num].desc %>
 	</div>
 </li>

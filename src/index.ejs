@@ -3,9 +3,8 @@
 <%- include('./_includes/_header')%>
 
 
-
 <main class="main">
-  <div class="l-snap-container">
+	<div class="l-snap-container">
     <%_ section.forEach(function(ele) { _%>
     <%- include('./_includes/_section_template',{name:ele.name, next:ele.next})%>
     <%_ }) _%>

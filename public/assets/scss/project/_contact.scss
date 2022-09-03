@@ -1,0 +1,131 @@
+@use "../foundation/variables" as v;
+
+
+
+.p-contact__form{
+	margin-top: 30px;
+	font-size: 2.0rem;
+	text-align: left;
+	input,textarea{
+		border: 1px solid v.$main-primary;
+	}
+}
+
+.p-contact__user-info{
+display: flex;
+gap: 20px;
+label{
+	display: block;
+}
+}
+
+.p-contact__inquiry-wrapper{
+	margin-top: 30px;
+	label,textarea{
+		display: block;
+		width: 100%;
+	}
+}
+
+.p-contact__submit-button{
+	display: block;
+	margin: 30px auto 0;
+	width: 200px;height: 60px;
+	text-align: center;
+	&:hover{
+		color: v.$color-white;
+		background-color: v.$main-primary;
+	}
+
+}
+
+.p-contact .c-arrow{
+	display: none;
+}
+
+
+
+
+// フッター部分
+
+
+.l-footer {
+  position: relative;
+  position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+  height: 128px;
+  background-color: v.$shadow-cBlue;
+  padding: 20px 5%;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  @include v.mq(md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+  }
+}
+
+.l-footer__logo {
+  width: 18%;
+  @include v.mq(md) {
+    width: 40%;
+    max-width: 180px;
+  }
+}
+
+.l-footer__cv {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  width: 10%;
+  &:hover {
+    opacity: 0.7;
+  }
+  @include v.mq(md) {
+    position: static;
+    width: 20%;
+    max-width: 100px;
+  }
+}
+
+.l-footer__nav {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  @include v.mq(md) {
+    position: static;
+  }
+}
+
+.l-footer__menu {
+  display: flex;
+  gap: 10px;
+  &__item {
+    font-size: 2.4rem;
+    @include v.mq(lg) {
+      font-size: 2rem;
+    }
+    @include v.mq(sm) {
+      font-size: 1.4rem;
+    }
+  }
+  &__item + .l-footer__menu__item::before {
+    content: "|";
+    margin-right: 10px;
+  }
+}
+
+.l-footer__copyright {
+  position: absolute;
+	font-size: 1.4rem;
+  right: 5%;
+  bottom: 20px;
+  @include v.mq(md) {
+    position: static;
+  }
+}

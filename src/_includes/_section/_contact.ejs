@@ -1,6 +1,52 @@
-<h1>contact</h1>
+<div class="c-section__heading-block">
+  <h2 class="c-section__title">お問い合わせ</h2>
+  <div class="c-section__lead">
+    <p class="c-section__lead__text">どんなことでも結構ですので、まずは、こちらからご連絡をくださいませ！
+    </p>
+  </div>
+</div>
+<div class="p-contact__contents c-inner">
+  <form class="p-contact__form" action="#">
+    <div class="p-contact__user-info">
+      <label class="p-contact__name" for="name">
+        お名前
+        <input type="text" name="name" id="name">
+      </label>
+      <label class="p-contact__email" for="email">
+        メールアドレス
+        <input type="email" name="email" id="email">
+      </label>
+    </div>
+    <div class="p-contact__inquiry-wrapper">
+      <label class="p-contact__inquiry" for="inquiry">お問い合わせの内容</label>
+      <textarea name="inquiry" id="inquiry" cols="30" rows="6"></textarea>
+    </div>
+		<input class="p-contact__submit-button" type="button" value="送信する">
+  </form>
 
-<footer>
-	<h1>footer</h1>
-	<p>ここはフッター</p>
+
+</div>
+
+<footer class="l-footer js-footer">
+
+  <nav class="l-footer__nav">
+    <ul class="l-footer__menu">
+      <li class="l-footer__menu__item">
+        <Link to="#about">アバウト</Link>
+      </li>
+      <li class="l-footer__menu__item">
+        <Link to="#works">実績</Link>
+      </li>
+      <li class="l-footer__menu__item">
+        <Link to="#skills">スキル</Link>
+      </li>
+      <li class="l-footer__menu__item">
+        <Link to="#services">サービス</Link>
+      </li>
+      <li class="l-footer__menu__item">
+        <Link to="#career">経歴</Link>
+      </li>
+    </ul>
+  </nav>
+  <p class="l-footer__copyright">©2021 WEBSON そんほんす</p>
 </footer>

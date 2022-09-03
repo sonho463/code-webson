@@ -1,0 +1,11 @@
+.c-overlay{
+	position: absolute;
+	top: -15%;left: -15%;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba( 0,0,0,.3);
+	z-index: -1;
+	&.visible{
+		// z-index:3;
+	}
+}

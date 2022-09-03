@@ -10,7 +10,6 @@
 // layout
 // *--------------*
 @use "./layout/header";
-@use "./layout/footer";
 @use "./layout/l-snap-container";
 
 // *--------------*
@@ -20,6 +19,7 @@
 @use "./component/section";
 @use "./component/c-arrow__next";
 @use "./component/c-more-info";
+@use "./component/overlay";
 
 // *--------------*
 // project
@@ -28,6 +28,8 @@
 @use "./project/fv";
 @use "./project/works";
 @use "./project/services";
+@use "./project/about";
+@use "./project/contact";
 
 // *--------------*
 // utility
