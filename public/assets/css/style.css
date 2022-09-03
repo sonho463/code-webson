@@ -509,9 +509,14 @@ a:hover img {
   padding-bottom: 5px;
   background-color: #f8faf0;
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
   .l-header {
-    padding: 0;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    padding: 0 5%;
   }
 }
 
@@ -519,6 +524,11 @@ a:hover img {
   height: calc(100vh - 100px);
   scroll-snap-type: y mandatory;
   overflow-y: auto;
+}
+@media screen and (max-width:480px) {
+  .l-snap-container {
+    scroll-snap-type: none;
+  }
 }
 
 .l-snap-item {

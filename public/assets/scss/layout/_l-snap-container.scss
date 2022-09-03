@@ -4,6 +4,9 @@
   height: calc(100vh - 100px);
   scroll-snap-type: y mandatory;
   overflow-y: auto;
+	@include v.mq(sm){
+		scroll-snap-type: none;
+	}
 }
 
 .l-snap-item {
@@ -17,33 +20,12 @@
   padding-bottom: 10%;
   display: flex;
   align-items: flex-start;
-  // margin-right: calc(50% - 50vw);
-  // margin-left: calc(50% - 50vw);
   &.l-fv {
-    // background-color: #11ffff;
     height: 200vh;
   }
-  // &.l-fv-2 {
-  //   background-color: #ffff00;
-  // }
-  // &.l-works {
-  //   background-color: #ff9900;
-  // }
-  // &.l-services {
-  //   background-color: #ff0000;
-  // }
-  // &.l-about {
-  //   background-color: #990000;
-  // }
   &.l-contact {
     display: flex;
     flex-direction: column;
   }
 }
 
-// .l-contact {
-//   width: 100%;
-//   height: 20%;
-//   margin-right: calc(50% - 50vw);
-//   margin-left: calc(50% - 50vw);
-// }
