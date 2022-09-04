@@ -1,10 +1,10 @@
 @use "../foundation/variables" as v;
 
 .p-contact__contents{
-	width: 72%;
+	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-bottom: 200px;
+	// padding-bottom: 200px;
 }
 
 .p-contact__form{
@@ -23,9 +23,15 @@
 	}
 }
 
+.p-contact__form__input-area{
+	display: flex;
+	gap: 30px;
+}
+
 .p-contact__user-info{
-display: flex;
-gap: 20px;
+	width: 30%;
+// display: flex;
+// gap: 20px;
 @include v.mq(sm){
 	flex-direction: column;
 }
@@ -49,8 +55,7 @@ input{
 }
 
 .p-contact__inquiry-wrapper{
-	margin-top: 15px;
-	// width: 80%;
+	flex:1;
 	margin-left: auto;
 	margin-right: auto;
 	@include v.mq(sm){
@@ -88,6 +93,7 @@ input{
   position: relative;
   position: absolute;
 	width: 100%;
+	margin-top: 36px;
 	left: 0;
 	bottom: 0;
   height: 100px;
@@ -100,33 +106,10 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-		margin-bottom: 80px;
+		margin-bottom: 40px;
   }
 }
 
-.l-footer__logo {
-  width: 18%;
-  @include v.mq(md) {
-    width: 40%;
-    max-width: 180px;
-  }
-}
-
-.l-footer__cv {
-  display: inline-block;
-  position: absolute;
-  top: 20px;
-  right: 5%;
-  width: 10%;
-  &:hover {
-    opacity: 0.7;
-  }
-  @include v.mq(md) {
-    position: static;
-    width: 20%;
-    max-width: 100px;
-  }
-}
 
 .l-footer__nav {
   position: absolute;

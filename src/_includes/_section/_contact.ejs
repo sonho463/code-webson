@@ -7,23 +7,26 @@
 </div>
 <div class="p-contact__contents c-inner">
   <form class="p-contact__form" action="#">
-    <div class="p-contact__user-info">
-      <label class="p-contact__name" for="name">
-        お名前
-        <input type="text" name="name" id="name" required
-				aria-required="true" >
-      </label>
-      <label class="p-contact__email" for="email">
-        メールアドレス
-        <input type="email" name="email" id="email" required
-				aria-required="true" >
-      </label>
-    </div>
-    <div class="p-contact__inquiry-wrapper">
-      <label class="p-contact__inquiry" for="inquiry">お問い合わせの内容</label>
-      <textarea name="inquiry" id="inquiry" cols="30" rows="5"required
-			aria-required="true"></textarea>
-    </div>
+		<div class="p-contact__form__input-area">
+
+			<div class="p-contact__user-info">
+				<label class="p-contact__name" for="name">
+					お名前
+					<input type="text" name="name" id="name" required
+					aria-required="true" >
+				</label>
+				<label class="p-contact__email" for="email">
+					メールアドレス
+					<input type="email" name="email" id="email" required
+					aria-required="true" >
+				</label>
+			</div>
+			<div class="p-contact__inquiry-wrapper">
+				<label class="p-contact__inquiry" for="inquiry">お問い合わせの内容</label>
+				<textarea name="inquiry" id="inquiry" cols="30" rows="5"required
+				aria-required="true"></textarea>
+			</div>
+		</div>
 		<input class="p-contact__submit-button" type="button" value="送信する">
   </form>
 

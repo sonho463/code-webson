@@ -787,6 +787,7 @@ a:hover img {
 .p-fv__text {
   font-size: 2.4rem;
   line-height: 1.4;
+  text-indent: -1em;
 }
 @media screen and (max-width:480px) {
   .p-fv__text {
@@ -1122,6 +1123,9 @@ a.p-fv__link:hover::after {
 }
 .p-services__item__desc li {
   list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -20px;
+  padding-left: 20px;
 }
 .p-services__item__desc li + li {
   margin-top: 10px;
@@ -1186,10 +1190,9 @@ a.p-fv__link:hover::after {
 }
 
 .p-contact__contents {
-  width: 72%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 200px;
 }
 
 .p-contact__form {
@@ -1208,9 +1211,13 @@ a.p-fv__link:hover::after {
   padding: 10px;
 }
 
-.p-contact__user-info {
+.p-contact__form__input-area {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+}
+
+.p-contact__user-info {
+  width: 30%;
 }
 @media screen and (max-width:480px) {
   .p-contact__user-info {
@@ -1235,7 +1242,7 @@ a.p-fv__link:hover::after {
 }
 
 .p-contact__inquiry-wrapper {
-  margin-top: 15px;
+  flex: 1;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1269,6 +1276,7 @@ a.p-fv__link:hover::after {
   position: relative;
   position: absolute;
   width: 100%;
+  margin-top: 36px;
   left: 0;
   bottom: 0;
   height: 100px;
@@ -1283,35 +1291,7 @@ a.p-fv__link:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 80px;
-  }
-}
-
-.l-footer__logo {
-  width: 18%;
-}
-@media screen and (max-width:768px) {
-  .l-footer__logo {
-    width: 40%;
-    max-width: 180px;
-  }
-}
-
-.l-footer__cv {
-  display: inline-block;
-  position: absolute;
-  top: 20px;
-  right: 5%;
-  width: 10%;
-}
-.l-footer__cv:hover {
-  opacity: 0.7;
-}
-@media screen and (max-width:768px) {
-  .l-footer__cv {
-    position: static;
-    width: 20%;
-    max-width: 100px;
+    margin-bottom: 40px;
   }
 }
 
