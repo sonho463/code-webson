@@ -894,20 +894,49 @@ a.p-fv__link:hover::after {
   padding: 20px 5% 20px 3%;
   box-shadow: 0px 0px 15px -5px #777777;
 }
+@media screen and (max-width:480px) {
+  .p-works__item {
+    height: auto;
+  }
+}
 
 .p-works__article__inner {
   display: flex;
 }
+@media screen and (max-width:480px) {
+  .p-works__article__inner {
+    flex-direction: column;
+  }
+}
 .p-works__article__img {
   width: 45%;
 }
+@media screen and (max-width:480px) {
+  .p-works__article__img {
+    width: 100%;
+  }
+}
 .p-works__article__info {
   width: 55%;
+}
+@media screen and (max-width:480px) {
+  .p-works__article__info {
+    width: 100%;
+  }
 }
 .p-works__article__title {
   font-size: 3.2rem;
   height: 52px;
   overflow-y: hidden;
+}
+@media screen and (max-width:480px) {
+  .p-works__article__title {
+    font-size: 2rem;
+    line-height: 1.4;
+    height: auto;
+    max-height: 60px;
+    text-align: justify;
+  }
 }
 .p-works__article__responsible {
   margin-top: 10px;
@@ -916,12 +945,25 @@ a.p-fv__link:hover::after {
   max-height: 76px;
   overflow-y: hidden;
 }
+@media screen and (max-width:480px) {
+  .p-works__article__responsible {
+    font-size: 1.6rem;
+    height: auto;
+    max-height: 100px;
+  }
+}
 .p-works__article__desc {
   margin-top: 10px;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-align: justify;
   height: 100px;
   overflow-y: hidden;
+}
+@media screen and (max-width:480px) {
+  .p-works__article__desc {
+    font-size: 1.6rem;
+    height: auto;
+  }
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -929,6 +971,12 @@ a.p-fv__link:hover::after {
 .swiper-button-next {
   height: 80px;
   width: 160px;
+}
+@media screen and (max-width:480px) {
+  .swiper-button-prev,
+.swiper-button-next {
+    top: 5%;
+  }
 }
 
 .swiper-button-prev {
@@ -954,21 +1002,11 @@ a.p-fv__link:hover::after {
 .swiper-button-prev::after {
   background-image: url(../assets/img/works/slide-arrow.png);
 }
-@media screen and (max-width:480px) {
-  .swiper-button-prev::after {
-    transform: translate(-42%, 168px);
-  }
-}
 
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
   background-image: url(../assets/img/works/slide-arrow.png);
   transform: rotate(180deg);
-}
-@media screen and (max-width:480px) {
-  .swiper-button-next::after {
-    transform: translate(42%, 168px) rotate(180deg);
-  }
 }
 
 /* 画像サイズ調整 */
