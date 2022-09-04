@@ -543,6 +543,11 @@ a:hover img {
   display: flex;
   align-items: flex-start;
 }
+@media screen and (max-width:480px) {
+  .l-snap-item {
+    height: auto;
+  }
+}
 .l-snap-item.l-fv {
   height: 200vh;
 }
@@ -1022,6 +1027,11 @@ a.p-fv__link:hover::after {
 .p-services__contents {
   height: inherit;
 }
+@media screen and (max-width:480px) {
+  .p-services__contents {
+    height: 1200px;
+  }
+}
 
 .p-services__list {
   position: relative;
@@ -1031,6 +1041,11 @@ a.p-fv__link:hover::after {
   padding: 20px 3%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width:480px) {
+  .p-services__list {
+    flex-direction: column;
+  }
 }
 
 .p-services__item {
@@ -1046,6 +1061,16 @@ a.p-fv__link:hover::after {
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px #777777;
   cursor: pointer;
+}
+@media screen and (max-width:480px) {
+  .p-services__item {
+    width: 100%;
+  }
+}
+@media screen and (max-width:480px) {
+  .p-services__item + li {
+    margin-top: 30px;
+  }
 }
 .p-services__item.open {
   position: absolute;
