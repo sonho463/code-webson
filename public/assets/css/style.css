@@ -1120,6 +1120,14 @@ a.p-fv__link:hover::after {
   gap: 5%;
   height: 80%;
 }
+@media screen and (max-width:480px) {
+  .p-about__contents {
+    flex-direction: column;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 .p-about__profile {
   flex: 1;
@@ -1128,10 +1136,20 @@ a.p-fv__link:hover::after {
   text-align: center;
   font-size: 3.6rem;
 }
+@media screen and (max-width:480px) {
+  .p-about__profile__name {
+    font-size: 2rem;
+  }
+}
 .p-about__profile__desc {
   text-align: justify;
   font-size: 1.8rem;
   line-height: 1.8;
+}
+@media screen and (max-width:480px) {
+  .p-about__profile__desc {
+    font-size: 1.8rem;
+  }
 }
 
 .p-about__career {
@@ -1140,11 +1158,25 @@ a.p-fv__link:hover::after {
   font-size: 2.4rem;
   line-height: 1.8;
 }
+@media screen and (max-width:480px) {
+  .p-about__career {
+    font-size: 1.8rem;
+  }
+}
 
 .p-about__face {
   width: 200px;
   border-radius: 100vh;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-contact__contents {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 30px;
 }
 
 .p-contact__form {
@@ -1167,8 +1199,18 @@ a.p-fv__link:hover::after {
   display: flex;
   gap: 20px;
 }
+@media screen and (max-width:480px) {
+  .p-contact__user-info {
+    flex-direction: column;
+  }
+}
 .p-contact__user-info label {
   display: flex;
+}
+@media screen and (max-width:480px) {
+  .p-contact__user-info label {
+    flex-direction: column;
+  }
 }
 .p-contact__user-info label:first-of-type {
   flex: 1;
@@ -1187,6 +1229,11 @@ a.p-fv__link:hover::after {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width:480px) {
+  .p-contact__inquiry-wrapper {
+    width: 100%;
+  }
 }
 .p-contact__inquiry-wrapper label, .p-contact__inquiry-wrapper textarea {
   display: block;
@@ -1227,7 +1274,6 @@ a.p-fv__link:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 80px;
   }
 }
 

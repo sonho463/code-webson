@@ -5,6 +5,12 @@
 	display: flex;
 	gap:5%;
 	height: 80%;
+	@include v.mq(sm){
+		flex-direction: column;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 .p-about__profile{
@@ -12,11 +18,17 @@
 	&__name{
 		text-align: center;
 		font-size: 3.6rem;
+		@include v.mq(sm){
+			font-size: 2.0rem;
+		}
 	}
 	&__desc{
 		text-align: justify;
 		font-size: 1.8rem;
 		line-height: 1.8;
+		@include v.mq(sm){
+			font-size: 1.8rem;
+		}
 	}
 }
 .p-about__career{
@@ -24,10 +36,15 @@
 	text-align: justify;
 	font-size: 2.4rem;
 	line-height: 1.8;
+	@include v.mq(sm){
+		font-size: 1.8rem;
+	}
 }
 
 .p-about__face{
 	width: 200px;
 	border-radius: 100vh;
 	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
 }

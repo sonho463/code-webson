@@ -1,6 +1,11 @@
 @use "../foundation/variables" as v;
 
-
+.p-contact__contents{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 30px;
+}
 
 .p-contact__form{
 	margin-top: 30px;
@@ -21,8 +26,14 @@
 .p-contact__user-info{
 display: flex;
 gap: 20px;
+@include v.mq(sm){
+	flex-direction: column;
+}
 label{
 	display: flex;
+	@include v.mq(sm){
+		flex-direction: column;
+	}
 	&:first-of-type{
 		flex:1
 	}
@@ -42,6 +53,9 @@ input{
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	@include v.mq(sm){
+		width: 100%;
+	}
 	label,textarea{
 		display: block;
 		width: 100%;
@@ -86,7 +100,6 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 80px;
   }
 }
 
