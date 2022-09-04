@@ -6,22 +6,23 @@
 
 .p-services__contents {
   height: inherit;
-	@include v.mq(sm){
-		height: 1200px;
-	}
+  @include v.mq(sm) {
+    height: 900px;
+  }
 }
 
 .p-services__list {
-	position: relative;
+  position: relative;
   width: 100%;
   height: 80%;
   margin-top: 15px;
   padding: 20px 3%;
   display: flex;
   justify-content: space-between;
-	@include v.mq(sm){
-		flex-direction: column;
-	}
+  @include v.mq(sm) {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .p-services__item {
@@ -36,33 +37,37 @@
   gap: 30px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px #777777;
-	cursor: pointer;
-	@include v.mq(sm){
-		width: 100%;
-	}
-	&+li{
-		@include v.mq(sm){
-			margin-top: 30px;
-		}
-	}
-	&.open {
-		position: absolute;
-		height: 84%;
-		width: 100%;
-		&::after{
-			content:'カードクリックで閉じることができます。';
-			position: absolute;
-			display: inline-block;
-			bottom: 0;right: 0;
-		}
-		.p-services__item__inner {
-			width: 25%;
-			min-width: unset;
-		}
-	}
+  cursor: pointer;
+  @include v.mq(sm) {
+    width: 54%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  & + li {
+    @include v.mq(sm) {
+      margin-top: 30px;
+    }
+  }
+  &.open {
+    position: absolute;
+    height: 84%;
+    width: 100%;
+    &::after {
+      content: "カードクリックで閉じることができます。";
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      right: 0;
+    }
+    .p-services__item__heading-block {
+      width: 30%;
+      min-width: unset;
+      min-width: 300px;
+    }
+  }
 }
 
-.p-services__item__inner {
+.p-services__item__heading-block {
   width: 100%;
   min-width: 100%;
   height: inherit;
@@ -85,6 +90,15 @@
 
 .p-services__item__desc {
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.4;
   text-align: justify;
+  padding-right: 3%;
+  ul {
+  }
+  li {
+    list-style-type: disc;
+		+ li{
+			margin-top: 10px;
+		}
+  }
 }

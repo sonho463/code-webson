@@ -6,6 +6,8 @@
   overflow-y: auto;
 	@include v.mq(sm){
 		scroll-snap-type: none;
+		overflow-y: unset;
+		padding-bottom: 80px;
 	}
 }
 
