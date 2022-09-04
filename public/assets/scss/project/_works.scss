@@ -65,15 +65,22 @@
   height: inherit;
   margin: auto;
   width: inherit;
+
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev::after {
   background-image: url(../assets/img/works/slide-arrow.png);
+	@include v.mq(sm){
+		transform: translate(-42%, 168px);
+	}
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
-  background-image: url(../assets/img/works/slide-arrow.png);
+	background-image: url(../assets/img/works/slide-arrow.png);
   transform: rotate(180deg);
+	@include v.mq(sm){
+		transform: translate(42%, 168px) rotate(180deg);
+	}
 }
 /* 画像サイズ調整 */
 .swiper-slide img {

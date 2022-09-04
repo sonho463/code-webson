@@ -1031,12 +1031,24 @@ a.p-fv__link:hover::after {
 .swiper-button-prev::after {
   background-image: url(../assets/img/works/slide-arrow.png);
 }
+@media screen and (max-width:480px) {
+  .swiper-button-prev::after {
+    -webkit-transform: translate(-42%, 168px);
+            transform: translate(-42%, 168px);
+  }
+}
 
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
   background-image: url(../assets/img/works/slide-arrow.png);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media screen and (max-width:480px) {
+  .swiper-button-next::after {
+    -webkit-transform: translate(42%, 168px) rotate(180deg);
+            transform: translate(42%, 168px) rotate(180deg);
+  }
 }
 
 /* 画像サイズ調整 */

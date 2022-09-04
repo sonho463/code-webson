@@ -6,6 +6,7 @@
   position: relative;
 	@include v.mq(sm){
 		flex-direction: column;
+		// background-color: pink;
 	}
 	&__text{
 		font-size: 2.4rem;
