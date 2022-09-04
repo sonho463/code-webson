@@ -571,6 +571,14 @@ a:hover img {
   gap: 5%;
   padding-top: 50px;
 }
+@media screen and (max-width:480px) {
+  .c-section__heading-block {
+    flex-direction: column;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .c-section__title {
   position: relative;
   font-weight: 700;
@@ -579,16 +587,36 @@ a:hover img {
   color: rgb(27, 47, 96);
   width: fit-content;
 }
+@media screen and (max-width:480px) {
+  .c-section__title {
+    font-size: 3.2rem;
+  }
+}
 .c-section__lead {
   width: 80%;
   text-align: justify;
   flex: 1;
 }
+@media screen and (max-width:480px) {
+  .c-section__lead {
+    width: 100%;
+  }
+}
 .c-section__lead__text {
   font-size: 2.4rem;
 }
+@media screen and (max-width:480px) {
+  .c-section__lead__text {
+    font-size: 1.8rem;
+  }
+}
 .c-section__link {
   font-size: 2.4rem;
+}
+@media screen and (max-width:480px) {
+  .c-section__link {
+    font-size: 1.8rem;
+  }
 }
 
 .c-arrow {
@@ -601,6 +629,11 @@ a:hover img {
 }
 .c-arrow:hover {
   transform: translateX(-50%) rotate(360deg);
+}
+@media screen and (max-width:480px) {
+  .c-arrow {
+    display: none;
+  }
 }
 
 .p-fv .c-arrow {
@@ -739,9 +772,19 @@ a:hover img {
   display: flex;
   position: relative;
 }
+@media screen and (max-width:480px) {
+  .p-fv {
+    flex-direction: column;
+  }
+}
 .p-fv__text {
   font-size: 2.4rem;
   line-height: 1.4;
+}
+@media screen and (max-width:480px) {
+  .p-fv__text {
+    font-size: 1.8rem;
+  }
 }
 .p-fv__text + p {
   margin-top: 20px;
@@ -757,6 +800,13 @@ a:hover img {
   height: calc(100vh - 100px);
   position: sticky;
   top: 0;
+}
+@media screen and (max-width:480px) {
+  .p-fv__left {
+    position: static;
+    font-size: 2.4rem;
+    height: auto;
+  }
 }
 .p-fv__left__heading {
   font-weight: 700;
@@ -777,6 +827,11 @@ a:hover img {
   font-size: 3.2rem;
   font-weight: 700;
 }
+@media screen and (max-width:480px) {
+  .p-fv__right__heading {
+    font-size: 2.4rem;
+  }
+}
 .p-fv__right__heading + p {
   margin-top: 20px;
 }
@@ -786,6 +841,15 @@ a:hover img {
   scroll-snap-stop: always;
   scroll-snap-align: start;
   padding-top: 80px;
+}
+@media screen and (max-width:480px) {
+  .p-fv__msg {
+    height: auto;
+    padding-top: 0;
+  }
+  .p-fv__msg.--second {
+    margin-top: 50px;
+  }
 }
 .p-fv__msg.--first {
   position: relative;

@@ -1,17 +1,20 @@
 @use "../foundation/variables" as v;
 
-.c-arrow{
-	width: 78px;
-	position:absolute;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-50%);
-	transition: transform .5s;
-	&:hover{
-		transform: translateX(-50%) rotate(360deg);
-	}
+.c-arrow {
+  width: 78px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s;
+  &:hover {
+    transform: translateX(-50%) rotate(360deg);
+  }
+  @include v.mq(sm) {
+    display: none;
+  }
 }
 
-.p-fv .c-arrow{
-	bottom: 100px;
+.p-fv .c-arrow {
+  bottom: 100px;
 }

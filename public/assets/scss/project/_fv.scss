@@ -4,9 +4,15 @@
 .p-fv {
   display: flex;
   position: relative;
+	@include v.mq(sm){
+		flex-direction: column;
+	}
 	&__text{
 		font-size: 2.4rem;
 		line-height: 1.4;
+		@include v.mq(sm){
+			font-size: 1.8rem;
+		}
 		& + p{
 			margin-top: 20px;
 		}
@@ -24,6 +30,11 @@
     height: calc(100vh - 100px);
     position: sticky;
     top: 0;
+		@include v.mq(sm){
+			position:static;
+			font-size: 2.4rem;
+			height: auto;
+		}
 		&__heading{
 			font-weight: 700;
 			text-align: center;
@@ -42,6 +53,9 @@
 		&__heading{
 			font-size: 3.2rem;
 			font-weight: 700;
+			@include v.mq(sm){
+				font-size: 2.4rem;
+			}
 			& + p {
 				margin-top: 20px;
 			}
@@ -53,6 +67,13 @@
     scroll-snap-stop: always;
     scroll-snap-align: start;
 		padding-top: 80px;
+		@include v.mq(sm){
+			height: auto;
+			padding-top: 0;
+			&.--second{
+				margin-top: 50px;
+			}
+		}
 		&.--first{
 			position: relative;
 		}
