@@ -2,8 +2,11 @@
 
 .l-snap-container {
   height: calc(100vh - 100px);
+	scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-  overflow-y: auto;
+  overflow-y: scroll;
+	overflow-x: hidden;
+
 	@include v.mq(sm){
 		scroll-snap-type: none;
 		overflow-y: unset;

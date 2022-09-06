@@ -42,6 +42,10 @@
     width: 54%;
     margin-right: auto;
     margin-left: auto;
+		flex-direction: column;
+		&__desc{
+			display: none;
+		}
   }
   & + li {
     @include v.mq(sm) {
@@ -51,9 +55,17 @@
   &.open {
     position: absolute;
     height: 84%;
-    width: 100%;
+    width: 95%;
+		@include v.mq(lg){
+			height: 100%;
+			margin-top: 0;
+			.p-services__item__desc{
+				display: block;
+			}
+		}
     &::after {
       content: "カードクリックで閉じることができます。";
+			font-size: 2.4rem;
       position: absolute;
       display: inline-block;
       bottom: 0;
@@ -63,6 +75,10 @@
       width: 30%;
       min-width: unset;
       min-width: 300px;
+			@include v.mq(sm){
+				width: 100%;
+				height: 30%;
+			}
     }
   }
 }

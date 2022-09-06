@@ -14,7 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- swiper.js -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script><link rel="stylesheet" href="./public/build/style.css">
+	
+	<link rel="stylesheet" href="./public/build/style.css">
   <link rel="stylesheet" href="./build/style.css">
   <title>code-webson</title>
   <meta name="description" content="WEBSONのコーディング代行のアピール用ポートフォリオ" />
@@ -62,34 +63,40 @@
     <div class="p-fv c-inner">
       <div class="p-fv__left">
 	<h1 class="p-fv__left__heading">
-		そのコーディング業務<br>
-		WEBSON・そんほんすに<br>
-		おまかせください
+		<span></span><br>
+		<span></span><br>
+		<span></span><br>
+		<!-- WEBSON・そんほんすに<br>
+		おまかせください -->
 	</h1>
 	<img src="./assets/img/fv/code.png" class="p-fv__image" alt="">
 </div>
 
 
 <div class="p-fv__right">
-	<div class="p-fv__msg --first">
-		<p class="p-fv__text">・サイトへのご訪問ありがとうございます。</p>
-		<p class="p-fv__text">・コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</p>
-		<p class="p-fv__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</p>
-		<p class="p-fv__text">・まずは、ご連絡いただき、そんほんすのことを知っていただければうれしいです。</p>
-		<a class="p-fv__link" href="sbout">そんほんすについて</a>
-		<div class="c-arrow">
-			<a href="/#works" class="c-arrow__next">
+  <div class="p-fv__msg --first">
+    <ul>
+      <li class="p-fv__text">・サイトへのご訪問ありがとうございます。</li>
+      <li class="p-fv__text">・コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</li>
+      <li class="p-fv__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</li>
+      <li class="p-fv__text">・まずは、ご連絡いただき、そんほんすのことを知っていただければうれしいです。</li>
+    </ul>
+    <a class="p-fv__link" href="sbout">そんほんすについて</a>
+    <div class="c-arrow">
+      <a href="/#works" class="c-arrow__next">
   <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
 </a>
-		</div>
-	</div>
-	<div class="p-fv__msg --second">
-		<h2 class="p-fv__right__heading">WEBSON・そんほんすのコーディング業務について</h2>
-		<p class="p-fv__text">・サイトの成長のために、適切なタグ使用、構造、保守性の高いCSSを追求します。</p>
-		<p class="p-fv__text">・WordPressテーマカスタマイズ、オリジナルテーマ、GatsbyJSでのサイト構築に対応します。</p>
-		<p class="p-fv__text">・サーバー、Git、ワークフローの自動化など周辺技術も大事にして業務の効率化をはかります。</p>
-		<a class="p-fv__link" href="sbout">スキルについて</a>
-	</div>
+    </div>
+  </div>
+  <div class="p-fv__msg --second">
+    <h2 class="p-fv__right__heading">WEBSON・そんほんすのコーディング業務について</h2>
+    <ul>
+      <li class="p-fv__text">・サイトの成長のために、適切なタグ使用、構造、保守性の高いCSSを追求します。</li>
+      <li class="p-fv__text">・WordPressテーマカスタマイズ、オリジナルテーマ、GatsbyJSでのサイト構築に対応します。</li>
+      <li class="p-fv__text">・サーバー、Git、ワークフローの自動化など周辺技術も大事にして業務の効率化をはかります。</li>
+    </ul>
+    <a id="button" class="p-fv__link" href="sbout">スキルについて</a>
+  </div>
 </div>
 
       <div class="c-arrow">
@@ -229,10 +236,7 @@
       <div class="c-section__heading-block">
   <h2 class="c-section__title">サービス</h2>
   <div class="c-section__lead">
-    <p class="c-section__lead__text">コーディング実績の一部をご紹介します。コーディング以外の活動や実績の紹介もしています。
-      <a href="/" class="c-section__link" target="_blank" rel="noopener noreferrer">
-        さらに詳しく
-      </a>
+    <p class="c-section__lead__text">提供できるサービスです。各カードをクリックして、詳しい解説をご覧ください。
     </p>
   </div>
 </div>
@@ -473,9 +477,15 @@
   </div>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/TextPlugin.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./assets/scripts/gsap.js"></script>
 <script src="./assets/scripts/main.js"></script>
 
 </body>
 
 </html>
+
 

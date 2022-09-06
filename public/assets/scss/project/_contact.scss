@@ -1,101 +1,94 @@
 @use "../foundation/variables" as v;
 
-.p-contact__contents{
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
-	// padding-bottom: 200px;
+.p-contact__contents {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  // padding-bottom: 200px;
 }
 
-.p-contact__form{
-	margin-top: 30px;
-	font-size: 2.0rem;
-	text-align: left;
-	input,textarea{
-		border: 1px solid v.$main-primary;
-		padding: 0 10px;
-	}
-	input{
-		padding: 0 10px;
-	}
-	textarea{
-		padding: 10px;
-	}
+.p-contact__form {
+  margin-top: 30px;
+  font-size: 2rem;
+  text-align: left;
+  input,
+  textarea {
+		margin-top: 10px;
+    border: 1px solid v.$main-primary;
+    padding: 0 10px;
+  }
+  input {
+    padding: 0 10px;
+  }
+  textarea {
+    padding: 10px;
+  }
 }
 
-.p-contact__form__input-area{
-	display: flex;
-	gap: 30px;
+.p-contact__form__input-area {
+  display: flex;
+  gap: 30px;
 }
 
-.p-contact__user-info{
-	width: 30%;
-// display: flex;
-// gap: 20px;
-@include v.mq(sm){
-	flex-direction: column;
-}
-label{
-	// display: flex;
-	@include v.mq(sm){
-		flex-direction: column;
-	}
-	&:first-of-type{
-		flex:1
-	}
-	&:last-of-type{
-		flex: 2;
-	}
-}
-input{
-	display: block;
-	width: 100%;
-	margin-left: 5px;
-}
+.p-contact__user-info {
+  width: 30%;
+  // display: flex;
+  // gap: 20px;
+  @include v.mq(sm) {
+    flex-direction: column;
+  }
+  label {
+    display: block;
+    &:last-of-type {
+			margin-top: 20px;
+    }
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+  }
 }
 
-.p-contact__inquiry-wrapper{
-	flex:1;
-	margin-left: auto;
-	margin-right: auto;
-	@include v.mq(sm){
-		width: 100%;
-	}
-	label,textarea{
-		display: block;
-		width: 100%;
-	}
+.p-contact__inquiry-wrapper {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  @include v.mq(sm) {
+    width: 100%;
+  }
+  label,
+  textarea {
+    display: block;
+    width: 100%;
+  }
 }
 
-.p-contact__submit-button{
-	display: block;
-	margin: 30px auto 0;
-	width: 200px;height: 60px;
-	text-align: center;
-	&:hover{
-		color: v.$color-white;
-		background-color: v.$main-primary;
-	}
-
+input.p-contact__submit-button {
+  display: block;
+  margin: 30px auto 0;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  &:hover {
+    color: v.$color-white;
+    background-color: v.$main-primary;
+  }
 }
 
-.p-contact .c-arrow{
-	display: none;
+.p-contact .c-arrow {
+  display: none;
 }
-
-
-
 
 // フッター部分
-
 
 .l-footer {
   position: relative;
   position: absolute;
-	width: 100%;
-	margin-top: 36px;
-	left: 0;
-	bottom: 0;
+  width: 100%;
+  margin-top: 36px;
+  left: 0;
+  bottom: 0;
   height: 100px;
   background-color: v.$shadow-cBlue;
   padding: 20px 5%;
@@ -106,10 +99,9 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-		margin-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
-
 
 .l-footer__nav {
   position: absolute;
@@ -140,7 +132,7 @@ input{
 
 .l-footer__copyright {
   position: absolute;
-	font-size: 1.4rem;
+  font-size: 1.4rem;
   right: 5%;
   bottom: 20px;
   @include v.mq(md) {

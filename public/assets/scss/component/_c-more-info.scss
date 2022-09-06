@@ -1,7 +1,7 @@
 @use "../foundation/variables" as v;
-.c-more-info{
-	display: flex;
-	align-items: flex-end;
+.c-more-info {
+  display: flex;
+  align-items: flex-end;
 }
 
 .c-more-info::before {
@@ -11,23 +11,32 @@
   width: 20px;
   height: 20px;
   background-size: cover;
-	margin-right: 2px;
+  margin-right: 2px;
 }
 
-.c-more-info__link{
-	font-size: 1.6rem;
+.c-more-info__link {
+  font-size: 1.6rem;
 }
-
 
 // 場所ごとの配置
-.p-works__item .c-more-info{
-	position: absolute;
-	bottom: 45px;
-	right: 36px;
-	right: 7%;
+.p-works__item .c-more-info {
+  position: absolute;
+  bottom: 45px;
+  right: 36px;
+  right: 7%;
 }
 
-.p-services .c-more-info{
-	// margin-top: 40px;
-	justify-content: flex-end;
+.p-services .c-more-info {
+  // margin-top: 40px;
+  justify-content: flex-end;
+}
+
+.p-about {
+  .c-more-info::before {
+    width: 40px;
+    height: 40px;
+  }
+  .c-more-info__link {
+    font-size: 2.4rem;
+  }
 }

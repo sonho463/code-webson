@@ -522,8 +522,10 @@ a:hover img {
 
 .l-snap-container {
   height: calc(100vh - 100px);
+  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 @media screen and (max-width:480px) {
   .l-snap-container {
@@ -644,7 +646,11 @@ a:hover img {
 }
 
 .p-fv .c-arrow {
-  bottom: 100px;
+  bottom: 120px;
+}
+
+.p-fv__right .c-arrow {
+  bottom: 80px;
 }
 
 .c-more-info {
@@ -675,6 +681,14 @@ a:hover img {
 
 .p-services .c-more-info {
   justify-content: flex-end;
+}
+
+.p-about .c-more-info::before {
+  width: 40px;
+  height: 40px;
+}
+.p-about .c-more-info__link {
+  font-size: 2.4rem;
 }
 
 .c-overlay {
@@ -794,7 +808,7 @@ a:hover img {
     font-size: 1.8rem;
   }
 }
-.p-fv__text + p {
+.p-fv__text + li {
   margin-top: 20px;
 }
 .p-fv__left, .p-fv__right {
@@ -983,16 +997,27 @@ a.p-fv__link:hover::after {
 @media screen and (max-width:480px) {
   .swiper-button-prev,
 .swiper-button-next {
-    top: 5%;
+    top: 43%;
+    width: 80px;
   }
 }
 
 .swiper-button-prev {
   left: 80px;
 }
+@media screen and (max-width:480px) {
+  .swiper-button-prev {
+    left: 0;
+  }
+}
 
 .swiper-button-next {
   right: 80px;
+}
+@media screen and (max-width:480px) {
+  .swiper-button-next {
+    right: 0;
+  }
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -1071,6 +1096,10 @@ a.p-fv__link:hover::after {
     width: 54%;
     margin-right: auto;
     margin-left: auto;
+    flex-direction: column;
+  }
+  .p-services__item__desc {
+    display: none;
   }
 }
 @media screen and (max-width:480px) {
@@ -1081,10 +1110,20 @@ a.p-fv__link:hover::after {
 .p-services__item.open {
   position: absolute;
   height: 84%;
-  width: 100%;
+  width: 95%;
+}
+@media screen and (max-width:1024px) {
+  .p-services__item.open {
+    height: 100%;
+    margin-top: 0;
+  }
+  .p-services__item.open .p-services__item__desc {
+    display: block;
+  }
 }
 .p-services__item.open::after {
   content: "カードクリックで閉じることができます。";
+  font-size: 2.4rem;
   position: absolute;
   display: inline-block;
   bottom: 0;
@@ -1094,6 +1133,12 @@ a.p-fv__link:hover::after {
   width: 30%;
   min-width: unset;
   min-width: 300px;
+}
+@media screen and (max-width:480px) {
+  .p-services__item.open .p-services__item__heading-block {
+    width: 100%;
+    height: 30%;
+  }
 }
 
 .p-services__item__heading-block {
@@ -1200,7 +1245,9 @@ a.p-fv__link:hover::after {
   font-size: 2rem;
   text-align: left;
 }
-.p-contact__form input, .p-contact__form textarea {
+.p-contact__form input,
+.p-contact__form textarea {
+  margin-top: 10px;
   border: 1px solid rgb(27, 47, 96);
   padding: 0 10px;
 }
@@ -1224,16 +1271,11 @@ a.p-fv__link:hover::after {
     flex-direction: column;
   }
 }
-@media screen and (max-width:480px) {
-  .p-contact__user-info label {
-    flex-direction: column;
-  }
-}
-.p-contact__user-info label:first-of-type {
-  flex: 1;
+.p-contact__user-info label {
+  display: block;
 }
 .p-contact__user-info label:last-of-type {
-  flex: 2;
+  margin-top: 20px;
 }
 .p-contact__user-info input {
   display: block;
@@ -1251,19 +1293,20 @@ a.p-fv__link:hover::after {
     width: 100%;
   }
 }
-.p-contact__inquiry-wrapper label, .p-contact__inquiry-wrapper textarea {
+.p-contact__inquiry-wrapper label,
+.p-contact__inquiry-wrapper textarea {
   display: block;
   width: 100%;
 }
 
-.p-contact__submit-button {
+input.p-contact__submit-button {
   display: block;
   margin: 30px auto 0;
   width: 200px;
   height: 60px;
   text-align: center;
 }
-.p-contact__submit-button:hover {
+input.p-contact__submit-button:hover {
   color: #fff;
   background-color: rgb(27, 47, 96);
 }

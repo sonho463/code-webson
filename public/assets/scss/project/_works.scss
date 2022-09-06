@@ -78,14 +78,21 @@
   height: 80px;
   width: 160px;
 	@include v.mq(sm){
-		top: 5%;
+		top: 43%;
+		width: 80px;
 	}
 }
 .swiper-button-prev {
   left: 80px;
+	@include v.mq(sm){
+left: 0;
+	}
 }
 .swiper-button-next {
-  right: 80px;
+	right: 80px;
+	@include v.mq(sm){
+	right: 0;
+	}
 }
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev::after,

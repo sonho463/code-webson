@@ -15,7 +15,7 @@
 		@include v.mq(sm){
 			font-size: 1.8rem;
 		}
-		& + p{
+		& + li{
 			margin-top: 20px;
 		}
 	}
