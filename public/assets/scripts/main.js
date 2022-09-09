@@ -38,12 +38,31 @@ const swiper = new Swiper(".swiper", {
 const servicesItem = document.getElementsByClassName("js-services__item");
 console.log(servicesItem);
 for (let i = 0; i < servicesItem.length; i++) {
-  servicesItem[i].addEventListener("click", function () {
+	const button = servicesItem[i].querySelector('.js-services-button')
+	const buttonText = servicesItem[i].querySelector('.js-services-button__text')
+  button.addEventListener("click", function () {
     console.log(servicesItem[i].classList.contains("open"));
-    servicesItem[i].classList.contains("open")
-      ? servicesItem[i].classList.remove("open")
-      : servicesItem[i].classList.add("open");
 
+		if(servicesItem[i].classList.contains("open")){
+			servicesItem[i].classList.remove("open")
+			buttonText.textContent = '詳しく';
+
+		} else {
+			servicesItem[i].classList.add("open");
+			buttonText.textContent = '閉じる';
+		}
     servicesItem[i].scrollIntoView();
   });
 }
+// const servicesItem = document.getElementsByClassName("js-services__item");
+// console.log(servicesItem);
+// for (let i = 0; i < servicesItem.length; i++) {
+//   servicesItem[i].addEventListener("click", function () {
+//     console.log(servicesItem[i].classList.contains("open"));
+//     servicesItem[i].classList.contains("open")
+//       ? servicesItem[i].classList.remove("open")
+//       : servicesItem[i].classList.add("open");
+
+//     servicesItem[i].scrollIntoView();
+//   });
+// }

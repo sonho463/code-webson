@@ -5,15 +5,21 @@
   position: absolute;
   bottom: 50px;
   left: 50%;
+	text-align: center;
   transform: translateX(-50%);
   transition: transform 0.5s;
-  &:hover {
+	line-height: 0;
+  &__next__text{
+		font-size: 1.4rem;
+	}
+	&:hover {
     transform: translateX(-50%) rotate(360deg);
   }
   @include v.mq(sm) {
     display: none;
   }
 }
+
 
 .p-fv .c-arrow {
   bottom: 120px;

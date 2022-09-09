@@ -7,12 +7,16 @@
       <img src="../assets/img/services/<%= servicesList[num].imgPath %>
 			.png" alt="">
     </figure>
-    <div class="c-more-info">
-      <a href="さらに詳しく" class="c-more-info__link">さらに詳しく</a>
-    </div>
+
+
+    <button class="c-button js-services-button c-button-shadow">
+			<span class="c-button__text js-services-button__text">
+				詳しく
+			</span>
+		</button>
+
   </div>
   <div class="p-services__item__desc">
     <%- servicesList[num].desc %>
   </div>
 </li>
-

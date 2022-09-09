@@ -14,8 +14,10 @@
   input,
   textarea {
 		margin-top: 10px;
-    border: 1px solid v.$main-primary;
+    // outline: 1px solid v.$main-primary;
+		// outline-offset: 1px;
     padding: 0 10px;
+		background-color: v.$color-white;
   }
   input {
     padding: 0 10px;

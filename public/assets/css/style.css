@@ -460,6 +460,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   text-align: justify;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -633,8 +634,13 @@ a:hover img {
   position: absolute;
   bottom: 50px;
   left: 50%;
+  text-align: center;
   transform: translateX(-50%);
   transition: transform 0.5s;
+  line-height: 0;
+}
+.c-arrow__next__text {
+  font-size: 1.4rem;
 }
 .c-arrow:hover {
   transform: translateX(-50%) rotate(360deg);
@@ -700,6 +706,63 @@ a:hover img {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
+.c-button {
+  position: relative;
+  display: block;
+  width: fit-content;
+  font-size: 1.6rem;
+  color: rgb(27, 47, 96);
+  border-radius: 5px;
+  background-color: #b0c4de;
+  padding: 8px 30px;
+}
+.c-button-shadow::after {
+  content: "";
+  border: dotted 2px rgb(27, 47, 96);
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  left: -5px;
+}
+.c-button__text {
+  display: inline-block;
+  transform: translate(-5px, -5px);
+  transition: transform 0.5s;
+}
+
+.c-button-shadow:hover .c-button__text {
+  transform: translate(0, 0);
+}
+
+.c-button-shadow::after {
+  transition: top 0.5s, left 0.5s;
+}
+
+.c-button-shadow:hover::after {
+  border: solid 2px rgb(27, 47, 96);
+  top: 0;
+  left: 0;
+}
+
+.p-fv__right .c-button {
+  margin-top: 32px;
+  margin-left: auto;
+}
+
+.p-about .c-button {
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.p-contact .c-button {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+}
+
 .p-g-nav {
   background-color: #f8faf0;
   margin-left: auto;
@@ -1111,6 +1174,7 @@ a.p-fv__link:hover::after {
   position: absolute;
   height: 84%;
   width: 95%;
+  z-index: 10;
 }
 @media screen and (max-width:1024px) {
   .p-services__item.open {
@@ -1120,14 +1184,6 @@ a.p-fv__link:hover::after {
   .p-services__item.open .p-services__item__desc {
     display: block;
   }
-}
-.p-services__item.open::after {
-  content: "カードクリックで閉じることができます。";
-  font-size: 2.4rem;
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
 }
 .p-services__item.open .p-services__item__heading-block {
   width: 30%;
@@ -1174,6 +1230,44 @@ a.p-fv__link:hover::after {
 }
 .p-services__item__desc li + li {
   margin-top: 10px;
+}
+
+.p-services-button {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: rgb(27, 47, 96);
+  border-radius: 5px;
+  background-color: #b0c4de;
+  padding: 8px 30px;
+}
+.p-services-button-shadow::after {
+  content: "";
+  border: dotted 2px rgb(27, 47, 96);
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  left: -5px;
+}
+.p-services-button__text {
+  display: inline-block;
+  transform: translate(-5px, -5px);
+  transition: transform 0.5s;
+}
+
+.p-services-button-shadow:hover .p-services-button__text {
+  transform: translate(0, 0);
+}
+
+.p-services-button-shadow::after {
+  transition: top 0.5s, left 0.5s;
+}
+
+.p-services-button-shadow:hover::after {
+  top: 0;
+  left: 0;
 }
 
 .p-about__contents {
@@ -1248,8 +1342,8 @@ a.p-fv__link:hover::after {
 .p-contact__form input,
 .p-contact__form textarea {
   margin-top: 10px;
-  border: 1px solid rgb(27, 47, 96);
   padding: 0 10px;
+  background-color: #fff;
 }
 .p-contact__form input {
   padding: 0 10px;

@@ -42,10 +42,10 @@
     width: 54%;
     margin-right: auto;
     margin-left: auto;
-		flex-direction: column;
-		&__desc{
-			display: none;
-		}
+    flex-direction: column;
+    &__desc {
+      display: none;
+    }
   }
   & + li {
     @include v.mq(sm) {
@@ -56,29 +56,23 @@
     position: absolute;
     height: 84%;
     width: 95%;
-		@include v.mq(lg){
-			height: 100%;
-			margin-top: 0;
-			.p-services__item__desc{
-				display: block;
-			}
-		}
-    &::after {
-      content: "カードクリックで閉じることができます。";
-			font-size: 2.4rem;
-      position: absolute;
-      display: inline-block;
-      bottom: 0;
-      right: 0;
+		z-index: 10;
+    @include v.mq(lg) {
+      height: 100%;
+      margin-top: 0;
+      .p-services__item__desc {
+        display: block;
+      }
     }
+
     .p-services__item__heading-block {
       width: 30%;
       min-width: unset;
       min-width: 300px;
-			@include v.mq(sm){
-				width: 100%;
-				height: 30%;
-			}
+      @include v.mq(sm) {
+        width: 100%;
+        height: 30%;
+      }
     }
   }
 }
@@ -112,11 +106,52 @@
 
   li {
     list-style-type: disc;
-		list-style-position: inside;
-		text-indent: -20px;
-		padding-left: 20px;
-		+ li{
-			margin-top: 10px;
-		}
+    list-style-position: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+    + li {
+      margin-top: 10px;
+    }
   }
+}
+
+.p-services-button {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  // background-color: v.$shadow-cBlue;
+  color: v.$main-primary;
+  // width: 80px;height: 40px;
+  border-radius: 5px;
+  background-color: v.$shadow-cBlue;
+  padding: 8px 30px;
+  &-shadow::after {
+		content: "";
+    // display: block;
+    border: dotted 2px v.$main-primary;
+		border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: -5px;
+  }
+  &__text {
+    display: inline-block;
+    transform: translate(-5px, -5px);
+		transition: transform .5s;
+  }
+}
+
+.p-services-button-shadow:hover .p-services-button__text{
+	transform: translate(0,0);
+}
+
+.p-services-button-shadow::after {
+  transition: top 0.5s, left 0.5s;
+}
+
+.p-services-button-shadow:hover::after {
+  top: 0;
+  left: 0;
 }
