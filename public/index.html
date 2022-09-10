@@ -36,9 +36,9 @@
           サービス
         </a>
       </li>
-      <li class="p-g-nav__item p-g-nav__item--icon">
-        <a href="/" class="p-g-nav__link--icon">
-          <img src="./assets/img/ico_webson.png" alt="">
+      <li class="p-g-nav__item">
+        <a href="#fv" class="p-g-nav__link p-g-nav__link--icon">
+          WEBSON
         </a>
       </li>
       <li class="p-g-nav__item">
@@ -47,8 +47,8 @@
         </a>
       </li>
       <li class="p-g-nav__item">
-        <a href="javascript:void(0)" class="p-g-nav__link p-g-nav__link--contact">
-          contact
+        <a href="#contact" class="p-g-nav__link p-g-nav__link--icon --contact">
+          お問い合わせ
         </a>
       </li>
     </ul>
@@ -81,14 +81,13 @@
       <li class="p-fv__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</li>
       <li class="p-fv__text">・まずは、ご連絡いただき、そんほんすのことを知っていただければうれしいです。</li>
     </ul>
-    <a class="c-button c-button-shadow" href="/#about">
+    <a href="#about" class="c-button c-button-shadow js-c-button">
 			<span class="c-button__text">そんほんすについて&nbsp;→</span>
 		</a>
     <div class="c-arrow">
       <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#messageSecond" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#messageSecond" id="messageSecond" class="c-arrow__next">
 
 	</a>
     </div>
@@ -100,7 +99,7 @@
       <li class="p-fv__text">・WordPressテーマカスタマイズ、オリジナルテーマ、GatsbyJSでのサイト構築に対応します。</li>
       <li class="p-fv__text">・サーバー、Git、ワークフローの自動化など周辺技術も大事にして業務の効率化をはかります。</li>
     </ul>
-    <a id="button" class="c-button c-button-shadow" href="/#services">
+    <a href="#services" id="button" class="c-button c-button-shadow js-c-button">
 		<span class="c-button__text">
 			サービスについて&nbsp;→
 		</span>
@@ -111,8 +110,7 @@
       <div class="c-arrow">
         <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#works" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#works" id="works" class="c-arrow__next">
   <span class="c-arrow__next__text">実績</span>
 
 	</a>
@@ -239,8 +237,7 @@
       <div class="c-arrow">
         <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#services" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#services" id="services" class="c-arrow__next">
   <span class="c-arrow__next__text">サービス</span>
 
 	</a>
@@ -390,8 +387,7 @@
       <div class="c-arrow">
         <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#about" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#about" id="about" class="c-arrow__next">
   <span class="c-arrow__next__text">アバウト</span>
 
 	</a>
@@ -406,35 +402,84 @@
 </div>
 <div class="p-about__contents c-inner">
   <div class="p-about__profile">
-		<figure class="p-about__face">
-			<img src="./assets/img/about/face.jpg" alt="">
-		</figure>
-		<h3 class="p-about__profile__name">
-			そんほんす
-		</h3>
-		<p class="p-about__profile__desc">
-			48歳から本気出してプログラミング、WEB制作のことを勉強しはじめました。2021年8月1日ウェブ制作・開発フリーランスWEBSONを開業しました。
-		</p>
+    <figure class="p-about__face">
+      <img src="./assets/img/about/face.jpg" alt="">
+    </figure>
+    <h3 class="p-about__profile__name">
+      そんほんす
+    </h3>
+    <p class="p-about__profile__desc">
+      48歳から本気出してプログラミング、WEB制作のことを勉強しはじめました。2021年8月1日ウェブ制作・開発フリーランスWEBSONを開業しました。
+    </p>
   </div>
   <div class="p-about__career">
-		【経歴】<br>
+    【経歴】<br>
     大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
     大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
     人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
-  	２０２３年３月 退職予定。
+    ２０２３年３月 退職予定。
 
-      <a href="/" class="c-button c-button-shadow">
-				<span class="c-button__text">さらに詳しく</span>
-			</a>
+    <button onclick="openModal()" class="p-about__open c-button c-button-shadow">
+      <span class="c-button__text">さらに詳しく</span>
+    </button>
 
   </div>
+	<div class="p-about__modal">
+		
+<div class="p-modal__contents c-inner">
+	<button onclick="closeModal()" class="p-modal__close c-button c-button-shadow">
+		<span class="c-button__text">
+			閉じる
+		</span>
+	</button>
+  <div class="p-modal__profile">
+    <figure class="p-modal__face">
+      <img src="./assets/img/about/face.jpg" alt="">
+    </figure>
+    <h3 class="p-modal__profile__name">
+      そんほんす
+    </h3>
+    <p class="p-modal__profile__desc">
+      48歳から本気出してプログラミング、WEB制作のことを勉強しはじめました。2021年8月1日ウェブ制作・開発フリーランスWEBSONを開業しました。
+    </p>
+  </div>
+  <div class="p-modal__career">
+    【経歴】<br>
+    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
+    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
+    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
+    ２０２３年３月 退職予定。
+    【経歴】<br>
+    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
+    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
+    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
+    ２０２３年３月 退職予定。
+    【経歴】<br>
+    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
+    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
+    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
+    ２０２３年３月 退職予定。
+    【経歴】<br>
+    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
+    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
+    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
+    ２０２３年３月 退職予定。
+    【経歴】<br>
+    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
+    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
+    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
+    ２０２３年３月 退職予定。
+
+  </div>
+</div>
+
+	</div>
 </div>
 
       <div class="c-arrow">
         <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#contact" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#contact" id="contact" class="c-arrow__next">
   <span class="c-arrow__next__text">お問い合わせ</span>
 
 	</a>
@@ -510,8 +555,7 @@
       <div class="c-arrow">
         <!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
 
-<a href="/#footer" class="c-arrow__next">
-  <img src="./assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<a href="/#footer" id="footer" class="c-arrow__next">
   <span class="c-arrow__next__text">ー</span>
 
 	</a>

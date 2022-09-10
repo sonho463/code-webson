@@ -630,17 +630,30 @@ a:hover img {
 }
 
 .c-arrow {
-  width: 78px;
+  width: 84px;
+  height: 84px;
   position: absolute;
   bottom: 50px;
   left: 50%;
   text-align: center;
+  vertical-align: bottom;
   transform: translateX(-50%);
   transition: transform 0.5s;
   line-height: 0;
+  background-image: url("../assets/img/arrow_d.png");
+  background-size: 100%;
+}
+.c-arrow__next {
+  display: block;
+  width: inherit;
+  height: inherit;
 }
 .c-arrow__next__text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px;
 }
 .c-arrow:hover {
   transform: translateX(-50%) rotate(360deg);
@@ -818,6 +831,18 @@ a:hover img {
   justify-content: space-around;
   align-items: center;
 }
+.p-g-nav__link--about::before {
+  background-image: url(../assets/img/header/about.png);
+}
+.p-g-nav__link--works::before {
+  background-image: url(../assets/img/header/works.png);
+}
+.p-g-nav__link--services::before {
+  background-image: url(../assets/img/header/services.png);
+}
+.p-g-nav__link--contact::before {
+  background-image: url(../assets/img/to-contact.png);
+}
 .p-g-nav__link::before {
   content: "";
   display: block;
@@ -833,23 +858,22 @@ a:hover img {
     height: 40px;
   }
 }
-.p-g-nav__link--about::before {
-  background-image: url(../assets/img/header/about.png);
+.p-g-nav__link--icon {
+  background-image: url(../assets/img/arrow_webson.png);
+  background-size: 60%;
+  background-position: center 6px;
+  background-repeat: no-repeat;
+  background-color: rgb(27, 47, 96);
+  color: #fff;
+  border-radius: 100vh;
+  width: 90px;
+  height: 90px;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
 }
-.p-g-nav__link--works::before {
-  background-image: url(../assets/img/header/works.png);
-}
-.p-g-nav__link--skills::before {
-  background-image: url(../assets/img/header/skills.png);
-}
-.p-g-nav__link--services::before {
-  background-image: url(../assets/img/header/services.png);
-}
-.p-g-nav__link--career::before {
-  background-image: url(../assets/img/header/career.png);
-}
-.p-g-nav__link--contact::before {
-  background-image: url(../images/mv/face.png);
+.p-g-nav__link--icon.--contact {
+  background-color: #b0c4de;
+  color: rgb(27, 47, 96);
 }
 
 .p-fv {
@@ -1326,6 +1350,39 @@ a.p-fv__link:hover::after {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
+}
+
+.p-about__modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.p-about__modal.open {
+  display: block;
+}
+
+.p-modal__contents {
+  background-color: #fff;
+  padding: 100px 3%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 75vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  font-size: 2rem;
 }
 
 .p-contact__contents {

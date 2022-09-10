@@ -1,52 +1,90 @@
 @use "../foundation/variables" as v;
 
-.p-about__contents{
-	margin-top: 20px;
+
+.p-about__contents {
+  margin-top: 20px;
+  display: flex;
+  gap: 5%;
+  height: 80%;
+  @include v.mq(sm) {
+    flex-direction: column;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.p-about__profile {
+  flex: 1;
+  &__name {
+    text-align: center;
+    font-size: 3.6rem;
+    @include v.mq(sm) {
+      font-size: 2rem;
+    }
+  }
+  &__desc {
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    @include v.mq(sm) {
+      font-size: 1.8rem;
+    }
+  }
+}
+.p-about__career {
+  flex: 3;
+  text-align: justify;
+  font-size: 2.4rem;
+  line-height: 1.8;
+  @include v.mq(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.p-about__face {
+  width: 200px;
+  border-radius: 100vh;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-about__modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+	// overflow: scroll;
+  &.open {
+		display: block;
+  }
+}
+
+.p-modal__contents {
+	background-color: #fff;
+	padding: 100px 3%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	height: 75vh;
+	overflow-y: scroll;
 	display: flex;
-	gap:5%;
-	height: 80%;
-	@include v.mq(sm){
-		flex-direction: column;
-		width: 90%;
-		margin-right: auto;
-		margin-left: auto;
-	}
+	flex-direction: column;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // width: 90vh;
+	margin-right: auto;margin-left: auto;
+  // height: 90vh;
 }
 
-.p-about__profile{
-	flex:1;
-	&__name{
-		text-align: center;
-		font-size: 3.6rem;
-		@include v.mq(sm){
-			font-size: 2.0rem;
-		}
-	}
-	&__desc{
-		text-align: justify;
-		font-size: 1.8rem;
-		line-height: 1.8;
-		@include v.mq(sm){
-			font-size: 1.8rem;
-		}
-	}
-}
-.p-about__career{
-	flex:3;
-	text-align: justify;
-	font-size: 2.4rem;
-	line-height: 1.8;
-	@include v.mq(sm){
-		font-size: 1.8rem;
-	}
-}
-
-.p-about__face{
-	width: 200px;
-	border-radius: 100vh;
-	overflow: hidden;
-	margin-right: auto;
+.p-modal__close{
+	position: sticky;
+	;top: 0;
 	margin-left: auto;
+	font-size: 2rem;
 }
-
-
