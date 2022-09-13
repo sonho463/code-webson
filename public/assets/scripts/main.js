@@ -76,10 +76,12 @@ const setLinkInPage = (targetItemList) => {
 const navItems = document.querySelectorAll(".p-g-nav__item > a");
 const navNext = document.querySelectorAll('.c-arrow__next');
 const linkButton = document.querySelectorAll('.js-c-button');
+const footerLink = document.querySelectorAll('.js-footer__link');
+
 setLinkInPage(navItems);
 setLinkInPage(navNext);
 setLinkInPage(linkButton);
-
+setLinkInPage(footerLink);
 
 // アバウトページのモーダル開閉
 

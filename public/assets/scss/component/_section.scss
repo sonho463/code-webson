@@ -14,12 +14,13 @@
 		}
 	}
   &__title {
+    width: fit-content;
     position: relative;
     font-weight: 700;
     font-size: 5.2rem;
+		line-height: 1.3;
     text-align: left;
     color: v.$main-primary;
-    width: fit-content;
 		@include v.mq(sm){
 			font-size: 3.2rem;
 		}
