@@ -37,12 +37,6 @@
       letter-spacing: -0.1em;
     }
   }
-  &__item--icon {
-    width: 100px;
-    @include v.mq(md) {
-      width: 50px;
-    }
-  }
   &__link {
     display: flex;
     flex-direction: column;
@@ -90,6 +84,11 @@
       background-color: v.$shadow-cBlue;
       color: v.$main-primary;
     }
+		@include v.mq(sm){
+			width: 68px;
+			height: 68px;
+			padding-bottom: 0;
+		}
 
   }
 }

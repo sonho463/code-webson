@@ -541,7 +541,7 @@ a:hover img {
     -ms-scroll-snap-type: none;
         scroll-snap-type: none;
     overflow-y: unset;
-    padding-bottom: 80px;
+    height: calc(100vh - 80px);
   }
 }
 
@@ -577,6 +577,7 @@ a:hover img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 0;
 }
 
 .c-inner {
@@ -703,7 +704,7 @@ a:hover img {
 }
 
 .p-fv__right .c-arrow {
-  bottom: 80px;
+  bottom: 52px;
 }
 
 .c-more-info {
@@ -875,14 +876,6 @@ a:hover img {
     letter-spacing: -0.1em;
   }
 }
-.p-g-nav__item--icon {
-  width: 100px;
-}
-@media screen and (max-width:768px) {
-  .p-g-nav__item--icon {
-    width: 50px;
-  }
-}
 .p-g-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -940,6 +933,13 @@ a:hover img {
 .p-g-nav__link--icon.--contact {
   background-color: #b0c4de;
   color: rgb(27, 47, 96);
+}
+@media screen and (max-width:480px) {
+  .p-g-nav__link--icon {
+    width: 68px;
+    height: 68px;
+    padding-bottom: 0;
+  }
 }
 
 .p-fv {
@@ -1158,8 +1158,11 @@ a.p-fv__link:hover::after {
   margin-top: 10px;
   font-size: 1.4rem;
   text-align: justify;
-  height: 100px;
+  height: 94px;
   overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 @media screen and (max-width:480px) {
   .p-works__article__desc {
@@ -1358,6 +1361,11 @@ a.p-fv__link:hover::after {
   width: 94px;
   margin-top: -30px;
 }
+@media screen and (max-width:768px) {
+  .p-services__item__icon {
+    margin-top: 0;
+  }
+}
 
 .p-services__item__desc {
   font-size: 1.6rem;
@@ -1365,7 +1373,7 @@ a.p-fv__link:hover::after {
   text-align: justify;
   padding-right: 3%;
   position: absolute;
-  left: 360px;
+  left: 330px;
   width: 600px;
   visibility: hidden;
 }
@@ -1391,6 +1399,11 @@ a.p-fv__link:hover::after {
   border-radius: 5px;
   background-color: #b0c4de;
   padding: 8px 30px;
+}
+@media screen and (max-width:768px) {
+  .p-services-button {
+    margin-top: 20px;
+  }
 }
 .p-services-button-shadow::after {
   content: "";
@@ -1652,7 +1665,6 @@ input.p-contact__submit-button:hover {
 }
 
 .l-footer {
-  position: relative;
   position: absolute;
   width: 100%;
   margin-top: 36px;
@@ -1666,6 +1678,7 @@ input.p-contact__submit-button:hover {
 }
 @media screen and (max-width:768px) {
   .l-footer {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1678,7 +1691,6 @@ input.p-contact__submit-button:hover {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-bottom: 40px;
   }
 }
 
@@ -1727,4 +1739,11 @@ input.p-contact__submit-button:hover {
   .l-footer__copyright {
     position: static;
   }
+}
+
+.p-work-detail__eyecatch {
+  margin-top: -120px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }

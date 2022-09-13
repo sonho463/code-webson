@@ -85,7 +85,6 @@ input.p-contact__submit-button {
 // フッター部分
 
 .l-footer {
-  position: relative;
   position: absolute;
   width: 100%;
   margin-top: 36px;
@@ -97,11 +96,12 @@ input.p-contact__submit-button {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
   @include v.mq(md) {
+		position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
   }
 }
 

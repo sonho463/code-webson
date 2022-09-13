@@ -56,7 +56,7 @@
     position: absolute;
     height: 84%;
     width: 95%;
-		z-index: 10;
+    z-index: 10;
     @include v.mq(lg) {
       height: 100%;
       margin-top: 0;
@@ -88,13 +88,16 @@
 }
 .p-services__item__heading {
   font-size: 2.4rem;
-	min-height: 78px;
+  min-height: 78px;
 }
 
 .p-services__item__icon {
   width: 60%;
   width: 94px;
-	margin-top: -30px;
+  margin-top: -30px;
+  @include v.mq(md) {
+    margin-top: 0;
+  }
   // margin-top: 30px;
   // margin-right: auto;
   // margin-left: auto;
@@ -105,10 +108,10 @@
   line-height: 1.4;
   text-align: justify;
   padding-right: 3%;
-	position:absolute;
-	left: 360px;
-	width: 600px;
-	visibility: hidden;
+  position: absolute;
+  left: 330px;
+  width: 600px;
+  visibility: hidden;
   li {
     list-style-type: disc;
     list-style-position: inside;
@@ -120,10 +123,10 @@
   }
 }
 
-.p-services__item.open{
-	.p-services__item__desc{
-		visibility: visible;
-	}
+.p-services__item.open {
+  .p-services__item__desc {
+    visibility: visible;
+  }
 }
 
 .p-services-button {
@@ -136,11 +139,14 @@
   border-radius: 5px;
   background-color: v.$shadow-cBlue;
   padding: 8px 30px;
+  @include v.mq(md) {
+    margin-top: 20px;
+  }
   &-shadow::after {
-		content: "";
+    content: "";
     // display: block;
     border: dotted 2px v.$main-primary;
-		border-radius: 5px;
+    border-radius: 5px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -150,12 +156,12 @@
   &__text {
     display: inline-block;
     transform: translate(-5px, -5px);
-		transition: transform .5s;
+    transition: transform 0.5s;
   }
 }
 
-.p-services-button-shadow:hover .p-services-button__text{
-	transform: translate(0,0);
+.p-services-button-shadow:hover .p-services-button__text {
+  transform: translate(0, 0);
 }
 
 .p-services-button-shadow::after {
