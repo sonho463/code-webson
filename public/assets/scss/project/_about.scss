@@ -42,6 +42,24 @@
   }
 }
 
+.p-about__career{
+	&__web{
+		font-size: 2rem;
+		width: 100%;
+		td{
+			padding: 4px 2%;
+		}
+	}
+	&__date{
+		width: 20%;
+		// background-color: pink;
+	}
+	&__content{
+		width: 80%;
+		// background-color: yellow;
+	}
+}
+
 .p-about__face {
   width: 200px;
   border-radius: 100vh;
@@ -66,21 +84,36 @@
 
 .p-modal__contents {
 	background-color: #fff;
-	padding: 100px 3%;
+	padding: 60px 12%;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	height: 75vh;
 	overflow-y: scroll;
 	display: flex;
 	flex-direction: column;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // width: 90vh;
 	margin-right: auto;margin-left: auto;
-  // height: 90vh;
+	font-size: 2rem;
+	text-align: justify;
 }
+
+.p-modal__face{
+		width: 100px;
+	}
+
+.p-modal__profile__body{
+	h3{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 2.4rem;
+		font-weight: bold;
+	}
+	p{
+		margin-top: 5px;
+		margin-bottom: 5px;
+
+	}
+}
+
 
 .p-modal__close{
 	position: sticky;

@@ -34,9 +34,9 @@ tl.to("h1.p-fv__left__heading > span:nth-of-type(2)", {
 	duration: 1,
   text: "WEBSON・そんほんすに",
   ease: "none",
-},'3');
+},'2');
 tl.to("h1.p-fv__left__heading > span:last-of-type", {
   duration: 1,
   text: "おまかせください！",
   ease: "none",
-},'4');
+},'3');

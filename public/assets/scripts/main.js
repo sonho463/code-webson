@@ -35,6 +35,8 @@ const swiper = new Swiper(".swiper", {
 
 // サービスブロックのアイテムオープン
 
+const snapContainer = document.querySelector('.l-snap-container')
+
 const servicesItem = document.getElementsByClassName("js-services__item");
 console.log(servicesItem);
 for (let i = 0; i < servicesItem.length; i++) {
@@ -46,25 +48,15 @@ for (let i = 0; i < servicesItem.length; i++) {
     if (servicesItem[i].classList.contains("open")) {
       servicesItem[i].classList.remove("open");
       buttonText.textContent = "詳しく";
+			snapContainer.style.overflow="auto"
     } else {
       servicesItem[i].classList.add("open");
       buttonText.textContent = "閉じる";
+			snapContainer.style.overflow="hidden"
     }
     servicesItem[i].scrollIntoView();
   });
 }
-// const servicesItem = document.getElementsByClassName("js-services__item");
-// console.log(servicesItem);
-// for (let i = 0; i < servicesItem.length; i++) {
-//   servicesItem[i].addEventListener("click", function () {
-//     console.log(servicesItem[i].classList.contains("open"));
-//     servicesItem[i].classList.contains("open")
-//       ? servicesItem[i].classList.remove("open")
-//       : servicesItem[i].classList.add("open");
-
-//     servicesItem[i].scrollIntoView();
-//   });
-// }
 
 // ページ内リンクの設定
 
@@ -87,37 +79,7 @@ const linkButton = document.querySelectorAll('.js-c-button');
 setLinkInPage(navItems);
 setLinkInPage(navNext);
 setLinkInPage(linkButton);
-// navItems.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     console.log(event);
-//     event.preventDefault();
-//     const targetId = event.target.hash;
-//     const target = document.querySelector(targetId);
-// 		console.log(target)
-//     target.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
 
-// navNext.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     console.log(event);
-//     event.preventDefault();
-//     const targetId = event.target.hash;
-//     const target = document.querySelector(targetId);
-// 		console.log(target)
-//     target.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
-// linkButton.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     console.log(event);
-//     event.preventDefault();
-//     const targetId = event.target.hash;
-//     const target = document.querySelector(targetId);
-// 		console.log(target)
-//     target.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
 
 // アバウトページのモーダル開閉
 
@@ -129,8 +91,10 @@ const aboutArrowNext = document.querySelector('.p-about > .c-arrow')
 const closeModal = () => {
 	modal.classList.remove('open')
 	aboutArrowNext.style.display="block"
+	snapContainer.style.overflow="auto"
 }
 const  openModal = () => {
 	modal.classList.add('open')
 	aboutArrowNext.style.display="none"
+	snapContainer.style.overflow="hidden"
 }

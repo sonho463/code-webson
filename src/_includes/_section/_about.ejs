@@ -10,22 +10,53 @@
       そんほんす
     </h3>
     <p class="p-about__profile__desc">
-      48歳から本気出してプログラミング、WEB制作のことを勉強しはじめました。2021年8月1日ウェブ制作・開発フリーランスWEBSONを開業しました。
+      小学校教員20年以上。48歳から本格的にプログラミング、WEB制作のことを勉強しはじめました。2021年8月1日ウェブ制作・開発フリーランスWEBSONを開業しました。
     </p>
   </div>
   <div class="p-about__career">
-    【経歴】<br>
-    大学卒業後、在日外国人のアイデンティティ育成を目的にした子ども会でスタッフ<br>
-    大阪府公立小学校で講師→本採用　教職員組合で役員を経験<br>
-    人権教育、生活指導などのマネジメント、日本語指導担当し、市内の担当者ネットワーク運営などにとりくむ。<br>
-    ２０２３年３月 退職予定。
+    <table class="p-about__career__web">
+      <tr class="p-about__career__row">
+        <td class="p-about__career__date">
+          2020年1月
+        </td>
+        <td class="p-about__career__content">
+          とぎれとぎれだったプログラミング学習に復帰。
+        </td>
+      </tr>
+      <tr class="p-about__career__row">
+        <td class="p-about__career__date">
+          2020年3月〜
+        </td>
+        <td class="p-about__career__content">
+          Progate web開発パス、Railsチュートリアル完走、Isara模写完成
+        </td>
+      </tr>
+      <tr class="p-about__career__row">
+        <td class="p-about__career__date">
+          2021年2月〜
+        </td>
+        <td class="p-about__career__content">
+          Over40WebClub主催勉強会登壇（初学者が登壇することで学習内容をアウトプットする趣旨）
+        </td>
+      </tr>
+      <tr class="p-about__career__row">
+        <td class="p-about__career__date">
+          2021年2月〜
+        </td>
+        <td class="p-about__career__content">
+					教材紹介サイト（13ページ）HTML/CSS〜WordPress化案件、ウェブ制作事業LPコーディング案件納品
+        </td>
+      </tr>
+
+
+    </table>
 
     <button onclick="openModal()" class="p-about__open c-button c-button-shadow">
       <span class="c-button__text">さらに詳しく</span>
     </button>
 
   </div>
-	<div class="p-about__modal">
-		<%- include('../_modal') %>
-	</div>
+  <div class="p-about__modal">
+    <%- include('../_modal') %>
+  </div>
 </div>
