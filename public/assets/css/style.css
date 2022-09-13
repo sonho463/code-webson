@@ -1236,11 +1236,13 @@ a.p-fv__link:hover::after {
 
 .p-services__item__heading {
   font-size: 2.4rem;
+  min-height: 78px;
 }
 
 .p-services__item__icon {
   width: 60%;
   width: 94px;
+  margin-top: -30px;
 }
 
 .p-services__item__desc {
@@ -1248,6 +1250,10 @@ a.p-fv__link:hover::after {
   line-height: 1.4;
   text-align: justify;
   padding-right: 3%;
+  position: absolute;
+  left: 360px;
+  width: 600px;
+  visibility: hidden;
 }
 .p-services__item__desc li {
   list-style-type: disc;
@@ -1257,6 +1263,10 @@ a.p-fv__link:hover::after {
 }
 .p-services__item__desc li + li {
   margin-top: 10px;
+}
+
+.p-services__item.open .p-services__item__desc {
+  visibility: visible;
 }
 
 .p-services-button {
