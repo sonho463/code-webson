@@ -13,11 +13,11 @@
   text-align: left;
   input,
   textarea {
-		margin-top: 10px;
+    margin-top: 10px;
     // outline: 1px solid v.$main-primary;
-		// outline-offset: 1px;
+    // outline-offset: 1px;
     padding: 0 10px;
-		background-color: v.$color-white;
+    background-color: v.$color-white;
   }
   input {
     padding: 0 10px;
@@ -36,13 +36,13 @@
   width: 30%;
   // display: flex;
   // gap: 20px;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     flex-direction: column;
   }
   label {
     display: block;
     &:last-of-type {
-			margin-top: 20px;
+      margin-top: 20px;
     }
   }
   input {
@@ -56,7 +56,7 @@
   flex: 1;
   margin-left: auto;
   margin-right: auto;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     width: 100%;
   }
   label,
@@ -96,7 +96,7 @@ input.p-contact__submit-button {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
   @include v.mq(md) {
-		position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +122,7 @@ input.p-contact__submit-button {
     @include v.mq(lg) {
       font-size: 1.6rem;
     }
-    @include v.mq(sm) {
+    @include v.mq(lg) {
       font-size: 1.4rem;
     }
   }

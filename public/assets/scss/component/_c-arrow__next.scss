@@ -2,41 +2,41 @@
 
 .c-arrow {
   width: 84px;
-	height: 84px;
+  height: 84px;
   position: absolute;
   bottom: 50px;
   left: 50%;
-	text-align: center;
-	vertical-align: bottom;
+  text-align: center;
+  vertical-align: bottom;
   transform: translateX(-50%);
   transition: transform 0.5s;
-	line-height: 0;
-	background-image:url('../assets/img/arrow_d.png');
-	background-size: 100%;
-	&__next{
-		display: block;
-		width: inherit;height: inherit;
-	}
-  &__next__text{
-		font-size: 1.2rem;
-		position: absolute;
-		bottom: 0;
-		transform: translateX(-50%);
-		width: 100px;
-	}
-	&:hover {
+  line-height: 0;
+  background-image: url("../assets/img/arrow_d.png");
+  background-size: 100%;
+  &__next {
+    display: block;
+    width: inherit;
+    height: inherit;
+  }
+  &__next__text {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100px;
+  }
+  &:hover {
     transform: translateX(-50%) rotate(360deg);
   }
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     display: none;
   }
 }
-
 
 .p-fv .c-arrow {
   bottom: 120px;
 }
 
-.p-fv__right .c-arrow{
-	bottom: 52px;
+.p-fv__right .c-arrow {
+  bottom: 52px;
 }

@@ -1,12 +1,11 @@
 @use "../foundation/variables" as v;
 
-
 .p-about__contents {
   margin-top: 20px;
   display: flex;
   gap: 5%;
   height: 80%;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     flex-direction: column;
     width: 90%;
     margin-right: auto;
@@ -19,7 +18,7 @@
   &__name {
     text-align: center;
     font-size: 3.6rem;
-    @include v.mq(sm) {
+    @include v.mq(lg) {
       font-size: 2rem;
     }
   }
@@ -27,7 +26,7 @@
     text-align: justify;
     font-size: 1.8rem;
     line-height: 1.8;
-    @include v.mq(sm) {
+    @include v.mq(lg) {
       font-size: 1.8rem;
     }
   }
@@ -37,27 +36,27 @@
   text-align: justify;
   font-size: 2.4rem;
   line-height: 1.8;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     font-size: 1.8rem;
   }
 }
 
-.p-about__career{
-	&__web{
-		font-size: 2rem;
-		width: 100%;
-		td{
-			padding: 4px 2%;
-		}
-	}
-	&__date{
-		width: 20%;
-		// background-color: pink;
-	}
-	&__content{
-		width: 80%;
-		// background-color: yellow;
-	}
+.p-about__career {
+  &__web {
+    font-size: 2rem;
+    width: 100%;
+    td {
+      padding: 4px 2%;
+    }
+  }
+  &__date {
+    width: 20%;
+    // background-color: pink;
+  }
+  &__content {
+    width: 80%;
+    // background-color: yellow;
+  }
 }
 
 .p-about__face {
@@ -76,48 +75,47 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-	// overflow: scroll;
+  // overflow: scroll;
   &.open {
-		display: block;
+    display: block;
   }
 }
 
 .p-modal__contents {
-	background-color: #fff;
-	padding: 60px 12%;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	height: 75vh;
-	overflow-y: scroll;
-	display: flex;
-	flex-direction: column;
-	margin-right: auto;margin-left: auto;
-	font-size: 2rem;
-	text-align: justify;
+  background-color: #fff;
+  padding: 60px 12%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 75vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+  text-align: justify;
 }
 
-.p-modal__face{
-		width: 100px;
-	}
-
-.p-modal__profile__body{
-	h3{
-		margin-top: 10px;
-		margin-bottom: 10px;
-		font-size: 2.4rem;
-		font-weight: bold;
-	}
-	p{
-		margin-top: 5px;
-		margin-bottom: 5px;
-
-	}
+.p-modal__face {
+  width: 100px;
 }
 
+.p-modal__profile__body {
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 
-.p-modal__close{
-	position: sticky;
-	;top: 0;
-	margin-left: auto;
-	font-size: 2rem;
+.p-modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  font-size: 2rem;
 }

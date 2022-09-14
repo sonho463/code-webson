@@ -2,21 +2,21 @@
 
 .l-snap-container {
   height: calc(100vh - 100px);
-	scroll-snap-points-y: repeat(100vh);
+  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-	overflow-x: hidden;
+  overflow-x: hidden;
 
-	@include v.mq(sm){
-		scroll-snap-type: none;
-		overflow-y: unset;
-		height: calc(100vh - 80px);
-		// padding-bottom: 80px;
-	}
+  @include v.mq(lg) {
+    scroll-snap-type: none;
+    overflow-y: unset;
+    height: calc(100vh - 80px);
+    // padding-bottom: 80px;
+  }
 }
 
 .l-snap-item {
-	position: relative;
+  position: relative;
   scroll-snap-stop: always;
   scroll-snap-align: start;
   text-align: center;
@@ -26,16 +26,15 @@
   padding-bottom: 10%;
   display: flex;
   align-items: flex-start;
-	@include v.mq(sm){
-		height: auto;
-	}
+  @include v.mq(lg) {
+    height: auto;
+  }
   &.l-fv {
     height: 200vh;
   }
   &.l-contact {
     display: flex;
     flex-direction: column;
-		padding-bottom: 0;
+    padding-bottom: 0;
   }
-
 }

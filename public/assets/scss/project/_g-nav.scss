@@ -42,7 +42,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-		&--about::before {
+    &--about::before {
       background-image: url(../assets/img/header/about.png);
     }
     &--works::before {
@@ -84,11 +84,10 @@
       background-color: v.$shadow-cBlue;
       color: v.$main-primary;
     }
-		@include v.mq(sm){
-			width: 68px;
-			height: 68px;
-			padding-bottom: 0;
-		}
-
+    @include v.mq(lg) {
+      width: 68px;
+      height: 68px;
+      padding-bottom: 0;
+    }
   }
 }

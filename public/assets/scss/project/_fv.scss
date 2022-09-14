@@ -4,109 +4,109 @@
 .p-fv {
   display: flex;
   position: relative;
-	@include v.mq(sm){
-		flex-direction: column;
-		// background-color: pink;
-	}
-	&__text{
-		font-size: 2.4rem;
-		line-height: 1.4;
-		text-indent: -1em;
-		@include v.mq(sm){
-			font-size: 1.8rem;
-		}
-		& + li{
-			margin-top: 16px;
-		}
-	}
+  @include v.mq(lg) {
+    flex-direction: column;
+    // background-color: pink;
+  }
+  &__text {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    text-indent: -1em;
+    @include v.mq(lg) {
+      font-size: 1.8rem;
+    }
+    & + li {
+      margin-top: 16px;
+    }
+  }
   &__left,
   &__right {
     flex: 1;
     padding: 8% 5%;
-		display: flex;
-		flex-direction: column;
-		// justify-content: center;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
   }
   &__left {
     font-size: 4rem;
     height: calc(100vh - 100px);
     position: sticky;
     top: 0;
-		@include v.mq(sm){
-			position:static;
-			font-size: 2.4rem;
-			height: auto;
-		}
-		&__heading{
-			font-weight: 700;
-			text-align: center;
-		}
+    @include v.mq(lg) {
+      position: static;
+      font-size: 2.4rem;
+      height: auto;
+    }
+    &__heading {
+      font-weight: 700;
+      text-align: center;
+    }
   }
-	&__image{
-		display: block;
-		margin-top: 50px;
-		margin-right: auto;
-		margin-left: auto;
-		width: 30%;
-	}
+  &__image {
+    display: block;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+  }
   &__right {
     font-size: 2.8rem;
     scroll-snap-type: y mandatory;
-		&__heading{
-			font-size: 3.2rem;
-			font-weight: 700;
-			margin-bottom: 16px;
-			line-height: 1.4;
-			@include v.mq(sm){
-				font-size: 2.4rem;
-			}
-			& + p {
-				margin-top: 20px;
-			}
-		}
+    &__heading {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      @include v.mq(lg) {
+        font-size: 2.4rem;
+      }
+      & + p {
+        margin-top: 20px;
+      }
+    }
   }
   &__msg {
     height: calc(100vh - 100px);
-		text-align: justify;
+    text-align: justify;
     scroll-snap-stop: always;
     scroll-snap-align: start;
-		padding-top: 80px;
-		@include v.mq(sm){
-			height: auto;
-			padding-top: 0;
-			&.--second{
-				margin-top: 50px;
-			}
-		}
-		&.--first{
-			position: relative;
-		}
+    padding-top: 80px;
+    @include v.mq(lg) {
+      height: auto;
+      padding-top: 0;
+      &.--second {
+        margin-top: 50px;
+      }
+    }
+    &.--first {
+      position: relative;
+    }
   }
 }
 
-a.p-fv__link{
-	display: block;
-	width: fit-content;
-	margin-top: 20px;
-	margin-left: auto;
-	padding: 10px 7%;
-	text-align: center;
-	font-size: 2rem;
-	border: solid 1px v.$main-primary;
-	border-radius: 100vh;
-	text-decoration: none;
-	&::after{
-		content:'→';
-		display: inline-block;
-		margin-left: 10px;
-	}
-	&:hover{
-		text-decoration: underline;
-		background-color: v.$main-primary;
-		color: white;
-		&::after{
-			transition: transform .3s;
-			transform: translateX(10px);
-		}
-	}
+a.p-fv__link {
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 10px 7%;
+  text-align: center;
+  font-size: 2rem;
+  border: solid 1px v.$main-primary;
+  border-radius: 100vh;
+  text-decoration: none;
+  &::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &:hover {
+    text-decoration: underline;
+    background-color: v.$main-primary;
+    color: white;
+    &::after {
+      transition: transform 0.3s;
+      transform: translateX(10px);
+    }
+  }
 }

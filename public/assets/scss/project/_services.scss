@@ -6,8 +6,8 @@
 
 .p-services__contents {
   height: inherit;
-  @include v.mq(sm) {
-    height: 900px;
+  @include v.mq(lg) {
+    height: auto;
   }
 }
 
@@ -19,9 +19,9 @@
   padding: 20px 3%;
   display: flex;
   justify-content: space-between;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     flex-direction: column;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -38,7 +38,7 @@
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px #777777;
   cursor: pointer;
-  @include v.mq(sm) {
+  @include v.mq(lg) {
     width: 54%;
     margin-right: auto;
     margin-left: auto;
@@ -48,7 +48,7 @@
     }
   }
   & + li {
-    @include v.mq(sm) {
+    @include v.mq(lg) {
       margin-top: 30px;
     }
   }
@@ -62,6 +62,10 @@
       margin-top: 0;
       .p-services__item__desc {
         display: block;
+        position: static;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
 
@@ -69,7 +73,7 @@
       width: 30%;
       min-width: unset;
       min-width: 300px;
-      @include v.mq(sm) {
+      @include v.mq(lg) {
         width: 100%;
         height: 30%;
       }

@@ -48,6 +48,12 @@
 	margin-left: auto;
 }
 
+.p-services .c-button{
+	@include v.mq(md){
+		margin-top: 20px;
+	}
+}
+
 .p-about .c-button{
 	margin-top: 20px;
 	margin-left: auto;
