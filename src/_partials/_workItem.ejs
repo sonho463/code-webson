@@ -1,4 +1,4 @@
-<li class="p-works__item swiper-slide">
+<li id="<%=worksList[num].link %>" class="p-works__item swiper-slide">
   <article class="p-works__article">
 		<h3 class="p-works__article__title">
 			<%- worksList[num].title %>
@@ -15,7 +15,7 @@
           <%- worksList[num].description %>
         </p>
 				<div class="c-more-info">
-					<a href="<%= worksList[num].link %>" class="c-more-info__link">さらに詳しく</a>
+					<a href="/<%= worksList[num].link %>" class="c-more-info__link">さらに詳しく</a>
 				</div>
       </div>
     </div>

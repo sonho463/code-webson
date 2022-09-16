@@ -1,0 +1,17 @@
+@use "../foundation/variables" as v;
+
+.p-work-detail {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+	clip-path: circle(0% at 70% 75%);
+	transition: 1s;
+	&.open{
+		clip-path: circle(120% at 70% 75%);
+		transition: 2s;
+	}
+}

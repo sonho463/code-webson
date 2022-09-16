@@ -1,11 +1,17 @@
 .c-overlay{
+	display: none;
 	position: absolute;
-	top: -15%;left: -15%;
+	// top: -15%;left: -15%;
 	width: 100vw;
-	height: 100vh;
-	background-color: rgba( 0,0,0,.3);
+	height: 100%;
+	background-color: rgba( 0,0,0,.6);
 	z-index: -1;
 	&.visible{
-		// z-index:3;
+		display: block;
+		z-index:999;
 	}
+}
+
+.l-header .c-overlay{
+	height: 100%;
 }

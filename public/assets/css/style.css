@@ -506,8 +506,6 @@ a:hover img {
 .l-header {
   position: sticky;
   top: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
   background-color: #f8faf0;
 }
 @media screen and (max-width:768px) {
@@ -713,14 +711,22 @@ a:hover img {
 }
 
 .c-overlay {
+  display: none;
   position: absolute;
-  top: -15%;
-  left: -15%;
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
+.c-overlay.visible {
+  display: block;
+  z-index: 999;
+}
+
+.l-header .c-overlay {
+  height: 100%;
+}
+
 .c-button {
   position: relative;
   display: block;
@@ -1600,11 +1606,20 @@ input.p-contact__submit-button:hover {
   }
 }
 
-.p-work-detail__eyecatch {
-  margin-top: -120px;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+.p-work-detail {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  clip-path: circle(0% at 70% 75%);
+  transition: 1s;
+}
+.p-work-detail.open {
+  clip-path: circle(120% at 70% 75%);
+  transition: 2s;
 }
 
 /*# sourceMappingURL=style.css.map */
