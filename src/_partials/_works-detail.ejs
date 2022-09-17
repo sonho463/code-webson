@@ -1,26 +1,35 @@
 <%_ for(let i=0; i < worksList.length; i++){ _%>
 <section id="<%= worksList[i].link %>" class="p-work-detail">
   <div class="c-inner">
-    <div class="c-section__heading-block">
-      <h2 class="c-section__title"><%= worksList[i].title%></h2>
-    </div>
-    <button class="close-work-detail">閉じる</button>
+		<figure class="p-work-detail__eyecatch">
+			<img src="./assets/img/works/<%= worksList[i].imgPath %>.png" alt="">
+		</figure>
+		<div class="c-section__heading-block">
+			<h2 class="c-section__title"><%= worksList[i].title%></h2>
+		</div>
+    <button class="c-button c-button-shadow close-work-detail">
+			<span class="c-button__text">
+				閉じる
+			</span>
+		</button>
+		<p class="p-work-detail__responsible">
+			担当工程：<b><%- worksList[i].responsibleProcess %></b>
+		</p>
+		<p class="p-work-detail__desc">
+			<%- worksList[i].description %>
+		</p>
+
     <ul class="p-work-detail__article">
-
       <%_ worksList[i].articles.forEach(element => { _%>
-
-
-
       <li class="p-work-detail__item">
         <figure class="p-work-detail__image">
-          <img src="" alt="画像<%= element.img %>">
+          <img src="./assets/img/workDetail/<%= element.img %>.png" alt="画像<%= element.img %>">
         </figure>
         <div class="p-work-detail__text">
-          <h3 class="p-work-detail__item__heading">
+          <h3 class="p-work-detail__heading">
 						<%= element.title %>
           </h3>
           <p class="p-work-detail__body">
-            aaaa
             <%= element.text %>
           </p>
         </div>

@@ -1,29 +1,44 @@
 <%_
 worksList = [
 	{
-		title:"フィットネス＋英会話サイト",
-		link: "eng",
-		imgPath: "eng_mockup",
-		responsibleProcess: "HTML/CSSコーディングHTML/CSSコーディングHTML/CSSコーディング",
-		description: "トップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディングトップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディングトップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディング",
+		title:"英会話スクールWordPressサイト",
+		link: "eng-sch",
+		imgPath: "eng-sch_mockup",
+		responsibleProcess: "HTML/CSSコーディング・WordPress化",
+		description: "英会話スクールの模擬サイト。XDデザインカンプからのコーディング、WordPress化。CSS設計はFLOCSS＋BEMを基本的な考え方として設計しています。",
 		articles: [
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "成功事例のブロック",
+					img: "eng01",
+					text: "成功事例は随時得ることができるのものなので、お客様で更新できることが望ましいことが多いです。今回はWordPressでカスタム投稿タイプとカスタムフィールドを使用して実装しました。画像についても、変更可能としました。"
 				},
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "よくある質問ブロック",
+					img: "eng02",
+					text: "JavaScriptで実装しました。QAいずれも、分量が多くなっても、レイアウトが崩れないことに注意してスタイルを整えました。"
+				},
+				{
+					title: "デフォルトのアイキャッチ画像",
+					img: "eng03",
+					text: "画像取得のロジックで、アイキャッチ画像が設定されていないときには、予め用意した画像をアイキャッチとして表示するようにしました。アイキャッチ画像はCanvaでサクッと作成しました。"
+				},
+				{
+					title: "サブループの使用",
+					img: "eng04",
+					text: "最新記事から３件、関連記事３件、おすすめの記事など、よくあるサブループを使用しています。また、記事詳細画面ではサイドバーにカテゴリリストも表示するようにしています。"
+				},
+				{
+					title: "コールトゥアクション部分のインクルード化",
+					img: "eng05",
+					text: "CTA部分はincludeできるように、コンポーネントに切り出しています。"
 				},
 			]
 		},
 		{
-			title:"英会話スクールWP",
-			link: "eng-sch",
-			imgPath: "eng-sch_mockup",
-			responsibleProcess: "HTML/CSSコーディング/WordPress構築",
+			title:"英会話＋フィットネス",
+			link: "eng",
+			imgPath: "eng_mockup",
+			responsibleProcess: "HTML/CSSコーディング",
 			description: "トップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディング",
 			articles: [
 				{
