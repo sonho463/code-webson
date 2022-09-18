@@ -9,27 +9,27 @@ worksList = [
 		articles: [
 				{
 					title: "成功事例のブロック",
-					img: "eng01",
+					img: "eng-sch01",
 					text: "成功事例は随時得ることができるのものなので、お客様で更新できることが望ましいことが多いです。今回はWordPressでカスタム投稿タイプとカスタムフィールドを使用して実装しました。画像についても、変更可能としました。"
 				},
 				{
 					title: "よくある質問ブロック",
-					img: "eng02",
+					img: "eng-sch02",
 					text: "JavaScriptで実装しました。QAいずれも、分量が多くなっても、レイアウトが崩れないことに注意してスタイルを整えました。"
 				},
 				{
 					title: "デフォルトのアイキャッチ画像",
-					img: "eng03",
+					img: "eng-sch03",
 					text: "画像取得のロジックで、アイキャッチ画像が設定されていないときには、予め用意した画像をアイキャッチとして表示するようにしました。アイキャッチ画像はCanvaでサクッと作成しました。"
 				},
 				{
 					title: "サブループの使用",
-					img: "eng04",
+					img: "eng-sch04",
 					text: "最新記事から３件、関連記事３件、おすすめの記事など、よくあるサブループを使用しています。また、記事詳細画面ではサイドバーにカテゴリリストも表示するようにしています。"
 				},
 				{
 					title: "コールトゥアクション部分のインクルード化",
-					img: "eng05",
+					img: "eng-sch05",
 					text: "CTA部分はincludeできるように、コンポーネントに切り出しています。"
 				},
 			]
@@ -39,17 +39,27 @@ worksList = [
 			link: "eng",
 			imgPath: "eng_mockup",
 			responsibleProcess: "HTML/CSSコーディング",
-			description: "トップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディング",
+			description: "XDデザインカンプからコーディングしました。アニメーションの部分でいろいろ学びが多かったです。かなり前に勉強したアニメーションをmixinにするという考え方も、これの実装している中で理解することができたのは大きな収穫。",
 			articles: [
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "aos.jsとkeyframesを併用",
+					img: "eng01",
+					text: "スクロール連動アニメーションはAOSをCDNで使用しました。その他のアニメーションはCSS、keyframeで定義して使っています。"
 				},
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "Studioブロック",
+					img: "eng02",
+					text: "Swiper.jsを使用。矢印のデザインをカスタマイズしています。"
+				},
+				{
+					title: "Priceブロック",
+					img: "eng03",
+					text: "Priceブロックのスマホ画面では横にスクロールできるようにしています。その際、スクロールができることがわかるように矢印を表示スクロールすると消える処理をJavaScriptで実装しています。"
+				},
+				{
+					title: "QAブロック",
+					img: "eng04",
+					text: "それまで、使ったことのなかったdetails-summaryタグを使用しています。Q,Aのマークを擬似要素にして、HTMLをスッキリかけるように意識しました。"
 				},
 			]
 		},
@@ -58,17 +68,27 @@ worksList = [
 			link: "const-company",
 			imgPath: "const-company_mockup",
 			responsibleProcess: "HTML/CSSコーディング",
-			description: "トップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディング",
+			description: "PSデザインカンプからのコーディングにおいて、画像の一括書き出し、Zeplinで値の確認など、新しいスキルを身につけることができました。週１５時間稼働のイメージでなんとか２週間くらいで実装しました。調べながらの実装も多かったので、今後もっとスピードをあげていきたいところです。",
 			articles: [
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "PSカンプ→Zeplinを使用",
+					img: "const-company02",
+					text: "PSカンプをZeplinで読み込んで、それをメインにコーディングを進める。画像の書き出しについても、使用画像を一括で書き出すなど、効率化を意識して作業をすすめました。"
 				},
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "ヘッダーナビの斜め線区切り",
+					img: "const-company01",
+					text: "・skewを使用。デザインの再現とレスポンシブのときの挙動に注意して実装しました。"
+				},
+				{
+					title: "MV",
+					img: "const-company04",
+					text: "swiper使用のスライドショーを実装。斜めにカットした画像が、徐々に拡大したあと画面切り替え。カンプで再現されている影の見落としが内容に気をつけて、デザインの再現するようにしました。"
+				},
+				{
+					title: "使用画像の切り替え",
+					img: "const-company03",
+					text: "pictureタグを使用。PCとSPで使用する画像を切り替え。"
 				},
 			]
 		},
@@ -77,21 +97,20 @@ worksList = [
 			link: "blue-leaf",
 			imgPath: "blue-leaf_mockup",
 			responsibleProcess: "HTML/CSSコーディング",
-			description: "トップページのアニメーション / pictureタグで画像の出し分け / FLOCSS、BEMを基本にコーディング",
+			description: "XDでのデザインカンプをいただいてコーディングしました。デザインを再現することは当然ですが、感じた違和感をできるだけ迅速にコミュニケーションをとって解決することを意識しました。コミュニケーションにはSlackを使用していて、デザイナーさんも素早く反応していただき、スムーズに進めることができました。",
 			articles: [
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "各セクションのタイトル",
+					img: "blue-leaf02",
+					text: "タイトルのCSSをコンポーネント化していたので、各セクションごとのpadding,marginの小さい差が気になりました。、デザイナーさんに相談をして揃えるように提案しました。"
 				},
 				{
-					title: "サンプルタイトル１",
-					img: "/image-path",
-					text: "サンプルテキスト"
+					title: "サービスブロック",
+					img: "blue-leaf01",
+					text: "デザイナーさんからの指定は特にない中、以下の点を提案して実装。JavaScriptでカードのオープン・クローズを実装。オープンしたときに画面にオーバーレイ、フィックスして、スクロールロック。いくつも開いてしまう自体を防ぐようにしました。カードの閉じるボタンとオーバーレイ部分をクリックで閉じるようにしました。"
 				},
 		]
 	},
-
 ]
 
 _%>

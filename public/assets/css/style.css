@@ -1607,13 +1607,16 @@ input.p-contact__submit-button:hover {
 }
 
 .p-work-detail {
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 90vh;
   background-image: url("../assets/img/works/bg-img-white.jpg");
   background-size: cover;
   position: fixed;
-  top: 0;
-  left: 0;
+  outline: 8px dotted rgb(27, 47, 96);
+  outline-offset: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 300;
   clip-path: circle(0% at 70% 75%);
   transition: 1s;
@@ -1674,6 +1677,7 @@ input.p-contact__submit-button:hover {
   text-underline-offset: -10px;
   text-decoration-color: #ffde59;
   text-decoration-thickness: 15px;
+  text-decoration-skip-ink: none;
 }
 .p-work-detail__responsible {
   margin-top: 10px;

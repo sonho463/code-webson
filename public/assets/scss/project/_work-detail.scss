@@ -1,13 +1,16 @@
 @use "../foundation/variables" as v;
 
 .p-work-detail {
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 90vh;
   background-image: url("../assets/img/works/bg-img-white.jpg");
 	background-size: cover;
   position: fixed;
-  top: 0;
-  left: 0;
+	outline: 8px dotted v.$main-primary;
+	outline-offset: 8px;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
   z-index: 300;
   clip-path: circle(0% at 70% 75%);
   transition: 1s;
@@ -70,6 +73,7 @@
 		text-underline-offset: -10px;
 		text-decoration-color: v.$accent-primary;
 		text-decoration-thickness: 15px;
+		text-decoration-skip-ink: none;
 	}
 	&__responsible{
 		margin-top: 10px;
