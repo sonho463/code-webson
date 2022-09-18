@@ -58,14 +58,16 @@
     width: 95%;
     z-index: 10;
     @include v.mq(lg) {
-      height: 100%;
+			height: 85%;
       margin-top: 0;
       .p-services__item__desc {
         display: block;
-        position: static;
         width: 95%;
+				margin-top: 64px;
         margin-right: auto;
         margin-left: auto;
+        position: static;
+				overflow-y:scroll;
       }
     }
 

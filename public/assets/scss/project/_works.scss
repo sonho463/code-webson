@@ -73,6 +73,13 @@
       height: auto;
     }
   }
+  .c-more-info {
+    @include v.mq(lg) {
+      margin-top: 12px;
+      position: static;
+      justify-content: flex-end;
+    }
+  }
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -82,7 +89,8 @@
   width: 160px;
   @include v.mq(lg) {
     top: 43%;
-    width: 80px;
+    height: 40px;
+    width: 40px;
   }
 }
 .swiper-button-prev {

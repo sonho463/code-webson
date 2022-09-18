@@ -30,6 +30,9 @@
 .p-contact__form__input-area {
   display: flex;
   gap: 30px;
+	@include v.mq(lg){
+		flex-direction: column;
+	}
 }
 
 .p-contact__user-info {
@@ -38,6 +41,7 @@
   // gap: 20px;
   @include v.mq(lg) {
     flex-direction: column;
+		width: 100%;
   }
   label {
     display: block;
@@ -101,6 +105,7 @@ input.p-contact__submit-button {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+		height: auto;
     // margin-bottom: 40px;
   }
 }
@@ -120,16 +125,20 @@ input.p-contact__submit-button {
   &__item {
     font-size: 1.6rem;
     @include v.mq(lg) {
-      font-size: 1.6rem;
-    }
-    @include v.mq(lg) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+			width: 45%;
     }
   }
   &__item + .l-footer__menu__item::before {
     content: "|";
     margin-right: 10px;
+		@include v.mq(lg){
+			display: none;
+		}
   }
+	@include v.mq(lg){
+		flex-wrap: wrap;
+	}
 }
 
 .l-footer__copyright {
@@ -139,5 +148,6 @@ input.p-contact__submit-button {
   bottom: 20px;
   @include v.mq(md) {
     position: static;
+		margin-top: 20px;
   }
 }

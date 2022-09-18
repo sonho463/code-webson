@@ -6,8 +6,8 @@
   background-image: url("../assets/img/works/bg-img-white.jpg");
 	background-size: cover;
   position: fixed;
-	outline: 8px dotted v.$main-primary;
-	outline-offset: 8px;
+	border: 8px dotted v.$main-primary;
+	// outline-offset: 4px;
   top: 50%;
   left: 50%;
 	transform: translate(-50%, -50%);
@@ -15,9 +15,15 @@
   clip-path: circle(0% at 70% 75%);
   transition: 1s;
   overflow: scroll;
+	@include v.mq(lg){
+		clip-path: circle(0%);
+	}
   &.open {
 		clip-path: circle(120% at 70% 75%);
     transition: 2s;
+		@include v.mq(lg){
+			clip-path: circle(120%);
+		}
   }
 	.c-inner{
 		padding: 80px 5%;
@@ -26,16 +32,27 @@
 
 .p-work-detail__eyecatch{
 	margin-top: -200px;
+	@include v.mq(lg){
+		margin-top: 0;
+	}
 }
 
 .p-work-detail{
 	.c-section__heading-block{
 		padding-top: 0;
 		margin-top: -120px;
+		@include v.mq(lg){
+			margin-top: 0;
+		}
 	}
 	.c-button{
-		position: fixed;
+		position: sticky;
+		margin-left: auto;
 		top: 7%;right: 9%;
+		@include v.mq(lg){
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -51,6 +68,9 @@
   & + li {
     margin-top: 100px;
   }
+	@include v.mq(lg){
+		flex-direction: column;
+	}
 }
 
 .p-work-detail__image {

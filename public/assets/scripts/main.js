@@ -54,7 +54,10 @@ for (let i = 0; i < servicesItem.length; i++) {
       console.log(`${activeCont} is open`);
       servicesItem[i].classList.add("open");
       buttonText.textContent = "閉じる";
+      const w = window.innerWidth;
+      // if(w>1024){
       snapContainer.style.overflow = "hidden";
+      // }
     }
     servicesItem[i].scrollIntoView();
   });
@@ -68,6 +71,7 @@ const setLinkInPage = (targetItemList) => {
       console.log(event);
       event.preventDefault();
       const targetId = event.target.hash;
+      console.log(targetId);
       const target = document.querySelector(targetId);
       console.log(target);
       target.scrollIntoView({ behavior: "smooth" });
@@ -95,15 +99,21 @@ const cOverlay = document.querySelector(".c-overlay");
 
 const closeModal = () => {
   modal.classList.remove("open");
-  aboutArrowNext.style.display = "block";
-  snapContainer.style.overflow = "auto";
   cOverlay.classList.remove("visible");
+  snapContainer.style.overflow = "auto";
+  if (w > 1024) {
+    aboutArrowNext.style.display = "block";
+  }
 };
 const openModal = () => {
   modal.classList.add("open");
   aboutArrowNext.style.display = "none";
-  snapContainer.style.overflow = "hidden";
   cOverlay.classList.add("visible");
+  const w = window.innerWidth;
+  // if(w>1024){
+  snapContainer.style.overflow = "hidden";
+  // }
+  modal.scrollIntoView(true);
 };
 
 // works-detail open
@@ -134,7 +144,7 @@ closeWorkDetailArray.forEach((ele) => {
   ele.addEventListener("click", () => {
     const targetId = ele.parentElement.parentElement.id;
     const target = document.querySelector(`#${targetId}`);
-		console.log(target)
-		target.classList.remove('open')
+    console.log(target);
+    target.classList.remove("open");
   });
 });
