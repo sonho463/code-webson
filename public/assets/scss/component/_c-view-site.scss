@@ -1,0 +1,27 @@
+@use "../foundation/variables" as v;
+
+.c-view-site{
+	display: flex;
+	align-items: center;
+// position: relative;
+font-size: 1.6rem;
+	&::before{
+		content:'';
+		display: block;
+		width: 20px;height: 20px;
+		margin-right: 5px;
+		background-image: url(../assets/img/view-site.png);
+		background-size: cover;
+	}
+}
+
+.p-work-detail{
+	.c-view-site{
+		margin-top: 20px;
+		font-size: 2.4rem;
+		justify-content: center;
+		&::before{
+			width: 24px;height: 24px;
+		}
+	}
+}

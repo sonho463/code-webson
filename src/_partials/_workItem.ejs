@@ -14,8 +14,13 @@
         <p class="p-works__article__desc">
           <%- worksList[num].description %>
         </p>
-				<div class="c-more-info">
-					<a href="/<%= worksList[num].link %>" class="c-more-info__link">さらに詳しく</a>
+				<div class="p-works__article__bottom-nav">
+					<div class="c-more-info">
+						<a href="/<%= worksList[num].link %>" class="c-more-info__link">さらに詳しく</a>
+					</div>
+					<div class="c-view-site">
+						<a href="<%= worksList[num].siteLink %>" target="_blank" rel="noopener noreferrer"">サイトを見る</a>
+					</div>
 				</div>
       </div>
     </div>

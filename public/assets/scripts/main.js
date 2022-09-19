@@ -34,10 +34,9 @@ const swiper = new Swiper(".swiper", {
 });
 
 // サービスブロックのアイテムオープン
-
 const snapContainer = document.querySelector(".l-snap-container");
-
 const servicesItem = document.getElementsByClassName("js-services__item");
+
 for (let i = 0; i < servicesItem.length; i++) {
   const button = servicesItem[i].querySelector(".js-services-button");
   const buttonText = servicesItem[i].querySelector(".js-services-button__text");
@@ -64,7 +63,6 @@ for (let i = 0; i < servicesItem.length; i++) {
 }
 
 // ページ内リンクの設定
-
 const setLinkInPage = (targetItemList) => {
   targetItemList.forEach((item) => {
     item.addEventListener("click", (event) => {
@@ -88,6 +86,7 @@ setLinkInPage(navItems);
 setLinkInPage(navNext);
 setLinkInPage(linkButton);
 setLinkInPage(footerLink);
+
 
 // アバウトページのモーダル開閉
 
@@ -125,20 +124,39 @@ const workDetailOpen = (target) => {
   target.classList.add("open");
 };
 
+// work-detailページ内のスクロールアイコンがスクロールしたら消えるアニメーション
+const addScrollIconAnimation = (parent) => {
+	console.log(parent)
+	const target = parent.querySelector('.p-work-detail__arrow')
+	const trigger = parent.querySelector('.p-work-detail__article')
+	gsap.to(target, {
+		scrollTrigger: {
+			trigger: trigger,
+			start:'top bottom',
+			toggleActions: "play pause resume reset",
+			scroller: parent,
+		},
+		opacity: 0,
+		duration: 1,
+	});
+}
+
+// さらに詳しくボタンクリック時にwork-detailを開くアクション
 moreInfoList.forEach((ele) => {
   ele.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(ele.href);
+    console.log(ele);
     const url = ele.href;
     const targetArray = url.split("/");
     const targetName = targetArray.slice(-1)[0];
     console.log(targetName);
     const target = document.querySelector(`#${targetName}`);
-    workDetailOpen(target);
+		workDetailOpen(target);
+		addScrollIconAnimation(target);
   });
 });
 
-console.log(closeWorkDetailArray);
+// console.log(closeWorkDetailArray);
 
 closeWorkDetailArray.forEach((ele) => {
   ele.addEventListener("click", () => {

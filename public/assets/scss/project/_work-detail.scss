@@ -31,7 +31,11 @@
 }
 
 .p-work-detail__eyecatch{
-	margin-top: -200px;
+	margin-top: -100px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
 	@include v.mq(lg){
 		margin-top: 0;
 	}
@@ -40,7 +44,7 @@
 .p-work-detail{
 	.c-section__heading-block{
 		padding-top: 0;
-		margin-top: -120px;
+		margin-top: -50px;
 		@include v.mq(lg){
 			margin-top: 0;
 		}
@@ -53,6 +57,23 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
+	}
+}
+
+.p-work-detail__arrow{
+	width: 80px;height: 80px;
+	position:absolute;
+	bottom: 50px;left: 50%;
+	transform: translateX(-50%);
+	background-image: url(../assets/img/scroll-down.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: v.$shadow-cBlue;
+	border-radius: 100vh;
+	&__text{
+		position: absolute;
+		bottom: -5px;
 	}
 }
 
