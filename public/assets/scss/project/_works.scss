@@ -83,10 +83,14 @@
     justify-content: flex-end;
     gap: 20px;
     margin-top: auto;
+		@include v.mq(lg){
+			position:static;
+			margin-top: 20px;
+		}
   }
   .c-more-info {
     @include v.mq(lg) {
-      margin-top: 12px;
+      // margin-top: 12px;
       position: static;
       justify-content: flex-end;
     }

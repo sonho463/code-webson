@@ -36,9 +36,6 @@
   text-align: justify;
   font-size: 2.4rem;
   line-height: 1.8;
-  @include v.mq(lg) {
-    font-size: 1.8rem;
-  }
 }
 
 .p-about__career {
@@ -50,9 +47,15 @@
 			@include v.mq(lg){
 				display: block;
 				width: 100%;
+				font-size: 1.8rem;
 			}
     }
   }
+	&__heading{
+		@include v.mq(lg){
+			font-size: 2.4rem;
+		}
+	}
   &__date {
     width: 20%;
 		@include v.mq(lg){

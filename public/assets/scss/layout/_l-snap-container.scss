@@ -6,12 +6,11 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
-
   @include v.mq(lg) {
     scroll-snap-type: none;
-    overflow-y: unset;
-    height: calc(100vh - 80px);
-    // padding-bottom: 80px;
+    overflow-y: scroll;
+    height: unset;
+    padding-bottom: 80px;
   }
 }
 
@@ -27,7 +26,7 @@
   display: flex;
   align-items: flex-start;
   @include v.mq(lg) {
-    height: auto;
+    height: none;
   }
   &.l-fv {
     height: 200vh;

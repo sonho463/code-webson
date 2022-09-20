@@ -529,8 +529,10 @@ a:hover img {
 @media screen and (max-width:1024px) {
   .l-snap-container {
     scroll-snap-type: none;
-    overflow-y: unset;
+    overflow-y: scroll;
     height: calc(100vh - 80px);
+    height: unset;
+    padding-bottom: 80px;
   }
 }
 
@@ -548,7 +550,7 @@ a:hover img {
 }
 @media screen and (max-width:1024px) {
   .l-snap-item {
-    height: auto;
+    height: none;
   }
 }
 .l-snap-item.l-fv {
@@ -969,6 +971,11 @@ a:hover img {
   font-size: 2.8rem;
   scroll-snap-type: y mandatory;
 }
+@media screen and (max-width:1024px) {
+  .p-fv__right {
+    scroll-snap-type: none;
+  }
+}
 .p-fv__right__heading {
   font-size: 3.2rem;
   font-weight: 700;
@@ -1128,8 +1135,13 @@ a.p-fv__link:hover::after {
   margin-top: auto;
 }
 @media screen and (max-width:1024px) {
+  .p-works__article__bottom-nav {
+    position: static;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width:1024px) {
   .p-works__article .c-more-info {
-    margin-top: 12px;
     position: static;
     justify-content: flex-end;
   }
@@ -1425,11 +1437,6 @@ a.p-fv__link:hover::after {
   font-size: 2.4rem;
   line-height: 1.8;
 }
-@media screen and (max-width:1024px) {
-  .p-about__career {
-    font-size: 1.8rem;
-  }
-}
 
 .p-about__career__web {
   font-size: 2rem;
@@ -1442,6 +1449,12 @@ a.p-fv__link:hover::after {
   .p-about__career__web td {
     display: block;
     width: 100%;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width:1024px) {
+  .p-about__career__heading {
+    font-size: 2.4rem;
   }
 }
 .p-about__career__date {
@@ -1714,6 +1727,7 @@ input.p-contact__submit-button:hover {
 @media screen and (max-width:1024px) {
   .p-work-detail {
     clip-path: circle(0%);
+    width: 99vw;
   }
 }
 .p-work-detail.open {
@@ -1727,6 +1741,11 @@ input.p-contact__submit-button:hover {
 }
 .p-work-detail .c-inner {
   padding: 80px 5%;
+}
+@media screen and (max-width:1024px) {
+  .p-work-detail .c-inner {
+    padding-top: 40px;
+  }
 }
 
 .p-work-detail__eyecatch {
@@ -1781,6 +1800,11 @@ input.p-contact__submit-button:hover {
 .p-work-detail__arrow__text {
   position: absolute;
   bottom: -5px;
+}
+@media screen and (max-width:1024px) {
+  .p-work-detail__arrow {
+    display: none;
+  }
 }
 
 .p-work-detail__article {
