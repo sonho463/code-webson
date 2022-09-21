@@ -87,7 +87,6 @@ setLinkInPage(navNext);
 setLinkInPage(linkButton);
 setLinkInPage(footerLink);
 
-
 // アバウトページのモーダル開閉
 
 const modal = document.querySelector(".p-about__modal");
@@ -126,20 +125,20 @@ const workDetailOpen = (target) => {
 
 // work-detailページ内のスクロールアイコンがスクロールしたら消えるアニメーション
 const addScrollIconAnimation = (parent) => {
-	console.log(parent)
-	const target = parent.querySelector('.p-work-detail__arrow')
-	const trigger = parent.querySelector('.p-work-detail__article')
-	gsap.to(target, {
-		scrollTrigger: {
-			trigger: trigger,
-			start:'top bottom',
-			toggleActions: "play pause resume reset",
-			scroller: parent,
-		},
-		opacity: 0,
-		duration: 1,
-	});
-}
+  console.log(parent);
+  const target = parent.querySelector(".p-work-detail__arrow");
+  const trigger = parent.querySelector(".c-view-site");
+  gsap.to(target, {
+    scrollTrigger: {
+      trigger: trigger,
+      start: "top bottom",
+      toggleActions: "play pause resume reset",
+      scroller: parent,
+    },
+    opacity: 0,
+    duration: 1,
+  });
+};
 
 // さらに詳しくボタンクリック時にwork-detailを開くアクション
 moreInfoList.forEach((ele) => {
@@ -151,8 +150,8 @@ moreInfoList.forEach((ele) => {
     const targetName = targetArray.slice(-1)[0];
     console.log(targetName);
     const target = document.querySelector(`#${targetName}`);
-		workDetailOpen(target);
-		addScrollIconAnimation(target);
+    workDetailOpen(target);
+    addScrollIconAnimation(target);
   });
 });
 

@@ -12,13 +12,16 @@ const sectionHeading = document.getElementsByClassName(
 Object.keys(sectionHeading).forEach((key) => {
   console.log(sectionHeading[key]);
   target = sectionHeading[key];
+	const trigger =
   gsap.from(target, {
-    scrollTrigger: target.parentNode,
-    duration: 1,
-    y: -200,
+		scrollTrigger: {
+			trigger: target.parentNode,
+			start: "center bottom",
+		},
+    x: 400,
     opacity: 0,
-    duration: 2,
-    ease: "expo",
+    duration: .5,
+    ease: "sine",
   });
 });
 

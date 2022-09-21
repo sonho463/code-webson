@@ -5,7 +5,7 @@
   &__heading-block {
     display: flex;
     gap: 5%;
-    padding-top: 50px;
+    padding-top: 24px;
     @include v.mq(lg) {
       flex-direction: column;
       width: 90%;

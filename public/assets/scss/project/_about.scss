@@ -13,6 +13,12 @@
   }
 }
 
+@media screen and (min-width: 1919px) {
+	.p-about__contents{
+		margin-top: 78px;
+	}
+}
+
 .p-about__profile {
   flex: 1;
   &__name {
