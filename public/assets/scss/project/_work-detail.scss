@@ -1,5 +1,9 @@
 @use "../foundation/variables" as v;
 
+.p-work-detail__outer{
+	height: 90vh;
+}
+
 .p-work-detail {
   width: 90vw;
   height: 90vh;
@@ -14,10 +18,16 @@
   z-index: 300;
   clip-path: circle(0% at 70% 75%);
   transition: 1s;
-  overflow: scroll;
+	overflow: auto;
 	@include v.mq(lg){
 		clip-path: circle(0%);
 		width: 99vw;
+		&__inner{
+			overflow:auto;
+			width:100%;
+			height:100%;
+			-webkit-overflow-scrolling:auto;
+		}
 	}
   &.open {
 		clip-path: circle(120% at 70% 75%);

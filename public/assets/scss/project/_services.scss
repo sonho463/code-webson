@@ -4,6 +4,8 @@
   height: inherit;
 }
 
+
+
 .p-services__contents {
   height: inherit;
   @include v.mq(lg) {
@@ -43,6 +45,7 @@
   cursor: pointer;
   @include v.mq(lg) {
     width: 54%;
+		max-height: unset;
     margin-right: auto;
     margin-left: auto;
     flex-direction: column;

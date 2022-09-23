@@ -33,9 +33,71 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+
+// iphone用bodyFix関数
+const bodyFixWhenIphone = (target) => {
+	console.log('iphone fixed start')
+	// var target = document.querySelector(target);
+	target.scrollTop = 1;
+
+	window.addEventListener('touchmove', function(event) {
+		if (event.target === target && target.scrollTop !== 0 && target.scrollTop + target.clientHeight !== target.scrollHeight) {
+			event.stopPropagation();
+		}
+		else {
+			event.preventDefault();
+		}
+	});
+
+	target.addEventListener('scroll', function(event) {
+		if (target.scrollTop === 0) {
+			target.scrollTop = 1;
+		}
+		else if (target.scrollTop + target.clientHeight === target.scrollHeight) {
+			target.scrollTop = target.scrollTop - 1;
+		}
+	});
+}
+
+
+
 // サービスブロックのアイテムオープン
 const snapContainer = document.querySelector(".l-snap-container");
 const servicesItem = document.getElementsByClassName("js-services__item");
+const servicesItemDesc = document.getElementsByClassName("js-services__item__desc");
+const servicesOverlay = document.querySelector(".c-overlay--services");
+const cOverlay = document.querySelector(".c-overlay");
+
+console.log(document)
+const bodyFix = () => {
+	document.body.classList.add('u-oy-hidden')
+	snapContainer.classList.add('u-oy-hidden')
+}
+const removeBodyFix = () => {
+	document.body.classList.remove('u-oy-hidden')
+	snapContainer.classList.remove('u-oy-hidden')
+}
+
+
+const closeServiceItem = (target,activeCont,buttonText) => {
+  console.log(`${activeCont} is close`);
+  target.classList.remove("open");
+  buttonText.textContent = "詳しく";
+	removeBodyFix()
+  servicesOverlay.classList.remove("visible");
+  cOverlay.classList.remove("visible");
+};
+const openServiceItem = (target,activeCont,buttonText) => {
+	console.log(`${activeCont} is open`);
+	target.classList.add("open");
+	buttonText.textContent = "閉じる";
+	bodyFix()
+	cOverlay.classList.add("visible");
+	servicesOverlay.classList.add("visible");
+	document.body.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, {passive: false});
+};
 
 for (let i = 0; i < servicesItem.length; i++) {
   const button = servicesItem[i].querySelector(".js-services-button");
@@ -44,23 +106,25 @@ for (let i = 0; i < servicesItem.length; i++) {
     const activeCont = servicesItem[i].querySelector(
       ".p-services__item__heading"
     ).textContent;
+		// toggleServiceCard
     if (servicesItem[i].classList.contains("open")) {
-      console.log(`${activeCont} is close`);
-      servicesItem[i].classList.remove("open");
-      buttonText.textContent = "詳しく";
-      snapContainer.style.overflow = "auto";
+			closeServiceItem(servicesItem[i],activeCont,buttonText);
     } else {
-      console.log(`${activeCont} is open`);
-      servicesItem[i].classList.add("open");
-      buttonText.textContent = "閉じる";
-      const w = window.innerWidth;
-      // if(w>1024){
-      snapContainer.style.overflow = "hidden";
-      // }
+			openServiceItem(servicesItem[i],activeCont,buttonText)
     }
     servicesItem[i].scrollIntoView();
   });
+	servicesOverlay.addEventListener("click", (activeCont) => {
+		console.log(`${activeCont} is close`);
+		servicesItem[i].classList.remove("open");
+		buttonText.textContent = "詳しく";
+		removeBodyFix()
+		servicesOverlay.classList.remove("visible");
+		cOverlay.classList.remove("visible");
+
+	});
 }
+
 
 // ページ内リンクの設定
 const setLinkInPage = (targetItemList) => {
@@ -90,15 +154,15 @@ setLinkInPage(footerLink);
 // アバウトページのモーダル開閉
 
 const modal = document.querySelector(".p-about__modal");
+const modalContents = document.querySelector('.p-modal__contents')
 const buttonCloseModal = document.querySelector(".p-modal__close");
 const buttonOpenModal = document.querySelector(".p-about__open");
 const aboutArrowNext = document.querySelector(".p-about > .c-arrow");
-const cOverlay = document.querySelector(".c-overlay");
 
 const closeModal = () => {
   modal.classList.remove("open");
   cOverlay.classList.remove("visible");
-  snapContainer.style.overflow = "auto";
+	removeBodyFix()
   if (w > 1024) {
     aboutArrowNext.style.display = "block";
   }
@@ -108,9 +172,8 @@ const openModal = () => {
   aboutArrowNext.style.display = "none";
   cOverlay.classList.add("visible");
   const w = window.innerWidth;
-  // if(w>1024){
-  snapContainer.style.overflow = "hidden";
-  // }
+	bodyFix()
+	// bodyFixWhenIphone(modalContents)
   modal.scrollIntoView(true);
 };
 
@@ -121,16 +184,17 @@ const closeWorkDetailArray = document.querySelectorAll(".close-work-detail");
 
 const workDetailOpen = (target) => {
   target.classList.add("open");
+	document.body.classList.add('u-oy-hidden');
 };
 
 // work-detailページ内のスクロールアイコンがスクロールしたら消えるアニメーション
 const addScrollIconAnimation = (parent) => {
-  console.log(parent);
+	console.log(parent);
   const target = parent.querySelector(".p-work-detail__arrow");
   const trigger = parent.querySelector(".c-view-site");
   gsap.to(target, {
-    scrollTrigger: {
-      trigger: trigger,
+		scrollTrigger: {
+			trigger: trigger,
       start: "top bottom",
       toggleActions: "play pause resume reset",
       scroller: parent,
@@ -142,8 +206,8 @@ const addScrollIconAnimation = (parent) => {
 
 // さらに詳しくボタンクリック時にwork-detailを開くアクション
 moreInfoList.forEach((ele) => {
-  ele.addEventListener("click", (event) => {
-    event.preventDefault();
+	ele.addEventListener("click", (event) => {
+		event.preventDefault();
     console.log(ele);
     const url = ele.href;
     const targetArray = url.split("/");
@@ -158,10 +222,13 @@ moreInfoList.forEach((ele) => {
 // console.log(closeWorkDetailArray);
 
 closeWorkDetailArray.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    const targetId = ele.parentElement.parentElement.id;
+	ele.addEventListener("click", () => {
+		const targetId = ele.parentElement.parentElement.id;
     const target = document.querySelector(`#${targetId}`);
-    console.log(target);
-    target.classList.remove("open");
+    console.log('close', target);
+		target.classList.remove('open');
+		document.body.classList.remove('u-oy-hidden');
+
+
   });
 });

@@ -18,7 +18,7 @@ Object.keys(sectionHeading).forEach((key) => {
 			trigger: target.parentNode,
 			start: "center bottom",
 		},
-    x: 400,
+    x: -400,
     opacity: 0,
     duration: .5,
     ease: "sine",

@@ -443,6 +443,7 @@ template {
 *:before,
 *:after {
   box-sizing: border-box;
+  outline: 1px solid pink;
 }
 
 html {
@@ -522,6 +523,7 @@ a:hover img {
 .l-snap-container {
   height: calc(100vh - 100px);
   scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -718,6 +720,21 @@ a:hover img {
 
 .l-header .c-overlay {
   height: 100%;
+}
+
+.c-overlay--services {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  left: 0;
+}
+
+.c-overlay--services.visible {
+  display: block;
+  z-index: 5;
 }
 
 .c-button {
@@ -1265,6 +1282,7 @@ a.p-fv__link:hover::after {
 @media screen and (max-width:1279px) {
   .p-services__item {
     width: 54%;
+    max-height: unset;
     margin-right: auto;
     margin-left: auto;
     flex-direction: column;
@@ -1726,6 +1744,10 @@ input.p-contact__submit-button:hover {
   }
 }
 
+.p-work-detail__outer {
+  height: 90vh;
+}
+
 .p-work-detail {
   width: 90vw;
   height: 90vh;
@@ -1739,12 +1761,18 @@ input.p-contact__submit-button:hover {
   z-index: 300;
   clip-path: circle(0% at 70% 75%);
   transition: 1s;
-  overflow: scroll;
+  overflow: auto;
 }
 @media screen and (max-width:1279px) {
   .p-work-detail {
     clip-path: circle(0%);
     width: 99vw;
+  }
+  .p-work-detail__inner {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: auto;
   }
 }
 .p-work-detail.open {
@@ -1875,6 +1903,22 @@ input.p-contact__submit-button:hover {
 .p-work-detail__body {
   margin-top: 20px;
   font-size: 2rem;
+}
+
+.u-opacity0 {
+  opacity: 0;
+}
+
+.u-oy-auto {
+  overflow-y: auto;
+}
+
+.u-oy-hidden {
+  overflow-y: hidden;
+}
+
+.u-oy-scroll {
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=style.css.map */
