@@ -94,9 +94,6 @@ const openServiceItem = (target,activeCont,buttonText) => {
 	bodyFix()
 	cOverlay.classList.add("visible");
 	servicesOverlay.classList.add("visible");
-	document.body.addEventListener('touchmove', function(e) {
-		e.preventDefault();
-	}, {passive: false});
 };
 
 for (let i = 0; i < servicesItem.length; i++) {
@@ -184,6 +181,7 @@ const closeWorkDetailArray = document.querySelectorAll(".close-work-detail");
 
 const workDetailOpen = (target) => {
   target.classList.add("open");
+	target.classList.add("u-z-index999")
 	document.body.classList.add('u-oy-hidden');
 };
 
@@ -227,8 +225,22 @@ closeWorkDetailArray.forEach((ele) => {
     const target = document.querySelector(`#${targetId}`);
     console.log('close', target);
 		target.classList.remove('open');
+		target.classList.remove("u-z-index999")
 		document.body.classList.remove('u-oy-hidden');
-
-
   });
 });
+
+
+
+const modalContainer = document.querySelector('.modal__container')
+const openButton = document.querySelector('.open')
+const closeButton = document.querySelector('.close')
+
+openButton.addEventListener('click',()=>{
+	modalContainer.classList.add('open');
+	document.body.style.overflow="hidden";
+})
+closeButton.addEventListener('click',()=>{
+	modalContainer.classList.remove('open');
+	document.body.style.overflow="auto";
+})

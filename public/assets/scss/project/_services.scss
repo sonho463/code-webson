@@ -4,8 +4,6 @@
   height: inherit;
 }
 
-
-
 .p-services__contents {
   height: inherit;
   @include v.mq(lg) {
@@ -73,7 +71,9 @@
         margin-right: auto;
         margin-left: auto;
         position: static;
-				overflow-y:scroll;
+				&__inner{
+					overflow-y:scroll;
+				}
       }
     }
 

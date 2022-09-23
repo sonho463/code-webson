@@ -33,9 +33,11 @@
 @use "./project/about";
 @use "./project/contact";
 @use "./project/work-detail";
+@use "./project/test";
 
 // *--------------*
 // utility
 // *--------------*
 @use "./utility/opacity";
 @use "./utility/overflow";
+@use "./utility/u-z-index";
