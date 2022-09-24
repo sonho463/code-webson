@@ -1,12 +1,11 @@
 <%_ for(let i=0; i < worksList.length; i++){ _%>
-
 <section id="<%= worksList[i].link %>" class="p-work-detail">
   <div class="p-work-detail__inner">
-		<button class="c-button c-button-shadow close-work-detail">
-			<span class="c-button__text">
-				閉じる
-			</span>
-		</button>
+    <button class="c-button c-button-shadow close-work-detail">
+      <span class="c-button__text">
+        閉じる
+      </span>
+    </button>
     <div class="c-inner">
       <figure class="p-work-detail__eyecatch">
         <img src="./assets/img/works/<%= worksList[i].imgPath %>.png" alt="">

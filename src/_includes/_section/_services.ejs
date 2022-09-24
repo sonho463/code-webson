@@ -2,21 +2,15 @@
 <div class="c-section__heading-block">
   <h2 class="c-section__title">サービス</h2>
   <div class="c-section__lead">
-    <p class="c-section__lead__text">提供できるサービスです。各カードをクリックして、詳しい解説をご覧ください。
+    <p class="c-section__lead__text">
+			提供できるサービスです。各カードをクリックして、詳しい解説をご覧ください。
     </p>
   </div>
 </div>
 <div class="p-services__contents c-inner">
   <ul class="p-services__list">
-
-
-
-		<%_ for(let i=0; i<servicesList.length; i++){ _%>
-
-			<%- include('../../_partials/_serviceItem', {num:i})%>
-
-			<%_ } _%>
-
-
+    <%_ for(let i=0; i<servicesList.length; i++){ _%>
+    <%- include('../../_partials/_serviceItem', {num:i})%>
+    <%_ } _%>
   </ul>
 </div>
