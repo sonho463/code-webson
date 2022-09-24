@@ -1,5 +1,5 @@
 <%_ for(let i=0; i < worksList.length; i++){ _%>
-<section id="<%= worksList[i].link %>" class="p-work-detail">
+<div id="<%= worksList[i].link %>" class="p-work-detail">
   <div class="p-work-detail__inner">
     <button class="c-button c-button-shadow close-work-detail">
       <span class="c-button__text">
@@ -25,7 +25,7 @@
         <%- worksList[i].description %>
       </p>
       <div class="c-view-site">
-        <a href="<%= worksList[i].siteLink %>" target="_blank" rel="noopener noreferrer"">サイトを見る</a>
+        <a href="<%= worksList[i].siteLink %>" target="_blank" rel="noopener noreferrer">サイトを見る</a>
 			</div>
 			<ul class=" p-work-detail__article">
           <%_ worksList[i].articles.forEach(element => { _%>
@@ -46,5 +46,5 @@
           </ul>
       </div>
     </div>
-</section>
+	</div>
 <%_ } _%>
