@@ -1471,31 +1471,21 @@ a.p-fv__link:hover::after {
   width: 600px;
   visibility: hidden;
 }
-.p-services__item__desc div {
+.p-services__item__desc li {
   list-style-type: disc;
   list-style-position: inside;
   text-indent: -20px;
   padding-left: 20px;
 }
-.p-services__item__desc div + div {
+.p-services__item__desc li + li {
   margin-top: 10px;
 }
 
 .p-services__item.open .p-services__item__desc {
   visibility: visible;
 }
-@media screen and (max-width:1279px) {
-  .p-services__item.open .p-services__item__desc__inner {
-    overflow-y: scroll;
-    /* when modal active */
-    -ms-touch-action: none;
-        touch-action: none;
-    -webkit-overflow-scrolling: none;
-    overflow: hidden;
-    /* Other browsers */
-    -ms-scroll-chaining: none;
-        overscroll-behavior: none;
-  }
+.p-services__item.open .p-services__item__desc__inner {
+  overflow-y: scroll;
 }
 
 .p-services__item__heading-block {
