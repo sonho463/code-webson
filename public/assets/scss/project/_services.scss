@@ -56,37 +56,71 @@
       margin-top: 30px;
     }
   }
-  &.open {
-    position: absolute;
-    height: 84%;
-    width: 95%;
-    z-index: 10;
-    @include v.mq(lg) {
-			height: 85%;
-      margin-top: 0;
-      .p-services__item__desc {
-        display: block;
-        width: 95%;
-				margin-top: 64px;
-        margin-right: auto;
-        margin-left: auto;
-        position: static;
-				&__inner{
+}
+.p-services__item.open {
+	position: absolute;
+	height: 84%;
+	width: 95%;
+	z-index: 10;
+	@include v.mq(lg) {
+		height: 85%;
+		margin-top: 0;
+		.p-services__item__desc {
+			display: block;
+			width: 95%;
+			height: 52%;
+			margin-top: 64px;
+			margin-right: auto;
+			margin-left: auto;
+			left: 0;top: 25%;
+			// position: static;
+			&__inner{
+				height: 100%;
+				ul{
 					overflow-y:scroll;
+					height: 100%;
 				}
-      }
-    }
+			}
+		}
+	}
 
-    .p-services__item__heading-block {
-      width: 30%;
-      min-width: unset;
-      min-width: 300px;
-      @include v.mq(lg) {
-        width: 100%;
-        height: 30%;
-      }
-    }
-  }
+	.p-services__item__heading-block {
+		width: 30%;
+		min-width: unset;
+		min-width: 300px;
+		@include v.mq(lg) {
+			width: 100%;
+			height: 30%;
+		}
+	}
+}
+.p-services__item__desc {
+	font-size: 1.6rem;
+	line-height: 1.4;
+	text-align: justify;
+	padding-right: 3%;
+	position: absolute;
+	left: 330px;
+	width: 600px;
+	visibility: hidden;
+	li {
+		list-style-type: disc;
+		list-style-position: inside;
+		text-indent: -20px;
+		padding-left: 20px;
+		+ li {
+			margin-top: 10px;
+		}
+	}
+}
+
+.p-services__item.open {
+	.p-services__item__desc {
+		visibility: visible;
+		&__inner{
+			overflow-y: scroll;
+		}
+	}
 }
 
 .p-services__item__heading-block {
@@ -116,31 +150,6 @@
   // margin-left: auto;
 }
 
-.p-services__item__desc {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  text-align: justify;
-  padding-right: 3%;
-  position: absolute;
-  left: 330px;
-  width: 600px;
-  visibility: hidden;
-  li {
-    list-style-type: disc;
-    list-style-position: inside;
-    text-indent: -20px;
-    padding-left: 20px;
-    + li {
-      margin-top: 10px;
-    }
-  }
-}
-
-.p-services__item.open {
-  .p-services__item__desc {
-    visibility: visible;
-  }
-}
 
 .p-services-button {
   position: relative;
