@@ -1,3 +1,6 @@
+@use "../foundation/variables" as v;
+
+
 .c-overlay{
 	display: none;
 	position: absolute;
@@ -26,6 +29,10 @@
 	background-color: rgba( 0,0,0,.6);
 	z-index: -1;
 	left: 0;
+	// @include v.mq(lg){
+	// 	position: fixed;
+	// 	top: 0;
+	// }
 }
 
 .c-overlay--services.visible{

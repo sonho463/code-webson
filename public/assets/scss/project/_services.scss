@@ -18,7 +18,7 @@
   margin-top: 15px;
   padding: 20px 3%;
   display: flex;
-	align-items: center;
+  align-items: center;
   justify-content: space-between;
   @include v.mq(lg) {
     flex-direction: column;
@@ -29,21 +29,21 @@
 .p-services__item {
   width: 24%;
   height: 90%;
-	max-height:400px;
+  max-height: 400px;
   padding: 25px 3%;
   background-color: rgba(240, 248, 255);
   border: solid 4px v.$main-primary;
   border-radius: 15px;
   transition: width 0.5s;
   display: flex;
-	align-items: center;
+  align-items: center;
   gap: 30px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px #777777;
   cursor: pointer;
   @include v.mq(lg) {
     width: 54%;
-		max-height: unset;
+    max-height: unset;
     margin-right: auto;
     margin-left: auto;
     flex-direction: column;
@@ -58,76 +58,87 @@
   }
 }
 .p-services__item.open {
-	position: absolute;
-	height: 84%;
-	width: 95%;
-	z-index: 10;
-	@include v.mq(lg) {
-		height: 85%;
-		margin-top: 0;
-		.p-services__item__desc {
-			display: block;
-			width: 95%;
-			height: 52%;
-			margin-top: 64px;
-			margin-right: auto;
-			margin-left: auto;
-			left: 0;top: 25%;
-			// position: static;
-			&__inner{
+  position: absolute;
+  height: 84%;
+  width: 95%;
+  z-index: 10;
+  @include v.mq(lg) {
+		z-index: 200;
+    height: 85%;
+    height: 88vh;
+    margin-top: 0;
+		bottom:0;
+    .p-services__item__desc {
+      display: block;
+      width: 95%;
+      height: 52%;
+      margin-top: 64px;
+      margin-right: auto;
+      margin-left: auto;
+      left: 0;
+      top: 40%;
+			// overscroll-behavior: none;
+      // position: static;
+      &__inner {
 				height: 100%;
-				ul{
-					overflow-y:scroll;
-					height: 100%;
-				}
-			}
-		}
-	}
+				overflow-y: scroll;
+				overscroll-behavior-y: contain;
+        // ul {
+        //   overflow-y: scroll;
+        //   height: 100%;
+        //   overscroll-behavior: none;
+        // }
+      }
+    }
+  }
 
-	.p-services__item__heading-block {
-		width: 30%;
-		min-width: unset;
-		min-width: 300px;
-		@include v.mq(lg) {
-			width: 100%;
-			height: 30%;
-		}
-	}
+  .p-services__item__heading-block {
+    width: 30%;
+    min-width: unset;
+    min-width: 300px;
+    @include v.mq(lg) {
+      width: 100%;
+      height: 30%;
+    }
+  }
 }
 .p-services__item__desc {
-	font-size: 1.6rem;
-	line-height: 1.4;
-	text-align: justify;
-	padding-right: 3%;
-	position: absolute;
-	left: 330px;
-	width: 600px;
-	visibility: hidden;
-	li {
-		list-style-type: disc;
-		list-style-position: inside;
-		text-indent: -20px;
-		padding-left: 20px;
-		+ li {
-			margin-top: 10px;
-		}
-	}
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: justify;
+  padding-right: 3%;
+  position: absolute;
+  left: 330px;
+  width: 600px;
+  visibility: hidden;
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+    + li {
+      margin-top: 10px;
+    }
+    @include v.mq(lg) {
+      padding-left: 45px;
+    }
+  }
 }
 
 .p-services__item.open {
-	.p-services__item__desc {
-		visibility: visible;
-		&__inner{
-			overflow-y: scroll;
-		}
-	}
+  .p-services__item__desc {
+    visibility: visible;
+    &__inner {
+      overflow-y: scroll;
+    }
+  }
 }
 
 .p-services__item__heading-block {
   width: 100%;
   min-width: 100%;
   height: inherit;
-	max-height: 272px;
+  max-height: 272px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -148,49 +159,4 @@
   // margin-top: 30px;
   // margin-right: auto;
   // margin-left: auto;
-}
-
-
-.p-services-button {
-  position: relative;
-  display: inline-block;
-  font-size: 1.6rem;
-  // background-color: v.$shadow-cBlue;
-  color: v.$main-primary;
-  // width: 80px;height: 40px;
-  border-radius: 5px;
-  background-color: v.$shadow-cBlue;
-  padding: 8px 30px;
-  @include v.mq(md) {
-    margin-top: 20px;
-  }
-  &-shadow::after {
-    content: "";
-    // display: block;
-    border: dotted 2px v.$main-primary;
-    border-radius: 5px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -5px;
-    left: -5px;
-  }
-  &__text {
-    display: inline-block;
-    transform: translate(-5px, -5px);
-    transition: transform 0.5s;
-  }
-}
-
-.p-services-button-shadow:hover .p-services-button__text {
-  transform: translate(0, 0);
-}
-
-.p-services-button-shadow::after {
-  transition: top 0.5s, left 0.5s;
-}
-
-.p-services-button-shadow:hover::after {
-  top: 0;
-  left: 0;
 }

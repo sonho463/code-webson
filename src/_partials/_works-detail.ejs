@@ -1,6 +1,6 @@
 <%_ for(let i=0; i < worksList.length; i++){ _%>
 <div id="<%= worksList[i].link %>" class="p-work-detail">
-  <div class="p-work-detail__inner">
+  <!-- <div class="p-work-detail__inner"> -->
     <button class="c-button c-button-shadow close-work-detail">
       <span class="c-button__text">
         閉じる
@@ -26,25 +26,25 @@
       </p>
       <div class="c-view-site">
         <a href="<%= worksList[i].siteLink %>" target="_blank" rel="noopener noreferrer">サイトを見る</a>
-			</div>
-			<ul class=" p-work-detail__article">
-          <%_ worksList[i].articles.forEach(element => { _%>
-          <li class="p-work-detail__item">
-            <figure class="p-work-detail__image">
-              <img src="./assets/img/workDetail/<%= element.img %>.png" alt="画像<%= element.img %>">
-            </figure>
-            <div class="p-work-detail__text">
-              <h3 class="p-work-detail__heading">
-                <%= element.title %>
-              </h3>
-              <p class="p-work-detail__body">
-                <%= element.text %>
-              </p>
-            </div>
-          </li>
-          <%_ }); _%>
-          </ul>
       </div>
+      <ul class=" p-work-detail__article">
+        <%_ worksList[i].articles.forEach(element => { _%>
+        <li class="p-work-detail__item">
+          <figure class="p-work-detail__image">
+            <img src="./assets/img/workDetail/<%= element.img %>.png" alt="画像<%= element.img %>">
+          </figure>
+          <div class="p-work-detail__text">
+            <h3 class="p-work-detail__heading">
+              <%= element.title %>
+            </h3>
+            <p class="p-work-detail__body">
+              <%= element.text %>
+            </p>
+          </div>
+        </li>
+        <%_ }) _%>
+      </ul>
     </div>
-	</div>
+  <!-- </div> -->
+</div>
 <%_ } _%>
