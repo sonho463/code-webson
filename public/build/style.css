@@ -514,7 +514,7 @@ a:hover img {
   top: 0;
   background-color: #f8faf0;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .l-header {
     position: fixed;
     top: unset;
@@ -830,7 +830,7 @@ a:hover img {
   margin-left: auto;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .p-services .c-button {
     margin-top: 20px;
   }
@@ -908,7 +908,7 @@ a:hover img {
     width: 85%;
   }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .p-g-nav__inner {
     width: 100%;
   }
@@ -924,7 +924,7 @@ a:hover img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .p-g-nav__item {
     font-size: 1.2rem;
     letter-spacing: -0.1em;
@@ -965,7 +965,7 @@ a:hover img {
   height: 65px;
   background-repeat: no-repeat;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .p-g-nav__link::before {
     width: 40px;
     height: 40px;
@@ -1403,6 +1403,7 @@ a.p-fv__link:hover::after {
   .p-services__item {
     width: 54%;
     max-height: unset;
+    min-height: 300px;
     margin-right: auto;
     margin-left: auto;
     -webkit-box-orient: vertical;
@@ -1524,7 +1525,7 @@ a.p-fv__link:hover::after {
   width: 94px;
   margin-top: -30px;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .p-services__item__icon {
     margin-top: 0;
   }
@@ -1576,6 +1577,7 @@ a.p-fv__link:hover::after {
 }
 @media screen and (max-width:1279px) {
   .p-about__profile__desc {
+    margin-top: 30px;
     font-size: 1.8rem;
   }
 }
@@ -1588,10 +1590,20 @@ a.p-fv__link:hover::after {
   font-size: 2.4rem;
   line-height: 1.8;
 }
+@media screen and (max-width:1279px) {
+  .p-about__career {
+    margin-top: 30px;
+  }
+}
 
 .p-about__career__web {
   font-size: 2rem;
   width: 100%;
+}
+@media screen and (max-width:1279px) {
+  .p-about__career__web {
+    margin-top: 20px;
+  }
 }
 .p-about__career__web td {
   padding: 4px 2%;
@@ -1614,6 +1626,7 @@ a.p-fv__link:hover::after {
 @media screen and (max-width:1279px) {
   .p-about__career__date {
     background-color: #ffde59;
+    margin-top: 30px;
   }
 }
 .p-about__career__content {
@@ -1661,6 +1674,11 @@ a.p-fv__link:hover::after {
   font-size: 2rem;
   text-align: justify;
 }
+@media screen and (max-width:768px) {
+  .p-modal__contents {
+    font-size: 1.4rem;
+  }
+}
 
 .p-modal__profile__overview {
   display: -webkit-box;
@@ -1683,6 +1701,13 @@ a.p-fv__link:hover::after {
   padding: 5px 2% 5px 135px;
   border-radius: 100vh;
 }
+@media screen and (max-width:768px) {
+  .p-modal__profile__career h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
 .p-modal__profile__career h3::before {
   content: "";
   position: absolute;
@@ -1692,6 +1717,12 @@ a.p-fv__link:hover::after {
   background-size: cover;
   width: 100px;
   height: 100px;
+}
+@media screen and (max-width:768px) {
+  .p-modal__profile__career h3::before {
+    width: 80px;
+    height: 80px;
+  }
 }
 .p-modal__profile__career p {
   margin-top: 20px;
@@ -1815,7 +1846,7 @@ input.p-contact__submit-button:hover {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .l-footer {
     position: relative;
     display: -webkit-box;
@@ -1839,7 +1870,7 @@ input.p-contact__submit-button:hover {
   bottom: 20px;
   left: 5%;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .l-footer__nav {
     position: static;
   }
@@ -1882,7 +1913,7 @@ input.p-contact__submit-button:hover {
   right: 5%;
   bottom: 20px;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1279px) {
   .l-footer__copyright {
     position: static;
     margin-top: 20px;

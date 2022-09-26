@@ -49,7 +49,7 @@
 }
 
 .p-services .c-button{
-	@include v.mq(md){
+	@include v.mq(lg){
 		margin-top: 20px;
 	}
 }
