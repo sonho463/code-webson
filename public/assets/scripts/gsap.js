@@ -1,4 +1,6 @@
+
 gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline();
 
 ScrollTrigger.defaults({
   toggleActions: "restart pause resume pause",
@@ -10,9 +12,8 @@ const sectionHeading = document.getElementsByClassName(
 );
 
 Object.keys(sectionHeading).forEach((key) => {
-  console.log(sectionHeading[key]);
   target = sectionHeading[key];
-	const trigger =
+	targetH2 = sectionHeading[key].getElementsByTagName('h2')[0]
   gsap.from(target, {
 		scrollTrigger: {
 			trigger: target.parentNode,
@@ -23,9 +24,10 @@ Object.keys(sectionHeading).forEach((key) => {
     duration: .5,
     ease: "sine",
   });
+
 });
 
-const tl = gsap.timeline();
+
 
 tl.to("h1.p-fv__left__heading > span:first-of-type", {
   duration: 1,
