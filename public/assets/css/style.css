@@ -1341,14 +1341,18 @@ a.p-fv__link:hover::after {
 }
 
 .p-services__item__desc {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  text-align: justify;
+  width: 600px;
+  height: 80%;
   padding-right: 3%;
   position: absolute;
   left: 330px;
-  width: 600px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: justify;
   visibility: hidden;
+}
+.p-services__item__desc__inner {
+  height: 100%;
 }
 .p-services__item__desc li {
   list-style-type: disc;

@@ -17,9 +17,9 @@ const noScroll = () => {
 // サービスブロックのアイテムオープン
 const snapContainer = document.querySelector(".l-snap-container");
 const servicesItem = document.getElementsByClassName("js-services__item");
-const servicesItemDesc = document.getElementsByClassName(
-  "js-services__item__desc"
-);
+// const servicesItemDescInner = document.getElementsByClassName(
+//   "p-services__item__desc__inner"
+// );
 const servicesOverlay = document.querySelector(".c-overlay--services");
 const cOverlay = document.querySelector(".c-overlay");
 
@@ -35,6 +35,9 @@ const removeBodyFix = () => {
 
 const closeServiceItem = (target, activeCont, buttonText) => {
   console.log(`${activeCont} is close`);
+	const targetInner = target.querySelector('.p-services__item__desc__inner')
+	console.log(targetInner)
+	targetInner.scrollTo(0,0);
   target.classList.remove("open");
   buttonText.textContent = "詳しく";
   removeBodyFix();
@@ -49,6 +52,7 @@ const openServiceItem = (target, activeCont, buttonText) => {
   bodyFix();
   cOverlay.classList.add("visible");
   servicesOverlay.classList.add("visible");
+
   // bodyScrollLock.disableBodyScroll(target)
 };
 
@@ -106,23 +110,29 @@ setLinkInPage(footerLink);
 
 const modal = document.querySelector(".p-about__modal");
 const modalContents = document.querySelector(".p-modal__contents");
+// const modalContents = document.querySelector("#modal");
 const buttonCloseModal = document.querySelector(".p-modal__close");
 const buttonOpenModal = document.querySelector(".p-about__open");
 const aboutArrowNext = document.querySelector(".p-about > .c-arrow");
 
 const closeModal = () => {
+  console.log("modal close");
+  modal.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
   modal.classList.remove("open");
   cOverlay.classList.remove("visible");
   removeBodyFix();
-  if (w > 1024) {
-    aboutArrowNext.style.display = "block";
-  }
+  // if (w > 1024) {
+  //   aboutArrowNext.style.display = "block";
+  // }
 };
 const openModal = () => {
   modal.classList.add("open");
   aboutArrowNext.style.display = "none";
   cOverlay.classList.add("visible");
-  const w = window.innerWidth;
+  // const w = window.innerWidth;
   bodyFix();
   // bodyFixWhenIphone(modalContents)
   modal.scrollIntoView(true);
@@ -182,12 +192,12 @@ closeWorkDetailArray.forEach((ele) => {
       top: 0,
       behavior: "smooth",
     });
-		const closeAction=()=>{
-			target.classList.remove("open");
-			target.classList.remove("u-z-index999");
-			document.body.classList.remove("u-oy-hidden");
-		}
-		setTimeout(closeAction, 500)
+    const closeAction = () => {
+      target.classList.remove("open");
+      target.classList.remove("u-z-index999");
+      document.body.classList.remove("u-oy-hidden");
+    };
+    setTimeout(closeAction, 500);
   });
 });
 

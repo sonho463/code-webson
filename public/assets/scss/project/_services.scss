@@ -104,14 +104,18 @@
   }
 }
 .p-services__item__desc {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  text-align: justify;
+  width: 600px;
+	height: 80%;
   padding-right: 3%;
   position: absolute;
   left: 330px;
-  width: 600px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: justify;
   visibility: hidden;
+	&__inner{
+		height: 100%;
+	}
   li {
     list-style-type: disc;
     list-style-position: inside;
