@@ -40,8 +40,7 @@ const closeServiceItem = (target, activeCont, buttonText) => {
   removeBodyFix();
   servicesOverlay.classList.remove("visible");
   cOverlay.classList.remove("visible");
-	// bodyScrollLock. enableBodyScroll(target)
-
+  // bodyScrollLock. enableBodyScroll(target)
 };
 const openServiceItem = (target, activeCont, buttonText) => {
   console.log(`${activeCont} is open`);
@@ -50,9 +49,7 @@ const openServiceItem = (target, activeCont, buttonText) => {
   bodyFix();
   cOverlay.classList.add("visible");
   servicesOverlay.classList.add("visible");
-	// bodyScrollLock.disableBodyScroll(target)
-
-
+  // bodyScrollLock.disableBodyScroll(target)
 };
 
 for (let i = 0; i < servicesItem.length; i++) {
@@ -181,9 +178,16 @@ closeWorkDetailArray.forEach((ele) => {
     const targetId = ele.parentElement.id;
     const target = document.querySelector(`#${targetId}`);
     console.log("close", target);
-    target.classList.remove("open");
-    target.classList.remove("u-z-index999");
-    document.body.classList.remove("u-oy-hidden");
+    target.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+		const closeAction=()=>{
+			target.classList.remove("open");
+			target.classList.remove("u-z-index999");
+			document.body.classList.remove("u-oy-hidden");
+		}
+		setTimeout(closeAction, 500)
   });
 });
 
