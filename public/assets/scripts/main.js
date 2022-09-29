@@ -109,7 +109,7 @@ setLinkInPage(footerLink);
 // アバウトページのモーダル開閉
 
 const modal = document.querySelector(".p-about__modal");
-const modalContents = document.querySelector(".p-modal__contents");
+const modalContents = document.querySelector('.p-modal__contents')
 // const modalContents = document.querySelector("#modal");
 const buttonCloseModal = document.querySelector(".p-modal__close");
 const buttonOpenModal = document.querySelector(".p-about__open");
@@ -117,10 +117,7 @@ const aboutArrowNext = document.querySelector(".p-about > .c-arrow");
 
 const closeModal = () => {
   console.log("modal close");
-  modal.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  modalContents.scrollTo(0,0);
   modal.classList.remove("open");
   cOverlay.classList.remove("visible");
   removeBodyFix();
