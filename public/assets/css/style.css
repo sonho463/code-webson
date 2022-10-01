@@ -1562,6 +1562,15 @@ a.p-fv__link:hover::after {
     font-size: 1.8rem;
     margin-top: 40px;
     margin-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 6%;
+  }
+}
+@media screen and (max-width:480px) {
+  .p-modal__profile__career h3 {
+    font-size: 1.4rem;
+    padding-left: 60px;
+    padding-right: 6%;
   }
 }
 .p-modal__profile__career h3::before {
@@ -1580,9 +1589,19 @@ a.p-fv__link:hover::after {
     height: 80px;
   }
 }
+@media screen and (max-width:480px) {
+  .p-modal__profile__career h3::before {
+    width: 50px;
+    height: 50px;
+    left: 10px;
+  }
+}
 .p-modal__profile__career p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.p-modal__profile__career a {
+  display: inline-block;
 }
 
 .p-modal__close {
