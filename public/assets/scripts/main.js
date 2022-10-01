@@ -1,3 +1,24 @@
+var textarea = document.querySelector('.textarea');
+textarea.scrollTop = 1;
+
+window.addEventListener('touchmove', function(event) {
+  if (event.target === textarea && textarea.scrollTop !== 0 && textarea.scrollTop + textarea.clientHeight !== textarea.scrollHeight) {
+    event.stopPropagation();
+  }
+  else {
+    event.preventDefault();
+  }
+});
+
+textarea.addEventListener('scroll', function(event) {
+  if (textarea.scrollTop === 0) {
+    textarea.scrollTop = 1;
+  }
+  else if (textarea.scrollTop + textarea.clientHeight === textarea.scrollHeight) {
+    textarea.scrollTop = textarea.scrollTop - 1;
+  }
+});
+
 // iphone用bodyFix関数
 const body = document.getElementsByTagName("body")[0];
 let scrollTop = 0;
@@ -28,6 +49,8 @@ const bodyFix = () => {
   document.body.classList.add("u-oy-hidden");
   snapContainer.classList.add("u-oy-hidden");
 };
+
+
 const removeBodyFix = () => {
   document.body.classList.remove("u-oy-hidden");
   snapContainer.classList.remove("u-oy-hidden");
@@ -59,7 +82,7 @@ const openServiceItem = (target, activeCont, buttonText) => {
 for (let i = 0; i < servicesItem.length; i++) {
   const button = servicesItem[i].querySelector(".js-services-button");
   const buttonText = servicesItem[i].querySelector(".js-services-button__text");
-  button.addEventListener("click", function () {
+  button.addEventListener("click", function (event) {
     const activeCont = servicesItem[i].querySelector(
       ".p-services__item__heading"
     ).textContent;
@@ -68,6 +91,9 @@ for (let i = 0; i < servicesItem.length; i++) {
       closeServiceItem(servicesItem[i], activeCont, buttonText);
     } else {
       openServiceItem(servicesItem[i], activeCont, buttonText);
+			console.log(event);
+			event.stopPropagation();
+
     }
     servicesItem[i].scrollIntoView();
   });
