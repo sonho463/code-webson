@@ -1,8 +1,13 @@
-<div class="section_template">
-	<h1>Section-template</h1>
-	<p>これがわたってきたele.name <%= name %></p>
-	<p>この次がinclude 変数</p>
-	<%_ $sectionPath = `./_section/_${name}` _%>
-	<%= $sectionPath %>
-	<%- include($sectionPath)%>
-</div>
+<%_ if(name==="fv"){ _%>
+<section id="<%= name %>" class="l-<%= name %> c-section">
+  <%_ } else { _%>
+  <section id="<%= name %>" class="l-<%= name %> l-snap-item c-section">
+    <%_ } _%>
+    <div class="p-<%= name %> c-inner">
+      <%_ $sectionPath = `./_section/_${name}` _%>
+      <%- include($sectionPath)%>
+      <div class="c-arrow">
+        <%- include('./_c-arrow__next') -%>
+      </div>
+    </div>
+  </section>

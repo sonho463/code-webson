@@ -2,12 +2,21 @@
 
 .l-snap-container {
   height: calc(100vh - 100px);
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity;
   scroll-snap-type: y mandatory;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @include v.mq(lg) {
+    scroll-snap-type: none;
+    overflow-y: scroll;
+    height: unset;
+    padding-bottom: 80px;
+  }
 }
 
 .l-snap-item {
-	position: relative;
+  position: relative;
   scroll-snap-stop: always;
   scroll-snap-align: start;
   text-align: center;
@@ -17,33 +26,15 @@
   padding-bottom: 10%;
   display: flex;
   align-items: flex-start;
-  // margin-right: calc(50% - 50vw);
-  // margin-left: calc(50% - 50vw);
-  &.l-fv-1 {
-    // background-color: #11ffff;
+  @include v.mq(lg) {
+    height: none;
+  }
+  &.l-fv {
     height: 200vh;
   }
-  // &.l-fv-2 {
-  //   background-color: #ffff00;
-  // }
-  // &.l-works {
-  //   background-color: #ff9900;
-  // }
-  // &.l-services {
-  //   background-color: #ff0000;
-  // }
-  // &.l-about {
-  //   background-color: #990000;
-  // }
   &.l-contact {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
   }
 }
-
-// .l-contact {
-//   width: 100%;
-//   height: 20%;
-//   margin-right: calc(50% - 50vw);
-//   margin-left: calc(50% - 50vw);
-// }

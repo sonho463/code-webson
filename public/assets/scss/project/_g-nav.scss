@@ -2,84 +2,92 @@
 
 .p-g-nav {
   background-color: v.$main-secondary;
-	margin-left: auto;
-	height: 100%;
+  margin-left: auto;
+  height: 100%;
   // display: none;
-	@include v.mq(md){
-	}
+  @include v.mq(lg) {
+  }
   &.is-active {
-		transform: translateX(0);
+    transform: translateX(0);
   }
   &__inner {
     width: 60%;
-		@include v.mq(lg){
-			width: 85%;
-		}
-		height: 100%;
+    @include v.mq(lg) {
+      width: 85%;
+    }
+    height: 100%;
     margin-right: auto;
     margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-		@include v.mq(md){
-			width: 100%;
-		}
+    @include v.mq(lg) {
+      width: 100%;
+    }
   }
   &__item {
-		font-size: 2.0rem;
-		transition: .3s;
-		&:hover{
-			transform: scale(1.2);
-			transition: .3s;
-		}
-		@include v.mq(md){
-			font-size: 1.2rem;
-			letter-spacing: -.1em;
-		}
+    font-size: 2rem;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+    @include v.mq(lg) {
+      font-size: 1.2rem;
+      letter-spacing: -0.1em;
+    }
   }
-  &__item--icon {
-    width: 100px;
-		@include v.mq(md){
-			width: 50px;
-		}
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &--about::before {
+      background-image: url(../assets/img/header/about.png);
+    }
+    &--works::before {
+      background-image: url(../assets/img/header/works.png);
+    }
+    &--services::before {
+      background-image: url(../assets/img/header/services.png);
+    }
+    &--contact::before {
+      background-image: url(../assets/img/to-contact.png);
+    }
   }
-	&__link{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-	}
-	&__link::before{
-		content:'';
-		display: block;
-		background-size: 80%;
-		background-position: center bottom;
-		width: 65px;height: 65px;
-		background-repeat: no-repeat;
-		@include v.mq(md){
-			width: 40px;height: 40px;
-		}
-	}
-	&__link{
-		&--about::before{
-			background-image: url(../assets/img/header/about.png);
-		}
-		&--works::before{
-			background-image: url(../assets/img/header/works.png);
-		}
-		&--skills::before{
-			background-image: url(../assets/img/header/skills.png);
-		}
-		&--services::before{
-			background-image: url(../assets/img/header/services.png);
-		}
-		&--career::before{
-		background-image: url(../assets/img/header/career.png);
-		}
-		&--contact::before{
-		background-image: url(../images/mv/face.png);
-		}
-
-	}
-
+  &__link::before {
+    content: "";
+    display: block;
+    background-size: 80%;
+    background-position: center bottom;
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    @include v.mq(lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__link--icon {
+    background-image: url(../assets/img/arrow_webson.png);
+    background-size: 60%;
+    background-position: center 6px;
+    background-repeat: no-repeat;
+    background-color: v.$main-primary;
+    color: v.$color-white;
+    border-radius: 100vh;
+    width: 90px;
+    height: 90px;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    &.--contact {
+      background-color: v.$shadow-cBlue;
+      color: v.$main-primary;
+    }
+    @include v.mq(lg) {
+      width: 68px;
+      height: 68px;
+      padding-bottom: 0;
+    }
+  }
 }

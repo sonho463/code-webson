@@ -4,12 +4,12 @@
   "description": "WEBSON/コーディング代行事業LP",
   "scripts": {
     "watch": "run-p watch:*",
-    "watch:browser": "browser-sync start --server --files='./public' --index='./public/index.html'",
+    "watch:ejs": "nodemon -e ejs -x \"npm run ejs:comp \"",
+    "watch:browser": "browser-sync start --server './public/' --files '**/*'",
     "watch:build": "watch 'npm run build' ./public/assets/scss/",
-    "build": "npm run build:scss && npm run build:autoprefixer",
+    "build": "npm run build:scss && npm run build:autoprefixer && browser-sync reload",
     "build:scss": "sass public/assets/scss/style.scss public/assets/css/style.css",
     "build:autoprefixer": "postcss --use autoprefixer --no-map public/assets/css/style.css -d public/build/",
-    "watch:ejs": "nodemon -e ejs -x \"npm run ejs:comp \"",
     "ejs:comp": "ejs-cli --base-dir src \"/**/[!^_]*.ejs\" --out ./public --watch"
   },
   "keywords": [],

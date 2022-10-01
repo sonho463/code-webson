@@ -4,7 +4,7 @@
 *:before,
 *:after {
 box-sizing: border-box;
-outline: 1px solid pink;
+// outline: 1px solid pink;
 }
 
 html {
@@ -22,6 +22,7 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	text-align: justify;
+	scroll-behavior: smooth;
 }
 
 // フォント設定

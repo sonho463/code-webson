@@ -1,4 +1,6 @@
-
-<a href="/#<%= $link %>" class="c-arrow__next">
-	<img src="./public/assets/img/arrow_d.png" class="c-arrow_next__image" alt="">
+<!-- index.jsで読み込んだdataの変数名をそのまま使用可能 -->
+<a href="/#<%= next %>" class="c-arrow__next">
+  <%_ if(next !== 'messageSecond'){ _%>
+  <span class="c-arrow__next__text"><%= nextJa %></span>
+  <%_ } _%>
 </a>

@@ -2,51 +2,20 @@
 <%- include('./_includes/_head') %>
 <%- include('./_includes/_header')%>
 
+<div class="wapper">
+	<%- include('./_partials/_works-detail')%>
+</div>
+
+<div class="p-about__modal">
+	<%- include('./_includes/_modal') %>
+</div>
+
 <main class="main">
-  <div class="l-snap-container">
-    <section id="fv" class="l-fv-1 l-snap-item c-section">
-      <div class="p-fv">
-        <%- include('./_includes/_fv-left')%>
-        <div class="p-fv__right">
-          <div class="p-fv__msg --first">
-            <p class="p-fv__right___text">・サイトへのご訪問ありがとうございます。</p>
-            <p class="p-fv__right__text">・独学で学習をはじめて２年。コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</p>
-            <p class="p-fv__right__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</p>
-            <p class="p-fv__right__text">・まずは、お気軽にご連絡ください。</p>
-						<div class="c-arrow">
-							<%- include('./_includes/_c-arrow__next', {$link:'works'}) -%>
-						</div>
-          </div>
-          <div class="p-fv__msg --first">
-            <h2 class="c-section__title">WEBSON・そんほんすのコーディング業務について</h2>
-            <p class="p-fv__right__text">・独学で学習をはじめて２年。コーディングスキルで、貴社事業の成長につながるお手伝いをさせていただきたいと考えています。</p>
-            <p class="p-fv__right__text">・軽微な修正、更新業務など外注しづらい案件にも対応いたします。</p>
-            <p class="p-fv__right__text">・まずは、お気軽にご連絡ください。</p>
-          </div>
-        </div>
-				<div class="c-arrow">
-					<%- include('./_includes/_c-arrow__next', {$link:'works'}) -%>
-				</div>
-      </div>
-
-    </section>
-    <section id="works" class="c-section l-works l-snap-item">works</section>
-    <section id="services" class="c-section l-services l-snap-item">services</section>
-    <section id="about" class="c-section l-about l-snap-item">
-      <h1>about</h1>
-    </section>
-    <section id="contact" class="c-section l-contact l-snap-item">contact
-
-      <%- include('./_includes/_footer')%>
-    </section>
-
-
+	<div class="l-snap-container">
+    <%_ section.forEach(function(ele) { _%>
+    <%- include('./_includes/_section_template',{name:ele.name, next:ele.next, nextJa:ele.next_ja})%>
+    <%_ }) _%>
   </div>
-
-	<%_ section.forEach(function(ele) { _%>
-		<p><%= ele.name %></p>
-		<p><%= ele.next %></p>
-		<%- include('./_includes/_section_template',{name:ele.name})%>
-		<p>したのコンテンツ</p>
-	<%_ }) _%>
 </main>
+
+<%- include('./_includes/_footer')%>

@@ -1,0 +1,153 @@
+@use "../foundation/variables" as v;
+
+.p-contact__contents {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  // padding-bottom: 200px;
+}
+
+.p-contact__form {
+  margin-top: 30px;
+  font-size: 2rem;
+  text-align: left;
+  input,
+  textarea {
+    margin-top: 10px;
+    // outline: 1px solid v.$main-primary;
+    // outline-offset: 1px;
+    padding: 0 10px;
+    background-color: v.$color-white;
+  }
+  input {
+    padding: 0 10px;
+  }
+  textarea {
+    padding: 10px;
+  }
+}
+
+.p-contact__form__input-area {
+  display: flex;
+  gap: 30px;
+  @include v.mq(lg) {
+    flex-direction: column;
+  }
+}
+
+.p-contact__user-info {
+  width: 30%;
+  // display: flex;
+  // gap: 20px;
+  @include v.mq(lg) {
+    flex-direction: column;
+    width: 100%;
+  }
+  label {
+    display: block;
+    &:last-of-type {
+      margin-top: 20px;
+    }
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+
+.p-contact__inquiry-wrapper {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  @include v.mq(lg) {
+    width: 100%;
+  }
+  label,
+  textarea {
+    display: block;
+    width: 100%;
+  }
+}
+
+input.p-contact__submit-button {
+  display: block;
+  margin: 30px auto 0;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  &:hover {
+    color: v.$color-white;
+    background-color: v.$main-primary;
+  }
+}
+
+.p-contact .c-arrow {
+  display: none;
+}
+
+// フッター部分
+
+.l-footer {
+  position: absolute;
+  width: 100%;
+  margin-top: 36px;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  background-color: v.$shadow-cBlue;
+  padding: 20px 5%;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  @include v.mq(lg) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    // margin-bottom: 40px;
+  }
+}
+
+.l-footer__nav {
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  @include v.mq(lg) {
+    position: static;
+  }
+}
+
+.l-footer__menu {
+  display: flex;
+  gap: 10px;
+  &__item {
+    font-size: 1.6rem;
+    @include v.mq(lg) {
+      font-size: 1.2rem;
+      width: 45%;
+    }
+  }
+  &__item + .l-footer__menu__item::before {
+    content: "|";
+    margin-right: 10px;
+    @include v.mq(lg) {
+      display: none;
+    }
+  }
+  @include v.mq(lg) {
+    flex-wrap: wrap;
+  }
+}
+
+.l-footer__copyright {
+  position: absolute;
+  font-size: 1.4rem;
+  right: 5%;
+  bottom: 20px;
+  @include v.mq(lg) {
+    position: static;
+    margin-top: 20px;
+  }
+}

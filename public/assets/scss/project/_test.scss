@@ -1,0 +1,29 @@
+@use "../foundation/variables" as v;
+
+.test__container{
+	position: relative;
+}
+
+.modal__container{
+	display: none;
+	background-color: pink;
+	position:absolute;
+	width: 90vw;
+	height: 90vh;
+	top: 25vh;
+	left: 50%;
+	transform: translateX(-50%);
+	&.open{
+		display: block;
+	}
+	&__inner{
+		height: 100%;
+		overflow-y: scroll;
+	}
+}
+
+.image{
+	width: 90vw;
+	margin-right: auto;
+	margin-left: auto;
+}

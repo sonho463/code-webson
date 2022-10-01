@@ -1,1 +1,21 @@
-<h1>works</h1>
+<div class="c-section__heading-block">
+  <h2 class="c-section__title">
+		コーディング実績
+	</h2>
+  <div class="c-section__lead">
+    <p class="c-section__lead__text">
+      コーディング実績の一部をご紹介します。
+      サイトリンク先には一部Basic認証をかけています。IDとパスワードは共通で、ID:webson, PASS:webson-pass です。
+    </p>
+  </div>
+</div>
+<div class="p-works__contents swiper">
+  <ul class="p-works__list swiper-wrapper">
+    <%_ for(let i=0; i < worksList.length; i++){ _%>
+    <%- include('../../_partials/_workItem',{num:i})%>
+    <%_ } _%>
+  </ul>
+  <!-- <div class="swiper-pagination"></div> -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>

@@ -1,0 +1,181 @@
+@use "../foundation/variables" as v;
+
+.p-about__contents {
+  margin-top: 20px;
+  display: flex;
+  gap: 5%;
+  height: 80%;
+  @include v.mq(lg) {
+    flex-direction: column;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .p-about__contents {
+    margin-top: 78px;
+  }
+}
+
+.p-about__profile {
+  flex: 1;
+  &__name {
+    text-align: center;
+    font-size: 3.6rem;
+    @include v.mq(lg) {
+      font-size: 2rem;
+    }
+  }
+  &__desc {
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    @include v.mq(lg) {
+			margin-top: 30px;
+      font-size: 1.8rem;
+    }
+  }
+}
+.p-about__career {
+  flex: 3;
+  text-align: justify;
+  font-size: 2.4rem;
+  line-height: 1.8;
+	@include v.mq(lg){
+		margin-top: 30px;
+	}
+}
+
+.p-about__career {
+  &__web {
+    font-size: 2rem;
+    width: 100%;
+		@include v.mq(lg){
+			margin-top: 20px;
+		}
+    td {
+      padding: 4px 2%;
+      @include v.mq(lg) {
+        display: block;
+        width: 100%;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__heading {
+    @include v.mq(lg) {
+      font-size: 2.4rem;
+    }
+  }
+  &__date {
+    width: 20%;
+    @include v.mq(lg) {
+      background-color: v.$accent-primary;
+			margin-top: 30px;
+    }
+    // background-color: pink;
+  }
+  &__content {
+    width: 80%;
+    // background-color: yellow;
+  }
+}
+
+.p-about__face {
+  width: 200px;
+  border-radius: 100vh;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-about__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  // overflow: scroll;
+  &.open {
+    display: block;
+  }
+}
+
+.p-modal__contents {
+  // background-color: #fff;
+  background-image: url("../assets/img/works/bg-img-white.jpg");
+  padding: 60px 12%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 75vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+  text-align: justify;
+  @include v.mq(md) {
+    font-size: 1.4rem;
+  }
+}
+
+.p-modal__profile__overview {
+  display: flex;
+  gap: 5%;
+}
+
+.p-modal__face {
+  // width: 100px;
+}
+
+.p-modal__profile__career {
+  margin-top: 60px;
+  h3 {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 2.8rem;
+    @include v.mq(md) {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    font-weight: bold;
+    background-color: v.$main-primary;
+    color: v.$color-white;
+    padding: 5px 2% 5px 135px;
+    border-radius: 100vh;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 20px;
+      background-image: url(../assets/img/header/about.png);
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      @include v.mq(md) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.p-modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  font-size: 2rem;
+  z-index: 100;
+}

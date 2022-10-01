@@ -1,0 +1,41 @@
+@use "../foundation/variables" as v;
+
+
+.c-overlay{
+	display: none;
+	position: absolute;
+	// top: -15%;left: -15%;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba( 0,0,0,.6);
+	z-index: -1;
+	&.visible{
+		display: block;
+		z-index:999;
+	}
+}
+
+.l-header .c-overlay{
+	height: 100%;
+	left: 0;
+}
+
+.c-overlay--services{
+	display: none;
+	position: absolute;
+	// top: -15%;left: -15%;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba( 0,0,0,.6);
+	z-index: -1;
+	left: 0;
+	// @include v.mq(lg){
+	// 	position: fixed;
+	// 	top: 0;
+	// }
+}
+
+.c-overlay--services.visible{
+		display: block;
+		z-index: 5;
+	}
