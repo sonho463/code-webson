@@ -2018,6 +2018,7 @@ input.p-contact__submit-button:hover {
 @media screen and (max-width:1279px) {
   .p-work-detail .c-section__heading-block {
     margin-top: 0;
+    width: 100%;
   }
 }
 .p-work-detail .c-button {
@@ -2063,18 +2064,6 @@ input.p-contact__submit-button:hover {
   margin-top: 120px;
 }
 
-.p-work-detail__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 32px;
-}
 .p-work-detail__item + li {
   margin-top: 100px;
 }
@@ -2087,11 +2076,36 @@ input.p-contact__submit-button:hover {
   }
 }
 
+.p-work-detail__2column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+  margin-top: 20px;
+}
+@media screen and (max-width:768px) {
+  .p-work-detail__2column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .p-work-detail__image {
   border: 1px solid #b0c4de;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 40%;
+}
+@media screen and (max-width:768px) {
+  .p-work-detail__image {
+    width: 100%;
+  }
 }
 .p-work-detail__image img {
   -o-object-fit: cover;
@@ -2099,10 +2113,15 @@ input.p-contact__submit-button:hover {
 }
 
 .p-work-detail__text {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0px 3% 10px;
+}
+@media screen and (max-width:768px) {
+  .p-work-detail__text {
+    width: 100%;
+  }
 }
 
 .p-work-detail__heading {
@@ -2124,7 +2143,6 @@ input.p-contact__submit-button:hover {
   font-size: 2rem;
 }
 .p-work-detail__body {
-  margin-top: 20px;
   font-size: 2rem;
 }
 
