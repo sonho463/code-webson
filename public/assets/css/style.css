@@ -1354,6 +1354,12 @@ a.p-fv__link:hover::after {
 .p-services__item__desc__inner {
   height: 100%;
 }
+.p-services__item__desc__inner ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 .p-services__item__desc li {
   list-style-type: disc;
   list-style-position: inside;
