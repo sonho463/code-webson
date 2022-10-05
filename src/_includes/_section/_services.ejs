@@ -3,56 +3,16 @@
   <h2 class="c-section__title">サービス</h2>
   <div class="c-section__lead">
     <p class="c-section__lead__text">
-			提供できるサービスです。各カードをクリックして、詳しい解説をご覧ください。
+      提供できるサービスです。各カードをクリックして、詳しい解説をご覧ください。
     </p>
   </div>
 </div>
 
 <ul class="p-services__content">
-	<li class="p-services__card">
-		<div class="p-services__card__heading-block">
-			<h2>HTML/CSS/JavaScript</h2>
-			<figure class="p-services__card__image">
-				<img src="./assets/img/services/ico-code.png" alt="">
-			</figure>
-		</div>
-		<p class="p-services__card__desc">
-				デザインを<b>忠実に再現</b>することを優先しつつ、デザイナーの意図やサイト、クライアントの目的を考えて、実装にあたります。
-				いろいろと考えたことについては、<b>綿密なコミュニケーション</b>をとりながら、作業をすすめたいと考えています。
-				適切な場所に適切なタグを使用する<b>セマンティックなHTML</b>を意識しています。
-				コーディングルールなどがございましたら、<b>忠実に守って</b>コーディングをいたします。
-				GitHub,Bitbucketなどの使用も可能です。また、npmScriptなどを使用した効率化も意識して作業を進めています。
-		</p>
-	</li>
-	<li class="p-services__card">
-		<div class="p-services__card__heading-block">
-			<h2>静的サイト<br>構築</h2>
-			<figure class="p-services__card__image">
-				<img src="./assets/img/services/ico-code.png" alt="">
-			</figure>
-		</div>
-		<p class="p-services__card__desc">
-				デザインを<b>忠実に再現</b>することを優先しつつ、デザイナーの意図やサイト、クライアントの目的を考えて、実装にあたります。
-				いろいろと考えたことについては、<b>綿密なコミュニケーション</b>をとりながら、作業をすすめたいと考えています。
-				適切な場所に適切なタグを使用する<b>セマンティックなHTML</b>を意識しています。
-				コーディングルールなどがございましたら、<b>忠実に守って</b>コーディングをいたします。
-				GitHub,Bitbucketなどの使用も可能です。また、npmScriptなどを使用した効率化も意識して作業を進めています。
-		</p>
-	</li>
-	<li class="p-services__card">
-		<div class="p-services__card__heading-block">
-			<h2>HTML/CSS/JavaScript</h2>
-			<figure class="p-services__card__image">
-				<img src="./assets/img/services/ico-code.png" alt="">
-			</figure>
-		</div>
-		<p class="p-services__card__desc">
-				デザインを<b>忠実に再現</b>することを優先しつつ、デザイナーの意図やサイト、クライアントの目的を考えて、実装にあたります。
-				いろいろと考えたことについては、<b>綿密なコミュニケーション</b>をとりながら、作業をすすめたいと考えています。
-				適切な場所に適切なタグを使用する<b>セマンティックなHTML</b>を意識しています。
-				コーディングルールなどがございましたら、<b>忠実に守って</b>コーディングをいたします。
-				GitHub,Bitbucketなどの使用も可能です。また、npmScriptなどを使用した効率化も意識して作業を進めています。
-		</p>
-	</li>
+
+  <%_ for(let i=0; i < servicesList.length; i++){ _%>
+  <%- include('../../_partials/_serviceItem',{num:i})%>
+  <%_ } _%>
+
 
 </ul>

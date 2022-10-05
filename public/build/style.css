@@ -1379,7 +1379,7 @@ a.p-fv__link:hover::after {
 .p-services__card__desc {
   position: absolute;
   top: 0;
-  left: 111%;
+  right: 111%;
   width: 20vw;
 }
 

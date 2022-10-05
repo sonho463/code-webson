@@ -1,44 +1,43 @@
 @use "../foundation/variables" as v;
 
-
-
 .p-services {
   height: inherit;
 }
 
-.p-services__content{
-	display: flex;
-	justify-content: space-between;
-	height: 80%;
+.p-services__content {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
 }
 
-.p-services__card{
-	position: relative;
-	width: 25%;
-	height: 100%;
-	padding: 30px 5%;
-	background-color: v.$accent-secondary;
-	border: 4px solid v.$main-primary;
-	border-radius: 10px;
-	display: flex;
-	gap: 50px;
-	overflow-x: hidden;
-	&__heading-block{
-		width: 100%;
-		padding: 20px 5%;
-		h2{
-			font-size: 3.2rem;
-			overflow-wrap: break-word;
-				}
-	}
-	&__image{
-		width: 100%;
-	}
-	&__desc{
-		position: absolute;
-		top: 0;left: 111%;
-		width: 20vw;
-	}
+.p-services__card {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  padding: 30px 5%;
+  background-color: v.$accent-secondary;
+  border: 4px solid v.$main-primary;
+  border-radius: 10px;
+  display: flex;
+  gap: 50px;
+  overflow-x: hidden;
+  &__heading-block {
+    width: 100%;
+    padding: 20px 5%;
+    h2 {
+      font-size: 3.2rem;
+      overflow-wrap: break-word;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__desc {
+    position: absolute;
+    top: 0;
+    right: 111%;
+    width: 20vw;
+  }
 }
 
 // 実装方針
