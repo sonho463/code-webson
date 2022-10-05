@@ -3,15 +3,21 @@
 <%- include('./_includes/_header')%>
 
 <div class="wapper">
-	<%- include('./_partials/_works-detail')%>
+  <%- include('./_partials/_works-detail')%>
 </div>
 
 <div class="p-about__modal">
-	<%- include('./_includes/_modal') %>
+  <%- include('./_includes/_modal') %>
 </div>
 
+<%_ for(let i=0; i < servicesList.length; i++){ _%>
+<div class="p-services__modal">
+  <%- include('./_includes/_serviceModal',{num: i}) %>
+</div>
+<%_ } _%>
+
 <main class="main">
-	<div class="l-snap-container">
+  <div class="l-snap-container">
     <%_ section.forEach(function(ele) { _%>
     <%- include('./_includes/_section_template',{name:ele.name, next:ele.next, nextJa:ele.next_ja})%>
     <%_ }) _%>

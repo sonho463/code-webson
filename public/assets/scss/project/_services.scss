@@ -5,42 +5,157 @@
 }
 
 .p-services__content {
-  display: flex;
-  justify-content: space-between;
+  height: inherit;
+  position: relative;
+  width: 100%;
   height: 80%;
+  margin-top: 15px;
+  padding: 20px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include v.mq(lg) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
-.p-services__card {
-  position: relative;
-  width: 25%;
-  height: 100%;
-  padding: 30px 5%;
-  background-color: v.$accent-secondary;
-  border: 4px solid v.$main-primary;
-  border-radius: 10px;
+.p-services__item {
+  width: 24%;
+  height: 90%;
+  max-height: 400px;
+  padding: 25px 3%;
+  background-color: rgba(240, 248, 255);
+  border: solid 4px v.$main-primary;
+  border-radius: 15px;
+  transition: width 0.5s;
   display: flex;
-  gap: 50px;
-  overflow-x: hidden;
-  &__heading-block {
-    width: 100%;
-    padding: 20px 5%;
-    h2 {
-      font-size: 3.2rem;
-      overflow-wrap: break-word;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px #777777;
+  cursor: pointer;
+  @include v.mq(lg) {
+    width: 54%;
+    max-height: unset;
+    min-height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    &__desc {
+      display: none;
     }
   }
-  &__image {
-    width: 100%;
+  & + li {
+    @include v.mq(lg) {
+      margin-top: 30px;
+    }
   }
-  &__desc {
-    position: absolute;
-    top: 0;
-    right: 111%;
-    width: 20vw;
+}
+.p-services__item.open {
+  position: absolute;
+  height: 84%;
+  width: 95%;
+  z-index: 10;
+  @include v.mq(lg) {
+    z-index: 200;
+    height: 85%;
+    height: 88vh;
+    margin-top: 0;
+    bottom: 0;
+    .p-services__item__desc {
+      display: block;
+      width: 95%;
+      height: 52%;
+      margin-top: 64px;
+      margin-right: auto;
+      margin-left: auto;
+      left: 0;
+      top: 40%;
+      // overscroll-behavior: none;
+      // position: static;
+      &__inner {
+        height: 100%;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        // ul {
+        //   overflow-y: scroll;
+        //   height: 100%;
+        //   overscroll-behavior: none;
+        // }
+      }
+    }
+  }
+
+  .p-services__item__heading-block {
+    width: 30%;
+    min-width: unset;
+    min-width: 300px;
+    @include v.mq(lg) {
+      width: 100%;
+      height: 30%;
+    }
+  }
+}
+.p-services__item__desc {
+  width: 600px;
+  height: 80%;
+  padding-right: 3%;
+  position: absolute;
+  left: 330px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: justify;
+  visibility: hidden;
+  &__inner {
+    height: 100%;
+  }
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+    + li {
+      margin-top: 10px;
+    }
+    @include v.mq(lg) {
+      padding-left: 45px;
+    }
   }
 }
 
-// 実装方針
-// GSAPタイムラインでアニメーション定義
-// クリックで発火
-// paused->play
+.p-services__item.open {
+  .p-services__item__desc {
+    visibility: visible;
+    &__inner {
+      overflow-y: scroll;
+    }
+  }
+}
+
+.p-services__item__heading-block {
+  width: 100%;
+  min-width: 100%;
+  height: inherit;
+  max-height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-services__item__heading {
+  font-size: 2.4rem;
+  min-height: 78px;
+}
+
+.p-services__item__icon {
+  width: 60%;
+  width: 94px;
+  margin-top: -30px;
+  @include v.mq(lg) {
+    margin-top: 0;
+  }
+  // margin-top: 30px;
+  // margin-right: auto;
+  // margin-left: auto;
+}
