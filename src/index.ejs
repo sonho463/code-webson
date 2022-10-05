@@ -11,7 +11,7 @@
 </div>
 
 <%_ for(let i=0; i < servicesList.length; i++){ _%>
-<div class="p-services__modal">
+<div id="<%= servicesList[i].imgPath %>" class="p-services__modal">
   <%- include('./_includes/_serviceModal',{num: i}) %>
 </div>
 <%_ } _%>
