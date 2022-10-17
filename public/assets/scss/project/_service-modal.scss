@@ -15,12 +15,16 @@
   box-shadow: 0px 0px 15px -5px #777777;
 }
 
-// #ico-wp
-#ico-gatsby
-// #ico-code
-{
+.p-services__modal.open{
 	display: flex;
 }
+
+// #ico-wp
+// #ico-gatsby
+// #ico-code
+// {
+// 	display: flex;
+// }
 
 .p-services__modal {
   &__heading-block {

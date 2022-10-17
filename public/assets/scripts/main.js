@@ -1,20 +1,25 @@
-var textarea = document.querySelector('.textarea');
+var textarea = document.querySelector(".textarea");
 textarea.scrollTop = 1;
 
-window.addEventListener('touchmove', function(event) {
-  if (event.target === textarea && textarea.scrollTop !== 0 && textarea.scrollTop + textarea.clientHeight !== textarea.scrollHeight) {
+window.addEventListener("touchmove", function (event) {
+  if (
+    event.target === textarea &&
+    textarea.scrollTop !== 0 &&
+    textarea.scrollTop + textarea.clientHeight !== textarea.scrollHeight
+  ) {
     event.stopPropagation();
-  }
-  else {
+  } else {
     event.preventDefault();
   }
 });
 
-textarea.addEventListener('scroll', function(event) {
+textarea.addEventListener("scroll", function (event) {
   if (textarea.scrollTop === 0) {
     textarea.scrollTop = 1;
-  }
-  else if (textarea.scrollTop + textarea.clientHeight === textarea.scrollHeight) {
+  } else if (
+    textarea.scrollTop + textarea.clientHeight ===
+    textarea.scrollHeight
+  ) {
     textarea.scrollTop = textarea.scrollTop - 1;
   }
 });
@@ -36,76 +41,29 @@ const noScroll = () => {
   }
 };
 // サービスブロックのアイテムオープン
-const snapContainer = document.querySelector(".l-snap-container");
-const servicesItem = document.getElementsByClassName("js-services__item");
-// const servicesItemDescInner = document.getElementsByClassName(
-//   "p-services__item__desc__inner"
-// );
-const servicesOverlay = document.querySelector(".c-overlay--services");
-const cOverlay = document.querySelector(".c-overlay");
+const serviceItemList = document.querySelectorAll(".js-services__item");
+const serviceButtonList = document.querySelectorAll(".js-services-button");
+const serviceModalList = document.querySelectorAll(".p-services__modal");
 
-console.log(document);
-const bodyFix = () => {
-  document.body.classList.add("u-oy-hidden");
-  snapContainer.classList.add("u-oy-hidden");
-};
+serviceItemList.forEach((item) => {
+  const button = item.querySelector(".js-services-button");
+  const parent = item.querySelector(".p-services__item__heading");
+  const targetName = parent.textContent.trim()
 
-
-const removeBodyFix = () => {
-  document.body.classList.remove("u-oy-hidden");
-  snapContainer.classList.remove("u-oy-hidden");
-};
-
-const closeServiceItem = (target, activeCont, buttonText) => {
-  console.log(`${activeCont} is close`);
-	const targetInner = target.querySelector('.p-services__item__desc__inner')
-	console.log(targetInner)
-	targetInner.scrollTo(0,0);
-  target.classList.remove("open");
-  buttonText.textContent = "詳しく";
-  removeBodyFix();
-  servicesOverlay.classList.remove("visible");
-  cOverlay.classList.remove("visible");
-  // bodyScrollLock. enableBodyScroll(target)
-};
-const openServiceItem = (target, activeCont, buttonText) => {
-  console.log(`${activeCont} is open`);
-  target.classList.add("open");
-  buttonText.textContent = "閉じる";
-  bodyFix();
-  cOverlay.classList.add("visible");
-  servicesOverlay.classList.add("visible");
-
-  // bodyScrollLock.disableBodyScroll(target)
-};
-
-for (let i = 0; i < servicesItem.length; i++) {
-  const button = servicesItem[i].querySelector(".js-services-button");
-  const buttonText = servicesItem[i].querySelector(".js-services-button__text");
-  button.addEventListener("click", function (event) {
-    const activeCont = servicesItem[i].querySelector(
-      ".p-services__item__heading"
-    ).textContent;
-    // toggleServiceCard
-    if (servicesItem[i].classList.contains("open")) {
-      closeServiceItem(servicesItem[i], activeCont, buttonText);
-    } else {
-      openServiceItem(servicesItem[i], activeCont, buttonText);
-			console.log(event);
-			event.stopPropagation();
-
+  serviceModalList.forEach((sModal) => {
+    sModalName = sModal.querySelector(
+      ".p-services__modal__heading"
+    ).textContent.trim();
+		console.log(`${sModalName}-${targetName}`)
+    console.log(sModalName === targetName);
+    if (sModalName === targetName) {
+      button.addEventListener("click", function () {
+        sModal.classList.add("open");
+        console.log("open");
+      });
     }
-    servicesItem[i].scrollIntoView();
   });
-  servicesOverlay.addEventListener("click", (activeCont) => {
-    console.log(`${activeCont} is close`);
-    servicesItem[i].classList.remove("open");
-    buttonText.textContent = "詳しく";
-    removeBodyFix();
-    servicesOverlay.classList.remove("visible");
-    cOverlay.classList.remove("visible");
-  });
-}
+});
 
 // ページ内リンクの設定
 const setLinkInPage = (targetItemList) => {
@@ -135,7 +93,7 @@ setLinkInPage(footerLink);
 // アバウトページのモーダル開閉
 
 const modal = document.querySelector(".p-about__modal");
-const modalContents = document.querySelector('.p-modal__contents')
+const modalContents = document.querySelector(".p-modal__contents");
 // const modalContents = document.querySelector("#modal");
 const buttonCloseModal = document.querySelector(".p-modal__close");
 const buttonOpenModal = document.querySelector(".p-about__open");
@@ -143,7 +101,7 @@ const aboutArrowNext = document.querySelector(".p-about > .c-arrow");
 
 const closeModal = () => {
   console.log("modal close");
-  modalContents.scrollTo(0,0);
+  modalContents.scrollTo(0, 0);
   modal.classList.remove("open");
   cOverlay.classList.remove("visible");
   removeBodyFix();
@@ -237,12 +195,7 @@ const closeButton = document.querySelector(".close");
 // 	document.body.style.overflow="auto";
 // })
 
-
 // サービスブロックのモーダル
-
-
-
-
 
 // Swiper.js
 const swiper = new Swiper(".swiper", {
