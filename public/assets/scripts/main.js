@@ -40,11 +40,26 @@ const noScroll = () => {
     body.classList.add("no_scroll");
   }
 };
+
+const servicesOverlay = document.querySelector(".c-overlay--services");
+const cOverlay = document.querySelector(".c-overlay");
+
+console.log(document);
+const bodyFix = () => {
+  document.body.classList.add("u-oy-hidden");
+  snapContainer.classList.add("u-oy-hidden");
+};
+
+const removeBodyFix = () => {
+  document.body.classList.remove("u-oy-hidden");
+  snapContainer.classList.remove("u-oy-hidden");
+};
+
 // サービスブロックのアイテムオープン
 const serviceItemList = document.querySelectorAll(".js-services__item");
 const serviceButtonList = document.querySelectorAll(".js-services-button");
 const serviceModalList = document.querySelectorAll(".p-services__modal");
-const snapContainer = document.querySelector('.l-snap-container')
+const snapContainer = document.querySelector(".l-snap-container");
 
 // 詳しくボタンに開く動作を追加
 serviceItemList.forEach((item) => {
@@ -59,21 +74,24 @@ serviceItemList.forEach((item) => {
     // console.log(`${sModalName}-${targetName}`)
     // console.log(sModalName === targetName);
     if (sModalName === targetName) {
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
         sModal.classList.add("open");
-				snapContainer.classList.add('u-oy-hidden')
-        // console.log("open");
+        bodyFix();
       });
     }
   });
 });
 
+// サービスモーダルの閉じるボタンの動作
 serviceModalList.forEach((modal) => {
   const buttonClose = modal.querySelector(".js-s-modal-button");
-  console.log(buttonClose);
+  console.log(modal);
+
   buttonClose.addEventListener("click", function () {
-		modal.classList.contains('open') ? modal.classList.remove("open") : ''
-		snapContainer.classList.remove('u-oy-hidden')
+    modal.scrollTo(0,0);
+    modal.classList.contains("open") ? modal.classList.remove("open") : "";
+    removeBodyFix();
   });
 });
 

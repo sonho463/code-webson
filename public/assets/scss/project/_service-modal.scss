@@ -4,7 +4,9 @@
   display: none;
   z-index: 3;
   width: 80%;
-	// height: 60vh;
+  // height: 60vh;
+	border-radius: 15px;
+	border: solid 4px v.$main-primary;
   padding: 80px 5% 50px;
   position: fixed;
   top: 50%;
@@ -14,25 +16,18 @@
   // display: flex;
   gap: 50px;
   box-shadow: 0px 0px 15px -5px #777777;
-}
-
-.p-services__modal.open{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.p-services__modal{
-	&__content{
-		display: flex;
-	}
-	&__heading-block,
-	&__desc{
-		width: 50%;
+	@include v.mq(lg){
+		height: 80vh;
+		overflow-y: scroll;
 	}
 
 }
 
+.p-services__modal.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 // #ico-wp
 // #ico-gatsby
@@ -42,15 +37,24 @@
 // }
 
 .p-services__modal {
+  &__content {
+    display: flex;
+    @include v.mq(lg) {
+      flex-direction: column;
+    }
+  }
   &__heading-block {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include v.mq(lg) {
+      width: 100%;
+    }
   }
   &__heading {
-		text-align: center;
+    text-align: center;
     font-size: 3.2rem;
   }
   &__image {
@@ -58,11 +62,15 @@
   }
   &__desc {
     width: 50%;
-		ul{
-			list-style-type:square;
-		}
-		li+li{
-			margin-top: 12px;
-		}
+    @include v.mq(lg) {
+      margin: 50px auto;
+			width: 90%;
+    }
+    ul {
+      list-style-type: square;
+    }
+    li + li {
+      margin-top: 12px;
+    }
   }
 }

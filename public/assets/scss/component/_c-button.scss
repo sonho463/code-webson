@@ -3,7 +3,7 @@
 .c-button {
   position: relative;
   display: block;
-	width: fit-content;
+  width: fit-content;
   font-size: 1.6rem;
   // background-color: v.$shadow-cBlue;
   color: v.$main-primary;
@@ -12,10 +12,10 @@
   background-color: v.$shadow-cBlue;
   padding: 8px 30px;
   &-shadow::after {
-		content: "";
+    content: "";
     // display: block;
     border: dotted 2px v.$main-primary;
-		border-radius: 5px;
+    border-radius: 5px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,45 +23,45 @@
     left: -5px;
   }
   &__text {
-		display: inline-block;
+    display: inline-block;
     transform: translate(-5px, -5px);
-		transition: transform .5s;
+    transition: transform 0.5s;
   }
 }
 
-.c-button-shadow:hover .c-button__text{
-	transform: translate(0,0);
+.c-button-shadow:hover .c-button__text {
+  transform: translate(0, 0);
 }
 
 .c-button-shadow::after {
-	transition: top 0.5s, left 0.5s;
+  transition: top 0.5s, left 0.5s;
 }
 
 .c-button-shadow:hover::after {
-	border: solid 2px v.$main-primary;
-	top: 0;
+  border: solid 2px v.$main-primary;
+  top: 0;
   left: 0;
 }
 
-.p-fv__right .c-button{
-	margin-top: 32px;
-	margin-left: auto;
+.p-fv__right .c-button {
+  margin-top: 32px;
+  margin-left: auto;
 }
 
-.p-services .c-button{
-	@include v.mq(lg){
-		margin-top: 20px;
-	}
+.p-services .c-button {
+  @include v.mq(lg) {
+    margin-top: 20px;
+  }
 }
 
-.p-about .c-button{
-	margin-top: 20px;
-	margin-left: auto;
+.p-about .c-button {
+  margin-top: 20px;
+  margin-left: auto;
 }
 
-.p-contact .c-button{
-	margin-top: 40px;
-	margin-right: auto;
-	margin-left: auto;
-	font-size: 2rem;
+.p-contact .c-button {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
 }

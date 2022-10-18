@@ -1530,6 +1530,8 @@ a.p-fv__link:hover::after {
   display: none;
   z-index: 3;
   width: 80%;
+  border-radius: 15px;
+  border: solid 4px rgb(27, 47, 96);
   padding: 80px 5% 50px;
   position: fixed;
   top: 50%;
@@ -1540,6 +1542,12 @@ a.p-fv__link:hover::after {
   gap: 50px;
   -webkit-box-shadow: 0px 0px 15px -5px #777777;
           box-shadow: 0px 0px 15px -5px #777777;
+}
+@media screen and (max-width:1279px) {
+  .p-services__modal {
+    height: 80vh;
+    overflow-y: scroll;
+  }
 }
 
 .p-services__modal.open {
@@ -1560,10 +1568,14 @@ a.p-fv__link:hover::after {
   display: -ms-flexbox;
   display: flex;
 }
-.p-services__modal__heading-block, .p-services__modal__desc {
-  width: 50%;
+@media screen and (max-width:1279px) {
+  .p-services__modal__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
-
 .p-services__modal__heading-block {
   width: 50%;
   display: -webkit-box;
@@ -1580,6 +1592,11 @@ a.p-fv__link:hover::after {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width:1279px) {
+  .p-services__modal__heading-block {
+    width: 100%;
+  }
+}
 .p-services__modal__heading {
   text-align: center;
   font-size: 3.2rem;
@@ -1589,6 +1606,12 @@ a.p-fv__link:hover::after {
 }
 .p-services__modal__desc {
   width: 50%;
+}
+@media screen and (max-width:1279px) {
+  .p-services__modal__desc {
+    margin: 50px auto;
+    width: 90%;
+  }
 }
 .p-services__modal__desc ul {
   list-style-type: square;
