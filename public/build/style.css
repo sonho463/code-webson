@@ -1530,7 +1530,7 @@ a.p-fv__link:hover::after {
   display: none;
   z-index: 3;
   width: 80%;
-  padding: 50px 5%;
+  padding: 80px 5% 50px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1546,6 +1546,22 @@ a.p-fv__link:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-services__modal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.p-services__modal__heading-block, .p-services__modal__desc {
+  width: 50%;
 }
 
 .p-services__modal__heading-block {
@@ -1573,6 +1589,12 @@ a.p-fv__link:hover::after {
 }
 .p-services__modal__desc {
   width: 50%;
+}
+.p-services__modal__desc ul {
+  list-style-type: square;
+}
+.p-services__modal__desc li + li {
+  margin-top: 12px;
 }
 
 .p-about__contents {

@@ -44,24 +44,36 @@ const noScroll = () => {
 const serviceItemList = document.querySelectorAll(".js-services__item");
 const serviceButtonList = document.querySelectorAll(".js-services-button");
 const serviceModalList = document.querySelectorAll(".p-services__modal");
+const snapContainer = document.querySelector('.l-snap-container')
 
+// 詳しくボタンに開く動作を追加
 serviceItemList.forEach((item) => {
   const button = item.querySelector(".js-services-button");
   const parent = item.querySelector(".p-services__item__heading");
-  const targetName = parent.textContent.trim()
+  const targetName = parent.textContent.trim();
 
   serviceModalList.forEach((sModal) => {
-    sModalName = sModal.querySelector(
-      ".p-services__modal__heading"
-    ).textContent.trim();
-		console.log(`${sModalName}-${targetName}`)
-    console.log(sModalName === targetName);
+    sModalName = sModal
+      .querySelector(".p-services__modal__heading")
+      .textContent.trim();
+    // console.log(`${sModalName}-${targetName}`)
+    // console.log(sModalName === targetName);
     if (sModalName === targetName) {
       button.addEventListener("click", function () {
         sModal.classList.add("open");
-        console.log("open");
+				snapContainer.classList.add('u-oy-hidden')
+        // console.log("open");
       });
     }
+  });
+});
+
+serviceModalList.forEach((modal) => {
+  const buttonClose = modal.querySelector(".js-s-modal-button");
+  console.log(buttonClose);
+  buttonClose.addEventListener("click", function () {
+		modal.classList.contains('open') ? modal.classList.remove("open") : ''
+		snapContainer.classList.remove('u-oy-hidden')
   });
 });
 

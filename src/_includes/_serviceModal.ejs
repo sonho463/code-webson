@@ -1,13 +1,18 @@
-  
-
-	<div class="p-services__modal__heading-block">
+<div class="p-services__modal__content">
+  <div class="p-services__modal__heading-block">
     <h2 class="p-services__modal__heading">
-			<%- servicesList[num].title %>
-		</h2>
+      <%- servicesList[num].title %>
+    </h2>
     <figure class="p-services__modal__image">
       <img src="../assets/img/services/<%= servicesList[num].imgPath %>.png" alt="<%= servicesList[num].imgAlt %>">
     </figure>
   </div>
-  <p class="p-services__modal__desc">
-		<%- servicesList[num].desc %>
-  </p>
+  <div class="p-services__modal__desc">
+    <%- servicesList[num].desc %>
+	</div>
+</div>
+<button class="c-button js-s-modal-button c-button-shadow">
+  <span class="c-button__text js-s-modal-button__text">
+    閉じる
+  </span>
+</button>
