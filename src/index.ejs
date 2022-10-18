@@ -10,6 +10,7 @@
   <%- include('./_includes/_modal') %>
 </div>
 
+<div class="c-overlay--services"></div>
 <%_ for(let i=0; i < servicesList.length; i++){ _%>
 <div id="<%= servicesList[i].imgPath %>" class="p-services__modal">
   <%- include('./_includes/_serviceModal',{num: i}) %>

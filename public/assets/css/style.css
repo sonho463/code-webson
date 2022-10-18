@@ -723,12 +723,13 @@ a:hover img {
 
 .c-overlay--services {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
   left: 0;
+  top: 0;
 }
 
 .c-overlay--services.visible {
@@ -1420,6 +1421,7 @@ a.p-fv__link:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 }
 
 .p-services__modal__content {

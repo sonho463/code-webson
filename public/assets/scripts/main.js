@@ -77,6 +77,8 @@ serviceItemList.forEach((item) => {
       button.addEventListener("click", function (event) {
         event.preventDefault();
         sModal.classList.add("open");
+				servicesOverlay.classList.add('visible')
+				cOverlay.classList.add('visible')
         bodyFix();
       });
     }
@@ -91,7 +93,9 @@ serviceModalList.forEach((modal) => {
   buttonClose.addEventListener("click", function () {
     modal.scrollTo(0,0);
     modal.classList.contains("open") ? modal.classList.remove("open") : "";
-    removeBodyFix();
+    servicesOverlay.classList.remove('visible')
+    cOverlay.classList.remove('visible')
+		removeBodyFix();
   });
 });
 
