@@ -1,7 +1,7 @@
 // ヘッダーとmvとcv-buttonの調整
 
 .l-header{
-	z-index:200;
+	z-index:3;
 }
 
 .l-main{
@@ -10,4 +10,8 @@
 
 .c-arrow{
 	z-index: 1;
+}
+
+.c-overlay{
+	z-index: 5;
 }

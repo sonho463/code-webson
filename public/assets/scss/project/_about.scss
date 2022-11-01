@@ -94,12 +94,13 @@
 .p-about__modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+  width: 76vw;
+  height: 75vh;
+  // background-color: rgba(0, 0, 0, 0.6);
+  z-index: 6;
   // overflow: scroll;
   &.open {
     display: block;
@@ -110,14 +111,16 @@
   // background-color: #fff;
   background-image: url("../assets/img/works/bg-img-white.jpg");
   padding: 60px 12%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  height: 75vh;
+	border-radius: 15px;
+
+  // margin-top: 50px;
+  // margin-bottom: 50px;
+  height: inherit;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  // margin-right: auto;
+  // margin-left: auto;
   font-size: 2rem;
   text-align: justify;
   @include v.mq(md) {

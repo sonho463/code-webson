@@ -41,10 +41,11 @@ const noScroll = () => {
   }
 };
 
-const servicesOverlay = document.querySelector(".c-overlay--services");
-const cOverlay = document.querySelector(".c-overlay");
+// const servicesOverlay = document.querySelector(".c-overlay--services");
+const cOverlayService = document.querySelector(".c-overlay.--services");
+const cOverlayAbout = document.querySelector(".c-overlay.--about");
 
-console.log(document);
+// console.log(document);
 const bodyFix = () => {
   document.body.classList.add("u-oy-hidden");
   snapContainer.classList.add("u-oy-hidden");
@@ -77,8 +78,8 @@ serviceItemList.forEach((item) => {
       button.addEventListener("click", function (event) {
         event.preventDefault();
         sModal.classList.add("open");
-				servicesOverlay.classList.add('visible')
-				cOverlay.classList.add('visible')
+        // servicesOverlay.classList.add("visible");
+        cOverlayService.classList.add("visible");
         bodyFix();
       });
     }
@@ -90,13 +91,18 @@ serviceModalList.forEach((modal) => {
   const buttonClose = modal.querySelector(".js-s-modal-button");
   console.log(modal);
 
-  buttonClose.addEventListener("click", function () {
-    modal.scrollTo(0,0);
-    modal.classList.contains("open") ? modal.classList.remove("open") : "";
-    servicesOverlay.classList.remove('visible')
-    cOverlay.classList.remove('visible')
-		removeBodyFix();
-  });
+  const setCloseAction = (target) => {
+    target.addEventListener("click", function () {
+      modal.scrollTo(0, 0);
+      modal.classList.contains("open") ? modal.classList.remove("open") : "";
+      // servicesOverlay.classList.remove("visible");
+      cOverlayService.classList.remove("visible");
+      removeBodyFix();
+    });
+  };
+
+  setCloseAction(buttonClose);
+  setCloseAction(cOverlayService);
 });
 
 // ページ内リンクの設定
@@ -137,7 +143,7 @@ const closeModal = () => {
   console.log("modal close");
   modalContents.scrollTo(0, 0);
   modal.classList.remove("open");
-  cOverlay.classList.remove("visible");
+  cOverlayAbout.classList.remove("visible");
   removeBodyFix();
   // if (w > 1024) {
   //   aboutArrowNext.style.display = "block";
@@ -146,12 +152,15 @@ const closeModal = () => {
 const openModal = () => {
   modal.classList.add("open");
   aboutArrowNext.style.display = "none";
-  cOverlay.classList.add("visible");
+  cOverlayAbout.classList.add("visible");
   // const w = window.innerWidth;
   bodyFix();
   // bodyFixWhenIphone(modalContents)
   modal.scrollIntoView(true);
 };
+
+cOverlayAbout.addEventListener('click', closeModal)
+
 
 // works-detail open
 const workDetail = document.querySelector(".p-work-detail");
